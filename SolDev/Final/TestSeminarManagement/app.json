@@ -1,0 +1,83 @@
+{
+  "id": "567a677b-aa03-4916-a474-b71062c2213e",
+  "name": "Test Seminar Management",
+  "publisher": "get&use Academy GmbH",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": 
+    [
+      {
+        "id": "11758a3f-bdad-4f6c-8e6e-a2eba03249be",
+        "name": "Seminar Management",
+        "publisher": "ge&use Academy GmbH",
+        "version": "1.0.0.0"
+      },
+      {
+          "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+          "publisher": "Microsoft",
+          "name": "Library Assert",
+          "version": "27.4.45366.45458"
+        },
+        {
+          "id": "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
+          "publisher": "Microsoft",
+          "name": "Test Runner",
+          "version": "27.4.45366.45458"
+        },
+        {
+          "id": "bee8cf2f-494a-42f4-aabd-650e87934d39",
+          "publisher": "Microsoft",
+          "name": "Business Foundation Test Libraries",
+          "version": "27.4.45366.45458"
+        },
+        {
+          "id": "c14a958d-a968-4b0d-9c6b-f92e8274a862",
+          "publisher": "Microsoft",
+          "name": "Business Foundation Tests",
+          "version": "27.4.45366.45458"
+        },
+         {
+          "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
+          "publisher": "Microsoft",
+          "name": "Tests-TestLibraries",
+          "version": "27.4.45366.45458"
+        },
+       {
+          "id": "9856ae4f-d1a7-46ef-89bb-6ef056398228",
+          "publisher": "Microsoft",
+          "name": "System Application Test Library",
+          "version": "27.4.45366.45458"
+        },
+      {
+          "id": "e7320ebb-08b3-4406-b1ec-b4927d3e280b",
+          "publisher": "Microsoft",
+          "name": "Any",
+          "version": "27.4.45366.45458"
+        }
+    ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "27.0.0.0",
+  "idRanges": [
+    {
+      "from": 80150,
+      "to": 80199
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "16.0",
+  "features": [
+    "NoImplicitWith"
+  ],
+  "suppressWarnings": ["PTE0001"]
+}

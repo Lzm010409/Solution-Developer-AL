@@ -1,0 +1,47 @@
+
+
+page 123456706 "SMB Seminar Comment Sheet"
+{
+    AutoSplitKey = true;
+    Caption = 'Comment Sheet';
+    DataCaptionFields = "Document Type", "No.";
+    DelayedInsert = true;
+    LinksAllowed = false;
+    MultipleNewLines = true;
+    PageType = List;
+    SourceTable = "SMB Seminar Comment Line";
+
+    layout
+    {
+        area(content)
+        {
+            repeater(Control1)
+            {
+                ShowCaption = false;
+                field("Date"; Rec.Date)
+                {
+                    ApplicationArea = Comments;
+                }
+                field(Comment; Rec.Comment)
+                {
+                    ApplicationArea = Comments;
+                }
+                field("Code"; Rec.Code)
+                {
+                    ApplicationArea = Comments;
+                    Visible = false;
+                }
+            }
+        }
+    }
+
+    actions
+    {
+    }
+
+    trigger OnNewRecord(BelowxRec: Boolean)
+    begin
+        Rec.SetUpNewLine();
+    end;
+}
+

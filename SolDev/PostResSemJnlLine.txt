@@ -1,0 +1,143 @@
+local procedure PostResJnlLine(ChargeType: Enum "SMB Sem. Ledger Charge Type";
+                                  var SMBSeminarRegHeader: Record "SMB Seminar Reg. Header"): Integer
+    var
+        Resource: Record Resource;
+        ResLedgerEntry: Record "Res. Ledger Entry";
+        SMBInstructor: Record "SMB Instructor";
+        SMBSeminarRoom: Record "SMB Seminar Room";
+        ResJnlLine: Record "Res. Journal Line";
+        ResJnlPostLine: Codeunit "Res. Jnl.-Post Line";
+    begin
+        // Füllen der Buchblatt Zeile
+        ResJnlLine.Init();
+
+        // Füllen gemeinsamer Felder
+        ResJnlLine."Entry Type" := ResJnlLine."Entry Type"::Usage;
+        ResJnlLine."Document No." := SMBSeminarRegHeader."Posting No.";
+        ResJnlLine."Posting Date" := SMBSeminarRegHeader."Posting Date";
+        ResJnlLine.Description := SMBSeminarRegHeader."Seminar Description";
+        ResJnlLine."Source Code" := SrcCode;
+        ResJnlLine."Reason Code" := SMBSeminarRegHeader."Reason Code";
+        ResJnlLine."Gen. Prod. Posting Group" := SMBSeminarRegHeader."Gen. Prod. Posting Group";
+        ResJnlLine."Document Date" := SMBSeminarRegHeader."Document Date";
+        ResJnlLine."Posting No. Series" := SMBSeminarRegHeader."Posting No. Series";
+        // Füllen der Felder abhängig vom ChargeType
+
+        // Aufruf der Res. Jnl Post Line
+
+        case ChargeType of
+            ChargeType::Instructor:
+                begin
+                    SMBInstructor.get(SMBSeminarRegHeader."Instructor Code");
+                    SMBInstructor.TestField("Resource No.");
+                    Resource.Get(SMBInstructor."Resource No.");
+                    ResJnlLine."Resource No." := Resource."No.";
+                    ResJnlLine."Unit of Measure Code" := Resource."Base Unit of Measure";
+                    ResJnlLine.Quantity := SMBSeminarRegHeader."Duration Days";
+                    ResJnlLine."Qty. per Unit of Measure" := 1;
+                    ResJnlLine."Unit Cost" := Resource."Unit Cost";
+                    ResJnlLine."Dimension Set ID" := SMBSeminarRegHeader."Dimension Set ID";
+                end;
+            ChargeType::Room:
+                begin
+                    SMBSeminarRoom.Get(SMBSeminarRegHeader."Room Code");
+                    SMBSeminarRoom.TestField("Resource No.");
+                    Resource.Get(SMBSeminarRoom."Resource No.");
+                    ResJnlLine."Resource No." := Resource."No.";
+                    ResJnlLine."Unit of Measure Code" := Resource."Base Unit of Measure";
+                    ResJnlLine.Quantity := SMBSeminarRegHeader."Duration Days";
+                    ResJnlLine."Qty. per Unit of Measure" := 1;
+                    ResJnlLine."Unit Cost" := Resource."Unit Cost";
+                    ResJnlLine."Dimension Set ID" := SMBSeminarRegHeader."Dimension Set ID";
+                end;
+        end;
+        ResJnlPostLine.RunWithCheck(ResJnlLine);
+        // letzten Ressourcenposten lesen und Lfd. Nr. holen
+        // gelesene Nr. als Rückgabeweert in der Prozedur verwenden.
+        ResLedgerEntry.FindLast();
+        exit(ResLedgerEntry."Entry No.");
+
+    end;
+
+    local procedure PostSemJnlLine(ChargeType: Enum "SMB Sem. Ledger Charge Type";
+                            var SMBSeminarRegHeader: Record "SMB Seminar Reg. Header";
+                            var SMBSeminarRegLine: Record "SMB Seminar Reg. Line";
+                            LastResLedgEntryNo: Integer)
+    var
+        SMBInstructor: Record "SMB Instructor";
+        SMBSeminarRoom: Record "SMB Seminar Room";
+        SMBSeminarJournalLine: Record "SMB Seminar Journal Line";
+        SMBSemJnlPostLine: Codeunit "SMB Sem. Jnl.-Post Line";
+    begin
+        SMBSeminarJournalLine.Init();
+        // Gemeinsame Felder        
+        SMBSeminarJournalLine."Seminar No." := SMBSeminarRegHeader."Seminar No.";
+        SMBSeminarJournalLine."Posting Date" := SMBSeminarRegHeader."Posting Date";
+        SMBSeminarJournalLine."Document Date" := SMBSeminarRegHeader."Document Date";
+        SMBSeminarJournalLine."Entry Type" := SMBSeminarJournalLine."Entry Type"::Registration;
+        SMBSeminarJournalLine."Document No." := SMBSeminarRegHeader."Posting No.";
+        SMBSeminarJournalLine."Starting Date" := SMBSeminarRegHeader."Starting Date";
+        SMBSeminarJournalLine."Seminar Registration No." := SMBSeminarRegHeader."No.";
+        SMBSeminarJournalLine."Source Type" := SMBSeminarJournalLine."Source Type"::Seminar;
+        SMBSeminarJournalLine."Source No." := SMBSeminarRegHeader."Seminar No.";
+        SMBSeminarJournalLine."Source Code" := SrcCode;
+        SMBSeminarJournalLine."Reason Code" := SMBSeminarRegHeader."Reason Code";
+        SMBSeminarJournalLine."Posting No. Series" := SMBSeminarRegHeader."Posting No. Series";
+        SMBSeminarJournalLine."Res. Ledger Entry No." := LastResLedgEntryNo;
+        LastResLedgEntryNo := 0;
+        // Zusätzlich sollen die Buchungsgruppen in die Buchblattzeile übergeben werden
+        // Anforderung für die Fakturierung, damit auf das Sachkonto aus der Buchungsmatrix gebucht werden kann
+        SMBSeminarJournalLine."Gen. Prod. Posting Group" := SMBSeminarRegHeader."Gen. Prod. Posting Group";
+        SMBSeminarJournalLine."VAT Prod. Posting Group" := SMBSeminarRegHeader."VAT Prod. Posting Group";
+
+        case ChargeType of
+            ChargeType::Instructor:
+                begin
+                    SMBSeminarJournalLine."Charge Type" := ChargeType;
+                    SMBSeminarJournalLine.Chargeable := false;
+                    SMBInstructor.Get(SMBSeminarRegHeader."Instructor Code");
+                    SMBSeminarJournalLine."Instructor Code" := SMBInstructor.Code;
+                    SMBSeminarJournalLine.Description := SMBInstructor.Name;
+                    SMBSeminarJournalLine.Type := SMBSeminarJournalLine.Type::Resource;
+                    SMBSeminarJournalLine.Quantity := SMBSeminarRegHeader."Duration Days";
+                    // Dimensionen aus dem Kopf
+                    SMBSeminarJournalLine."Dimension Set ID" := SMBSeminarRegHeader."Dimension Set ID";
+                end;
+            ChargeType::Room:
+                begin
+                    SMBSeminarJournalLine."Charge Type" := ChargeType;
+                    SMBSeminarJournalLine.Chargeable := false;
+                    SMBSeminarRoom.Get(SMBSeminarRegHeader."Room Code");
+                    SMBSeminarJournalLine."Seminar Room Code" := SMBSeminarRoom.Code;
+                    SMBSeminarJournalLine.Description := SMBSeminarRoom.Name;
+                    SMBSeminarJournalLine.Type := SMBSeminarJournalLine.Type::Resource;
+                    SMBSeminarJournalLine.Quantity := SMBSeminarRegHeader."Duration Days";
+                    // Dimensionen aus dem Kopf
+                    SMBSeminarJournalLine."Dimension Set ID" := SMBSeminarRegHeader."Dimension Set ID";
+                end;
+            ChargeType::Participant:
+                begin
+                    SMBSeminarJournalLine."Charge Type" := ChargeType;
+                    SMBSeminarJournalLine.Chargeable := SMBSeminarRegLine."To Invoice";
+                    SMBSeminarRegLine.CalcFields("Participant Name");
+                    SMBSeminarJournalLine.Description := SMBSeminarRegLine."Participant Name";
+                    SMBSeminarJournalLine."Participant Name" := SMBSeminarRegLine."Participant Name";
+                    SMBSeminarJournalLine."Participant Contact No." := SMBSeminarRegLine."Participant Contact No.";
+                    SMBSeminarJournalLine."Bill-to Customer No." := SMBSeminarRegLine."Bill-to Customer No.";
+                    SMBSeminarJournalLine.Type := SMBSeminarJournalLine.Type::Resource;
+                    SMBSeminarJournalLine.Quantity := 1;
+                    SMBSeminarJournalLine."Unit Price" := SMBSeminarRegLine."Line Amount (LCY)"; //aktuell nur Mandantenwährung
+                    SMBSeminarJournalLine."Total Price" := SMBSeminarRegLine."Line Amount (LCY)";//aktuell nur Mandantenwährung
+                    SMBSeminarJournalLine.Chargeable := SMBSeminarRegLine."To Invoice";
+                    SMBSeminarJournalLine."Instructor Code" := SMBSeminarRegHeader."Instructor Code";
+                    // Zusätzlich sollen die Buchungsgruppen in die Buchblattzeile übergeben werden
+                    // Anforderung für die Fakturierung, damit auf das Sachkonto aus der Buchungsmatrix gebucht werden kann
+                    SMBSeminarJournalLine."Gen. Bus. Posting Group" := SMBSeminarRegLine."Gen. Bus. Posting Group";
+                    SMBSeminarJournalLine."VAT Bus. Posting Group" := SMBSeminarRegLine."VAT Bus. Posting Group";
+                    // Dimensionen aus der Zeile
+                    SMBSeminarJournalLine."Dimension Set ID" := SMBSeminarRegLine."Dimension Set ID";
+                end;
+
+        end;
+        SMBSemJnlPostLine.RunWithCheck(SMBSeminarJournalLine);
+    end;
