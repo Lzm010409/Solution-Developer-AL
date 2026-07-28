@@ -178,6 +178,12 @@ table 63610 "PTE Software Change"
             TableRelation = "Gen. Business Posting Group";
             Caption = 'Gen. Bus. Posting Group', Comment = 'de-DE=Geschäftsbuchungsgruppe';
             ToolTip = 'Specifies the Gen. Bus. Posting Group of the Software Change.', Comment = 'de-DE=Gibt die Geschäftsbuchungsgruppe der Softwareanpassung an.';
+            trigger OnValidate()
+            begin
+                if xRec."Gen. Bus. Posting Group" <> "Gen. Bus. Posting Group" then
+                    if GenBusinessPostingGroup.ValidateVatBusPostingGroup(GenBusinessPostingGroup, "Gen. Bus. Posting Group") then
+                        Validate("VAT Bus. Posting Group", GenBusinessPostingGroup."Def. VAT Bus. Posting Group");
+            end;
         }
         field(103; "VAT Bus. Posting Group"; Code[20])
         {
@@ -301,4 +307,9 @@ table 63610 "PTE Software Change"
     begin
         SoftwareChange.ShowComments("Comment Line Table Name"::"PTE Software Change", "No.");
     end;
+
+
+    
+    var
+        GenBusinessPostingGroup: Record "Gen. Business Posting Group";
 }

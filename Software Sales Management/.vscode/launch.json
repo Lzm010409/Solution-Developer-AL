@@ -1,35 +1,23 @@
 {
-    // Je Umgebung eine Konfiguration. Im Multi-Root-Workspace erscheinen sie in der
-    // Auswahlliste von "Ausfuehren und Debuggen", jeweils mit dem Ordnernamen davor.
-    // Die nicht benoetigte Konfiguration einfach loeschen und die Platzhalter fuellen.
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Software Sales Management - Cloud Sandbox",
-            "type": "al",
+            "name": "Your own server",
             "request": "launch",
-            "environmentType": "Sandbox",
-            "environmentName": "<Name der Sandbox>",
-            "startupObjectType": "Page",
-            "startupObjectId": 63610,
-            "breakOnError": "All",
-            "launchBrowser": true,
-            "schemaUpdateMode": "Synchronize"
-        },
-        {
-            "name": "Software Sales Management - OnPrem",
             "type": "al",
-            "request": "launch",
             "environmentType": "OnPrem",
             "server": "http://localhost",
-            "serverInstance": "BC260",
-            "port": 7049,
-            "authentication": "UserPassword",
+            "serverInstance": "Cronus",
+            "authentication": "Windows",
+            "startupObjectId": 14,
             "startupObjectType": "Page",
-            "startupObjectId": 63610,
             "breakOnError": "All",
             "launchBrowser": true,
-            "schemaUpdateMode": "Synchronize"
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "tenant": "default",
+            "usePublicURLFromServer": true,
+            "schemaUpdateMode": "ForceSync"
         }
     ]
 }
