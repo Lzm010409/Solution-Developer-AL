@@ -3,3 +3,6 @@
 .snapshots/
 .altemplates/
 .altestrunner/
+
+# Buildergebnisse aus F5 / AL: Package
+*.app
