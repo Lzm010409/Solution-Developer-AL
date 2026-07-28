@@ -8,5 +8,12 @@
     "al.packageCachePath": [
         "./.alpackages",
         "../.alpackages-shared"
-    ]
+    ],
+    "xliffSync.baseFile": "Commission Management.g.xlf",
+    "xliffSync.parseFromDeveloperNote": true,
+    "xliffSync.parseFromDeveloperNoteOverwrite": true,
+    "xliffSync.parseFromDeveloperNoteSeparator": "|",
+    "xliffSync.detectSourceTextChanges": true,
+    "xliffSync.autoCheckMissingTranslations": true,
+    "xliffSync.autoCheckNeedWorkTranslations": true
 }
