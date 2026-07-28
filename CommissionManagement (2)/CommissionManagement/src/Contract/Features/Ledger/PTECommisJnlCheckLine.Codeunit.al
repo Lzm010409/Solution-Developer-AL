@@ -10,6 +10,11 @@ codeunit 63031 "PTE Commis. Jnl.-Check Line"
     var
         ClosingDateErr: Label 'cannot be a closing date', Comment = 'de-DE=darf kein Abschlussdatum sein';
 
+    /// <summary>
+    /// Verifies a single journal line before it is posted. The routine works exclusively on the
+    /// line handed over, performs no user interaction and writes nothing, so that it can be
+    /// called from any posting context.
+    /// </summary>
     procedure RunCheck(var CommissionJournalLine: Record "PTE Commission Journal Line")
     begin
         if CommissionJournalLine.EmptyLine() then

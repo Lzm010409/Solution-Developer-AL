@@ -66,6 +66,10 @@ report 63000 "PTE Calc. Commissions"
         TotalCount: Integer;
         LastPercent: Integer;
 
+    /// <summary>
+    /// Hands a single customer entry to the commission posting routine. The batch job itself
+    /// never writes commission entries.
+    /// </summary>
     local procedure PostCommissionForCustLedgEntry()
     var
         CommissionJournalLine: Record "PTE Commission Journal Line";

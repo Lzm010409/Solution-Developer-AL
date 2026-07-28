@@ -240,6 +240,10 @@ table 63615 "PTE Posted Software Change"
         SoftwareChange.ShowComments("Comment Line Table Name"::"PTE Posted Software Change", "No.");
     end;
 
+    /// <summary>
+    /// Opens the standard search for all entries and documents that were created when this
+    /// document was posted.
+    /// </summary>
     procedure ShowEntries()
     var
         Navigate: Page Navigate;

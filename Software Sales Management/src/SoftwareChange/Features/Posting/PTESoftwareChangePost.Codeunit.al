@@ -16,6 +16,11 @@ codeunit 63630 "PTE Software Change-Post"
         SetupRead: Boolean;
         PostingMsg: Label 'Posting software change  #1##################\', Comment = 'de-DE=Buche Softwareanpassung  #1##################\\';
 
+    /// <summary>
+    /// Invoices a software change in one go: it is checked, billed as a sales invoice, turned
+    /// into a historical document, commissioned and finally removed. The routine performs no
+    /// user interaction so that it stays callable from tests and background sessions.
+    /// </summary>
     procedure RunWithCheck(var SoftwareChange2: Record "PTE Software Change")
     var
         SoftwareChange: Record "PTE Software Change";
@@ -29,6 +34,10 @@ codeunit 63630 "PTE Software Change-Post"
         LockTables();
         InitProgressWindow(SoftwareChange);
 
+        // The order of these four steps is binding: the invoice has to exist before the
+        // commission can be determined, because the commission is based on the amount of the
+        // resulting customer entry, and the original record may only be removed once both
+        // documents have been created.
         SalesInvoiceNo := PostSalesInvoice(SoftwareChange);
         InsertPostedSoftwareChange(SoftwareChange, SalesInvoiceNo);
         PostCommission(SoftwareChange, SalesInvoiceNo);
@@ -40,6 +49,10 @@ codeunit 63630 "PTE Software Change-Post"
         SoftwareChange2 := SoftwareChange;
     end;
 
+    /// <summary>
+    /// Returns the historical document created by the last run, so that the calling routine can
+    /// report it back to the user.
+    /// </summary>
     procedure GetPostedSoftwareChange(var PostedSoftwareChange2: Record "PTE Posted Software Change")
     begin
         PostedSoftwareChange2 := PostedSoftwareChange;
@@ -135,6 +148,8 @@ codeunit 63630 "PTE Software Change-Post"
         SalesHeader.Invoice := true;
         SalesPost.Run(SalesHeader);
 
+        // The posted document is located through the number the unposted one carried, because
+        // posting may draw a number from a separate series.
         SalesInvoiceHeader.SetRange("Pre-Assigned No.", PreAssignedNo);
         SalesInvoiceHeader.FindLast();
         exit(SalesInvoiceHeader."No.");

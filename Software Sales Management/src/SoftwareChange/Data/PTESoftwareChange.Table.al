@@ -277,6 +277,10 @@ table 63610 "PTE Software Change"
         SoftwareChange.DeleteComments("No.");
     end;
 
+    /// <summary>
+    /// Lets the user pick a related number series and draws the next number from it. Returns
+    /// false when the user leaves the selection without choosing.
+    /// </summary>
     procedure AssistEditNoSeries(OldSoftwareChange: Record "PTE Software Change"): Boolean
     var
         Setup: Record "PTE Software Sales Mgt. Setup";

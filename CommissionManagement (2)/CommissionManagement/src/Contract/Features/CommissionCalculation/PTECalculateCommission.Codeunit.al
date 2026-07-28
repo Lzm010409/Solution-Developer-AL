@@ -11,6 +11,10 @@ codeunit 63021 "PTE Calculate Commission"
         exit(Amount);
     end;
 
+    /// <summary>
+    /// Indicates that a commission has already been created for a salesperson and a customer
+    /// entry. Keeps the same document from being commissioned a second time.
+    /// </summary>
     procedure IsAlreadyCommissioned(SalespersonCode: Code[20]; LedgerEntryNo: Integer): Boolean
     var
         CommissionLedgerEntry: Record "PTE Commission Ledger Entry";

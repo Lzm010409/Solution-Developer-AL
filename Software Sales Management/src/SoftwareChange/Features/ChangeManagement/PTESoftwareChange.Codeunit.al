@@ -1,5 +1,9 @@
 codeunit 63610 "PTE Software Change"
 {
+    /// <summary>
+    /// Takes over the defaults of the selected template. Validating instead of assigning keeps
+    /// the checks of the individual fields in force.
+    /// </summary>
     procedure ApplyTemplate(var SoftwareChange: Record "PTE Software Change")
     var
         SoftwareChangeTemplate: Record "PTE Software Change Template";
@@ -29,6 +33,10 @@ codeunit 63610 "PTE Software Change"
         SoftwareChange.Validate("VAT Bus. Posting Group", Customer."VAT Bus. Posting Group");
     end;
 
+    /// <summary>
+    /// Takes over the communication data of the selected contact, or clears them again when the
+    /// assignment is removed.
+    /// </summary>
     procedure UpdateContactDetails(var SoftwareChange: Record "PTE Software Change")
     var
         Contact: Record Contact;
@@ -91,6 +99,10 @@ codeunit 63610 "PTE Software Change"
         CommentSheet.RunModal();
     end;
 
+    /// <summary>
+    /// Copies the remarks of one record to another. Used both when copying a software change and
+    /// when carrying the remarks over into the historical document.
+    /// </summary>
     procedure CopyComments(FromTableName: Enum "Comment Line Table Name"; ToTableName: Enum "Comment Line Table Name"; FromNo: Code[20]; ToNo: Code[20])
     var
         CommentLineSource: Record "Comment Line";
