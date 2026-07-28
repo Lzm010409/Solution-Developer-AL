@@ -12,6 +12,8 @@ einer eigenen Extension mit dem Namensschema `[Name der Extension] Test`.
 
 ## Objekte
 
+Objekttyporientiert abgelegt unter `src/codeunit/`.
+
 | Typ | ID | Name | Zweck |
 |---|---|---|---|
 | Codeunit | 63701 | Softw. Change Test Lib | legt Einrichtung, Stammdaten und Testdaten an |

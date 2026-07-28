@@ -14,13 +14,19 @@ Beleg und der Provisionsposten des Verkäufers.
 
 ## Ordnerstruktur
 
+Objekttyporientiert, ein Ordner je Objekttyp:
+
 ```
 src/
-├── Setup/           Einrichtung mit den beiden Nummernkreisen
-├── SoftwareChange/  Kern: Vorlage, Anpassung, gebuchte Anpassung, Kopieren, Buchen
-├── Sales/           Erweiterungen des BC-Belegflusses
-├── Commission/      Anbindung an das Provisionsmanagement
-└── Permission/      vier Berechtigungssätze
+├── codeunit/           Tabellenlogik, Kopieren, Buchungskette, Navigate, Provisionsanbindung
+├── enum/               Abrechnungsart und Status
+├── enumextension/      Erweiterung der BC-Bemerkungsarten
+├── page/               Einrichtung, Vorlagen, Anpassungen, gebuchte Anpassungen
+├── pageextension/      Verkaufsbelege, Verkäufer, Rollencenter
+├── permissionset/      vier Berechtigungssätze
+├── report/             Kopierdialog
+├── table/              Einrichtung, Vorlage, Anpassung, gebuchte Anpassung
+└── tableextension/     BC-Belegfluss und die beiden Tabellen der Basis-App
 ```
 
 ## Objekte
