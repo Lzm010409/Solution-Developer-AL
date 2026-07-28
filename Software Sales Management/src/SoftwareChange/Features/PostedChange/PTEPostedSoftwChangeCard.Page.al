@@ -32,6 +32,7 @@ page 63616 "PTE Posted Softw. Change Card"
                 }
                 field("Closing Date"; Rec."Closing Date")
                 {
+                    Importance = Additional;
                 }
                 field("Posting Date"; Rec."Posting Date")
                 {
@@ -44,6 +45,7 @@ page 63616 "PTE Posted Softw. Change Card"
                 }
                 field("User ID"; Rec."User ID")
                 {
+                    Importance = Additional;
                 }
             }
             group(Invoicing)
@@ -153,11 +155,21 @@ page 63616 "PTE Posted Softw. Change Card"
         }
         area(Promoted)
         {
-            actionref(FindEntriesRef; FindEntries)
+            group(Category_Process)
             {
+                Caption = 'Process', Comment = 'de-DE=Prozess';
+
+                actionref(FindEntriesRef; FindEntries)
+                {
+                }
             }
-            actionref(ShowCommentsRef; ShowComments)
+            group(Category_Category4)
             {
+                Caption = 'Software Change', Comment = 'de-DE=Software Anpassung';
+
+                actionref(ShowCommentsRef; ShowComments)
+                {
+                }
             }
         }
     }

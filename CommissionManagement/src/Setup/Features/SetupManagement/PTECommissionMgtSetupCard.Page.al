@@ -84,10 +84,22 @@ page 63000 "PTE Commission Mgt. Setup Card"
                 }
             }
         }
-        area(Promoted){
-            actionref(CommissionPageRef; PTECommissionContracts){}
-            actionref(CommissionContractTypesRef; PTECommissionTypes){}
-            actionref(SalesPersonRef; PTESalesPersons){}
+        area(Promoted)
+        {
+            group(Category_Category4)
+            {
+                Caption = 'Commission', Comment = 'de-DE=Provision';
+
+                actionref(CommissionPageRef; PTECommissionContracts)
+                {
+                }
+                actionref(CommissionContractTypesRef; PTECommissionTypes)
+                {
+                }
+                actionref(SalesPersonRef; PTESalesPersons)
+                {
+                }
+            }
         }
     }
     trigger OnOpenPage()

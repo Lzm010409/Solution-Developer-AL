@@ -95,11 +95,21 @@ page 63615 "PTE Posted Softw. Change List"
         }
         area(Promoted)
         {
-            actionref(FindEntriesRef; FindEntries)
+            group(Category_Process)
             {
+                Caption = 'Process', Comment = 'de-DE=Prozess';
+
+                actionref(FindEntriesRef; FindEntries)
+                {
+                }
             }
-            actionref(ShowCommentsRef; ShowComments)
+            group(Category_Category4)
             {
+                Caption = 'Software Change', Comment = 'de-DE=Software Anpassung';
+
+                actionref(ShowCommentsRef; ShowComments)
+                {
+                }
             }
         }
     }

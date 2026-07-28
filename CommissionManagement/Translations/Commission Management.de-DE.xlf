@@ -4,9 +4,9 @@
     <body>
       <group id="body">
         <trans-unit id="Table 2127244123 - Field 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Code of the Commission Comment Line.</source>
-          <target state="translated">Dies ist der Code der Provisionskommentarzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Code der Provisionskommentarzeile.</note>
+          <source>Specifies the Code of the Commission Comment Line.</source>
+          <target state="translated">Gibt den Code der Provisionskommentarzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Code der Provisionskommentarzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -16,9 +16,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 2790486453 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Comment of the Commission Comment Line.</source>
-          <target state="translated">Dies ist der Kommentar der Provisionskommentarzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Kommentar der Provisionskommentarzeile.</note>
+          <source>Specifies the Comment of the Commission Comment Line.</source>
+          <target state="translated">Gibt den Kommentar der Provisionskommentarzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Kommentar der Provisionskommentarzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Comment - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -28,9 +28,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 3192175264 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Date of the Commission Comment Line.</source>
-          <target state="translated">Dies ist das Datum der Provisionskommentarzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Datum der Provisionskommentarzeile.</note>
+          <source>Specifies the Date of the Commission Comment Line.</source>
+          <target state="translated">Gibt das Datum der Provisionskommentarzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Datum der Provisionskommentarzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 3192175264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -40,9 +40,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Line No. of the Commission Comment Line.</source>
-          <target state="translated">Dies ist die Zeilennr. der Provisionskommentarzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Zeilennr. der Provisionskommentarzeile.</note>
+          <source>Specifies the Line No. of the Commission Comment Line.</source>
+          <target state="translated">Gibt die Zeilennr. der Provisionskommentarzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Zeilennr. der Provisionskommentarzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Line No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -52,9 +52,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Line No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Contract No. of the Commission Comment Line.</source>
-          <target state="translated">Dies ist die Vertrags Nr. des Provisionskommentarzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Vertrags Nr. des Provisionskommentarzeile.</note>
+          <source>Specifies the Contract No. of the Commission Comment Line.</source>
+          <target state="translated">Gibt die Vertrags Nr. des Provisionskommentarzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Vertrags Nr. des Provisionskommentarzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -64,9 +64,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 3808951907 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Table Name of the Commission Comment Line.</source>
-          <target state="translated">Dies ist der Tabellenname der Provisionskommentarzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Tabellenname der Provisionskommentarzeile.</note>
+          <source>Specifies the Table Name of the Commission Comment Line.</source>
+          <target state="translated">Gibt den Tabellenname der Provisionskommentarzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Tabellenname der Provisionskommentarzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Table Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2127244123 - Field 3808951907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -82,7 +82,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - NamedType OnDeleteRemainingSalespersonsErr</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 2790486453 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This indicates whether there is a comment for this Commission Contract.</source>
+          <source>Specifies whether there is a comment for this Commission Contract.</source>
           <target state="translated">Gibt an, ob es einen Kommentar für diesen Provisions Vertrag gibt.</target>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt an, ob es einen Kommentar für diesen Provisions Vertrag gibt.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Comment - Property ToolTip</note>
@@ -94,9 +94,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 893895184 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Bonus Amount of the Commission Contract.</source>
-          <target state="translated">Dies ist der Provisionsbonus Betrag des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisionsbonus Betrag des Provisions Vertrags.</note>
+          <source>Specifies the Commission Bonus Amount of the Commission Contract.</source>
+          <target state="translated">Gibt den Provisionsbonus Betrag des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisionsbonus Betrag des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Commission Bonus Amount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 893895184 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -106,9 +106,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Commission Bonus Amount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 2611672591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Percentage of the Commission Contract.</source>
-          <target state="translated">Der Provisions Prozentsatz des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Provisions Prozentsatz des Provisions Vertrags.</note>
+          <source>Specifies the Commission Percentage of the Commission Contract.</source>
+          <target state="translated">Gibt den Provisions Prozentsatz des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisions Prozentsatz des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Commission Percentage - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 2611672591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -118,9 +118,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Commission Percentage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 769429884 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Type Code of the Commission Contract.</source>
-          <target state="translated">Der Provisions Typ Code des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Provisions Typ Code des Provisions Vertrags.</note>
+          <source>Specifies the Commission Type Code of the Commission Contract.</source>
+          <target state="translated">Gibt den Provisions Typ Code des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisions Typ Code des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Commission Type Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 769429884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -130,9 +130,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Commission Type Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 1047322293 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Type Description of the Commission Contract.</source>
-          <target state="translated">Die Beschreibung des Provisions Typs des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Beschreibung des Provisions Typs des Provisions Vertrags.</note>
+          <source>Specifies the Commission Type Description of the Commission Contract.</source>
+          <target state="translated">Gibt die Beschreibung des Provisions Typs des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung des Provisions Typs des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Commission Type Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 1047322293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -142,9 +142,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Commission Type Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Description of the Commission Contract.</source>
-          <target state="translated">Die Beschreibung des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Beschreibung des Provisions Vertrags.</note>
+          <source>Specifies the Description of the Commission Contract.</source>
+          <target state="translated">Gibt die Beschreibung des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -154,9 +154,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 458406397 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Ending Date of the Commission Contract.</source>
-          <target state="translated">Das Enddatum des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Das Enddatum des Provisions Vertrags.</note>
+          <source>Specifies the Ending Date of the Commission Contract.</source>
+          <target state="translated">Gibt das Enddatum des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Enddatum des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Ending Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 458406397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -172,9 +172,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Ending Date - Method OnValidate - NamedType EndingDateErr</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the No. of the Commission Contract.</source>
-          <target state="translated">Die Nr. des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Nr. des Provisions Vertrags.</note>
+          <source>Specifies the No. of the Commission Contract.</source>
+          <target state="translated">Gibt die Nr. des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Nr. des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -184,9 +184,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 1351594800 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the No. Series of the Commission Contract.</source>
-          <target state="translated">Dies ist der Nummernkreis des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Nummernkreis des Provisions Vertrags.</note>
+          <source>Specifies the No. Series of the Commission Contract.</source>
+          <target state="translated">Gibt den Nummernkreis des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Nummernkreis des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field No. Series - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -196,7 +196,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field No. Series - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 1837204980 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This indicates whether to Pay Commission Bonus for the Commission Contract.</source>
+          <source>Specifies whether to Pay Commission Bonus for the Commission Contract.</source>
           <target state="translated">Gibt an, ob der Provisionsbonus für den Provisions Vertrag ausgezahlt werden soll.</target>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt an, ob der Provisionsbonus für den Provisions Vertrag ausgezahlt werden soll.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Pay Commission Bonus - Property ToolTip</note>
@@ -208,9 +208,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Pay Commission Bonus - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 460889064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Starting Date of the Commission Contract.</source>
-          <target state="translated">Das Startdatum des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Das Startdatum des Provisions Vertrags.</note>
+          <source>Specifies the Starting Date of the Commission Contract.</source>
+          <target state="translated">Gibt das Startdatum des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Startdatum des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Starting Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 460889064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -226,9 +226,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Starting Date - Method OnValidate - NamedType StartingDateErr</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Status of the Commission Contract.</source>
-          <target state="translated">Der Status des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Status des Provisions Vertrags.</note>
+          <source>Specifies the Status of the Commission Contract.</source>
+          <target state="translated">Gibt den Status des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Status des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Status - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -238,9 +238,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Status - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 3331548758 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Target Achievement Amount of the Commission Contract.</source>
-          <target state="translated">Dies ist der Zielerreichungsbetrag des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Zielerreichungsbetrag des Provisions Vertrags.</note>
+          <source>Specifies the Target Achievement Amount of the Commission Contract.</source>
+          <target state="translated">Gibt den Zielerreichungsbetrag des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Zielerreichungsbetrag des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Field Target Achievement Amount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - Field 3331548758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -256,9 +256,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Amount of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Betrag der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Betrag der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Amount of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Betrag der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Betrag der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Amount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -268,9 +268,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Amount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 592951229 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Amount (LCY) of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Betrag (Lokalwährung) der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Betrag (Lokalwährung) der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Amount (LCY) of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Betrag (Lokalwährung) der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Betrag (Lokalwährung) der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Amount (LCY) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 592951229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -280,9 +280,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Amount (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3413220098 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Amount (LCY) of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Provisionsbetrag (Lokalwährung) der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisionsbetrag (Lokalwährung) der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Commission Amount (LCY) of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Provisionsbetrag (Lokalwährung) der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisionsbetrag (Lokalwährung) der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Commission Amount (LCY) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3413220098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -292,9 +292,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Commission Amount (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 304384212 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Contract No. of the Commission Journal Line.</source>
-          <target state="translated">Dies ist die Provisionsvertragsnr. der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Provisionsvertragsnr. der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Commission Contract No. of the Commission Journal Line.</source>
+          <target state="translated">Gibt die Provisionsvertragsnr. der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Provisionsvertragsnr. der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Commission Contract No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 304384212 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -304,9 +304,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Commission Contract No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2611672591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Percentage of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Provisions Prozentsatz der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisions Prozentsatz der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Commission Percentage of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Provisions Prozentsatz der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisions Prozentsatz der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Commission Percentage - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2611672591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -316,9 +316,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Commission Percentage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3401411167 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Type of the Commission Journal Line.</source>
-          <target state="translated">Dies ist die Provisionsart der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Provisionsart der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Commission Type of the Commission Journal Line.</source>
+          <target state="translated">Gibt die Provisionsart der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Provisionsart der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Commission Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3401411167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -328,9 +328,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Commission Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Currency Code of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Währungscode der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Währungscode der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Currency Code of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Währungscode der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Währungscode der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Currency Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -340,9 +340,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Currency Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2538166446 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Customer Ledger Entry No. of the Commission Journal Line.</source>
-          <target state="translated">Dies ist die Kundenbuchungsnr. der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Kundenbuchungsnr. der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Customer Ledger Entry No. of the Commission Journal Line.</source>
+          <target state="translated">Gibt die Kundenbuchungsnr. der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Kundenbuchungsnr. der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Customer Ledger Entry No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2538166446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -352,9 +352,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Customer Ledger Entry No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 4190130733 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Customer No. of the Commission Journal Line.</source>
-          <target state="translated">Dies ist die Kundennr. der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Kundennr. der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Customer No. of the Commission Journal Line.</source>
+          <target state="translated">Gibt die Kundennr. der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Kundennr. der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Customer No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -364,9 +364,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Customer No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 580412389 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Document Date of the Commission Journal Line.</source>
-          <target state="translated">Dies ist das Belegdatum der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Belegdatum der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Document Date of the Commission Journal Line.</source>
+          <target state="translated">Gibt das Belegdatum der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Belegdatum der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Document Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 580412389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -376,9 +376,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Document Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Document No. of the Commission Journal Line.</source>
-          <target state="translated">Dies ist die Belegnr. der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Belegnr. der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Document No. of the Commission Journal Line.</source>
+          <target state="translated">Gibt die Belegnr. der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Belegnr. der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -388,9 +388,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Document No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Document Type of the Commission Journal Line.</source>
-          <target state="translated">Dies ist die Belegart der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Belegart der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Document Type of the Commission Journal Line.</source>
+          <target state="translated">Gibt die Belegart der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Belegart der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Document Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2363328873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -400,9 +400,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Document Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2704330142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Journal Batch Name of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Buch.-Blattname der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Buch.-Blattname der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Journal Batch Name of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Buch.-Blattname der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Buch.-Blattname der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Journal Batch Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2704330142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -412,9 +412,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Journal Batch Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3684440170 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Journal Template Name of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Buch.-Blattvorlagenname der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Buch.-Blattvorlagenname der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Journal Template Name of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Buch.-Blattvorlagenname der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Buch.-Blattvorlagenname der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Journal Template Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3684440170 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -424,9 +424,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Journal Template Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Line No. of the Commission Journal Line.</source>
-          <target state="translated">Dies ist die Zeilennr. der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Zeilennr. der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Line No. of the Commission Journal Line.</source>
+          <target state="translated">Gibt die Zeilennr. der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Zeilennr. der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Line No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -436,9 +436,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Line No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Posting Date of the Commission Journal Line.</source>
-          <target state="translated">Dies ist das Buchungsdatum der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Buchungsdatum der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Posting Date of the Commission Journal Line.</source>
+          <target state="translated">Gibt das Buchungsdatum der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Buchungsdatum der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Posting Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -448,9 +448,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Posting Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3268709882 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Posting Description of the Commission Journal Line.</source>
-          <target state="translated">Dies ist die Buchungsbeschreibung der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Buchungsbeschreibung der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Posting Description of the Commission Journal Line.</source>
+          <target state="translated">Gibt die Buchungsbeschreibung der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Buchungsbeschreibung der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Posting Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 3268709882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -460,9 +460,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Posting Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 1908046867 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Reason Code of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Ursachencode der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Ursachencode der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Reason Code of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Ursachencode der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Ursachencode der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Reason Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 1908046867 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -472,9 +472,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Reason Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 553464652 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Salesperson Code of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Verkäufercode der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Verkäufercode der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Salesperson Code of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Verkäufercode der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Verkäufercode der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Salesperson Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 553464652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -484,9 +484,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Salesperson Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2720485332 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Source Code of the Commission Journal Line.</source>
-          <target state="translated">Dies ist der Herkunftscode der Provisions Buch.-Blattzeile.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Herkunftscode der Provisions Buch.-Blattzeile.</note>
+          <source>Specifies the Source Code of the Commission Journal Line.</source>
+          <target state="translated">Gibt den Herkunftscode der Provisions Buch.-Blattzeile an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Herkunftscode der Provisions Buch.-Blattzeile an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Source Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2319255389 - Field 2720485332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -496,9 +496,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Source Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Amount of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist der Betrag des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Betrag des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Amount of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt den Betrag des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Betrag des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Amount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -508,9 +508,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Amount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 592951229 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Amount (LCY) of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist der Betrag (Lokalwährung) des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Betrag (Lokalwährung) des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Amount (LCY) of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt den Betrag (Lokalwährung) des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Betrag (Lokalwährung) des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Amount (LCY) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 592951229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -520,9 +520,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Amount (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 3413220098 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Amount (LCY) of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist der Provisionsbetrag (Lokalwährung) des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisionsbetrag (Lokalwährung) des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Commission Amount (LCY) of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt den Provisionsbetrag (Lokalwährung) des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisionsbetrag (Lokalwährung) des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Commission Amount (LCY) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 3413220098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -532,9 +532,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Commission Amount (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 304384212 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Contract No. of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist die Provisionsvertragsnr. des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Provisionsvertragsnr. des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Commission Contract No. of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt die Provisionsvertragsnr. des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Provisionsvertragsnr. des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Commission Contract No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 304384212 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -544,9 +544,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Commission Contract No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 2611672591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Percentage of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist der Provisions Prozentsatz des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisions Prozentsatz des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Commission Percentage of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt den Provisions Prozentsatz des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisions Prozentsatz des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Commission Percentage - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 2611672591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -556,9 +556,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Commission Percentage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 3401411167 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Type of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist die Provisionsart des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Provisionsart des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Commission Type of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt die Provisionsart des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Provisionsart des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Commission Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 3401411167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -568,9 +568,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Commission Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Currency Code of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist der Währungscode des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Währungscode des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Currency Code of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt den Währungscode des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Währungscode des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Currency Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 4198939294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -580,9 +580,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Currency Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 2538166446 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Customer Ledger Entry No. of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist die Kundenbuchungsnr. des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Kundenbuchungsnr. des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Customer Ledger Entry No. of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt die Kundenbuchungsnr. des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Kundenbuchungsnr. des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Customer Ledger Entry No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 2538166446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -592,9 +592,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Customer Ledger Entry No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 4190130733 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Customer No. of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist die Kundennr. des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Kundennr. des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Customer No. of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt die Kundennr. des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Kundennr. des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Customer No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -604,9 +604,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Customer No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Document No. of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist die Belegnr. des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Belegnr. des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Document No. of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt die Belegnr. des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Belegnr. des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -616,9 +616,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Document No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Document Type of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist die Belegart des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Belegart des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Document Type of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt die Belegart des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Belegart des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Document Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 2363328873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -628,9 +628,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Document Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 883711285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Entry No. of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist die Belegnr. des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Belegnr. des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Entry No. of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt die Belegnr. des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Belegnr. des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Entry No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -640,9 +640,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Entry No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Posting Date of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist das Buchungsdatum des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Buchungsdatum des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Posting Date of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt das Buchungsdatum des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Buchungsdatum des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Posting Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -652,9 +652,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Posting Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 3268709882 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Posting Description of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist die Buchungsbeschreibung des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Buchungsbeschreibung des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Posting Description of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt die Buchungsbeschreibung des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Buchungsbeschreibung des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Posting Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 3268709882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -664,9 +664,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Posting Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 553464652 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Salesperson Code of the Commission Ledger Entry.</source>
-          <target state="translated">Dies ist der Verkäufercode des Provisionsbuchungseintrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Verkäufercode des Provisionsbuchungseintrags.</note>
+          <source>Specifies the Salesperson Code of the Commission Ledger Entry.</source>
+          <target state="translated">Gibt den Verkäufercode des Provisionsbuchungseintrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Verkäufercode des Provisionsbuchungseintrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Salesperson Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1876454807 - Field 553464652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -688,9 +688,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Mgt. Setup - Field Contract Nos. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1747303013 - Field 1663593181 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Primary Key of the Datapoint.</source>
-          <target state="translated">Primärschlüssel des Datensatzes.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Primärschlüssel des Datensatzes.</note>
+          <source>Specifies the Primary Key of the Datapoint.</source>
+          <target state="translated">Gibt Primärschlüssel des Datensatzes an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt Primärschlüssel des Datensatzes an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Mgt. Setup - Field Primary Key - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1747303013 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -700,9 +700,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Mgt. Setup - Field Primary Key - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1747303013 - Field 2556434784 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Rounding Precision.</source>
-          <target state="translated">Die Rundungspräzision mit welcher gerundet wird.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Rundungspräzision mit welcher gerundet wird.</note>
+          <source>Specifies the Rounding Precision.</source>
+          <target state="translated">Gibt die Rundungspräzision mit welcher gerundet wird an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Rundungspräzision mit welcher gerundet wird an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Mgt. Setup - Field Rounding Precision - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1747303013 - Field 2556434784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -712,9 +712,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Mgt. Setup - Field Rounding Precision - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2521517640 - Field 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Code of the Commission Type.</source>
-          <target state="translated">Der Code des Provisions Typs.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Code des Provisions Typs.</note>
+          <source>Specifies the Code of the Commission Type.</source>
+          <target state="translated">Gibt den Code des Provisions Typs an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Code des Provisions Typs an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Type - Field Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2521517640 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -724,9 +724,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Type - Field Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2521517640 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Description of the Commission Type.</source>
-          <target state="translated">Die Beschreibung des Provisions Typs.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Beschreibung des Provisions Typs.</note>
+          <source>Specifies the Description of the Commission Type.</source>
+          <target state="translated">Gibt die Beschreibung des Provisions Typs an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung des Provisions Typs an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Type - Field Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 2521517640 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -772,9 +772,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 2611672591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the commission percentage of the Commission Contract.</source>
-          <target state="translated">Der Provisionsprozentsatz des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Provisionsprozentsatz des Provisions Vertrags.</note>
+          <source>Specifies the commission percentage of the Commission Contract.</source>
+          <target state="translated">Gibt den Provisionsprozentsatz des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisionsprozentsatz des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Commission Percentage - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 2611672591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -784,9 +784,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Commission Percentage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 1047322293 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the description of the commission type of the Commission Contract.</source>
-          <target state="translated">Die Beschreibung der Provisionsart des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Beschreibung der Provisionsart des Provisions Vertrags.</note>
+          <source>Specifies the description of the commission type of the Commission Contract.</source>
+          <target state="translated">Gibt die Beschreibung der Provisionsart des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung der Provisionsart des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Commission Type Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 1047322293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -796,9 +796,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Commission Type Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the description of the Commission Contract.</source>
-          <target state="translated">Die Beschreibung des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Beschreibung des Provisions Vertrags.</note>
+          <source>Specifies the description of the Commission Contract.</source>
+          <target state="translated">Gibt die Beschreibung des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -808,9 +808,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 458406397 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the ending date of the Commission Contract.</source>
-          <target state="translated">Das Enddatum des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Das Enddatum des Provisions Vertrags.</note>
+          <source>Specifies the ending date of the Commission Contract.</source>
+          <target state="translated">Gibt das Enddatum des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Enddatum des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Ending Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 458406397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -820,7 +820,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Ending Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 1837204980 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This indicates whether the commission bonus should be paid.</source>
+          <source>Specifies whether the commission bonus should be paid.</source>
           <target state="translated">Gibt an, ob der Provisionsbonus gezahlt werden soll.</target>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt an, ob der Provisionsbonus gezahlt werden soll.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Pay Commission Bonus - Property ToolTip</note>
@@ -832,9 +832,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Pay Commission Bonus - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 460889064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the starting date of the Commission Contract.</source>
-          <target state="translated">Das Startdatum des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Das Startdatum des Provisions Vertrags.</note>
+          <source>Specifies the starting date of the Commission Contract.</source>
+          <target state="translated">Gibt das Startdatum des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Startdatum des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Starting Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 460889064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -844,9 +844,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Starting Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the status of the Commission Contract.</source>
-          <target state="translated">Der Status des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Status des Provisions Vertrags.</note>
+          <source>Specifies the status of the Commission Contract.</source>
+          <target state="translated">Gibt den Status des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Status des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Com. Contract Factbox - Control Status - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 4022549379 - Control 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -910,9 +910,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 3926027074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This indicates whether there is a comment for the Commission Contract.</source>
-          <target state="translated">Ist ein Kommentar vorhanden.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Ist ein Kommentar vorhanden.</note>
+          <source>Specifies whether there is a comment for the Commission Contract.</source>
+          <target state="translated">Gibt Ist ein Kommentar vorhanden an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt Ist ein Kommentar vorhanden an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Comment - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 3926027074 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -922,9 +922,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Comment - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 769429884 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the commission type of the Commission Contract.</source>
-          <target state="translated">Die Provisionsart des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Provisionsart des Provisions Vertrags.</note>
+          <source>Specifies the commission type of the Commission Contract.</source>
+          <target state="translated">Gibt die Provisionsart des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Provisionsart des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Type Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 769429884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -934,9 +934,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Type Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 1047322293 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the description of the commission type of the Commission Contract.</source>
-          <target state="translated">Die Beschreibung der Provisionsart des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Beschreibung der Provisionsart des Provisions Vertrags.</note>
+          <source>Specifies the description of the commission type of the Commission Contract.</source>
+          <target state="translated">Gibt die Beschreibung der Provisionsart des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung der Provisionsart des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Type Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 1047322293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -946,9 +946,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Type Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the description of the Commission Contract.</source>
-          <target state="translated">Die Beschreibung des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Beschreibung des Provisions Vertrags.</note>
+          <source>Specifies the description of the Commission Contract.</source>
+          <target state="translated">Gibt die Beschreibung des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -958,9 +958,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 458406397 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the ending date of the Commission Contract.</source>
-          <target state="translated">Das Enddatum des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Das Enddatum des Provisions Vertrags.</note>
+          <source>Specifies the ending date of the Commission Contract.</source>
+          <target state="translated">Gibt das Enddatum des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Enddatum des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Ending Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 458406397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -970,9 +970,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Ending Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the unique number of the Commission Contract.</source>
-          <target state="translated">Die eindeutige Nummer des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die eindeutige Nummer des Provisions Vertrags.</note>
+          <source>Specifies the unique number of the Commission Contract.</source>
+          <target state="translated">Gibt die eindeutige Nummer des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die eindeutige Nummer des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -982,9 +982,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 460889064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the starting date of the Commission Contract.</source>
-          <target state="translated">Das Startdatum des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Das Startdatum des Provisions Vertrags.</note>
+          <source>Specifies the starting date of the Commission Contract.</source>
+          <target state="translated">Gibt das Startdatum des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Startdatum des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Starting Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 460889064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -994,9 +994,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Starting Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the status of the Commission Contract.</source>
-          <target state="translated">Der Status des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Status des Provisions Vertrags.</note>
+          <source>Specifies the status of the Commission Contract.</source>
+          <target state="translated">Gibt den Status des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Status des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Status - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1012,9 +1012,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Payout - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 893895184 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the commission bonus amount of the Commission Contract.</source>
-          <target state="translated">Der Provisionsbonus Betrag des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Provisionsbonus Betrag des Provisions Vertrags.</note>
+          <source>Specifies the commission bonus amount of the Commission Contract.</source>
+          <target state="translated">Gibt den Provisionsbonus Betrag des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisionsbonus Betrag des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Bonus Amount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 893895184 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1024,9 +1024,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Bonus Amount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 2611672591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the commission percentage of the Commission Contract.</source>
-          <target state="translated">Der Provisions Prozentsatz des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Provisions Prozentsatz des Provisions Vertrags.</note>
+          <source>Specifies the commission percentage of the Commission Contract.</source>
+          <target state="translated">Gibt den Provisions Prozentsatz des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisions Prozentsatz des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Percentage - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 2611672591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1036,7 +1036,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Commission Percentage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 1837204980 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This indicates whether to Pay Commission Bonus for the Commission Contract.</source>
+          <source>Specifies whether to Pay Commission Bonus for the Commission Contract.</source>
           <target state="translated">Gibt an, ob der Provisionsbonus für den Provisions Vertrag ausgezahlt werden soll.</target>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt an, ob der Provisionsbonus für den Provisions Vertrag ausgezahlt werden soll.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Pay Commission Bonus - Property ToolTip</note>
@@ -1048,9 +1048,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Pay Commission Bonus - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 3331548758 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the target achievement amount of the Commission Contract.</source>
-          <target state="translated">Der Zielerreichungsbetrag des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Zielerreichungsbetrag des Provisions Vertrags.</note>
+          <source>Specifies the target achievement amount of the Commission Contract.</source>
+          <target state="translated">Gibt den Zielerreichungsbetrag des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Zielerreichungsbetrag des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Control Target Achievement Amount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3352350518 - Control 3331548758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1089,6 +1089,12 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Verkäufer</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Action SalespersonContractAction - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3352350518 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission Contract</source>
+          <target state="translated">Provisionsvertrag</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Provisionsvertrag</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract Card - Action Category_Category4 - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 518729648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Commission Contract List</source>
           <target state="translated">Liste der Provisionsverträge</target>
@@ -1096,9 +1102,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the unique number of the Commission Contract.</source>
-          <target state="translated">Die eindeutige Nummer des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die eindeutige Nummer des Provisions Vertrags.</note>
+          <source>Specifies the unique number of the Commission Contract.</source>
+          <target state="translated">Gibt die eindeutige Nummer des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die eindeutige Nummer des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1108,9 +1114,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 1047322293 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the commission type of the Commission Contract.</source>
-          <target state="translated">Die Provisionsart des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Provisionsart des Provisions Vertrags.</note>
+          <source>Specifies the commission type of the Commission Contract.</source>
+          <target state="translated">Gibt die Provisionsart des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Provisionsart des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Commission Type Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 1047322293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1120,9 +1126,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Commission Type Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the description of the Commission Contract.</source>
-          <target state="translated">Die Beschreibung des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Beschreibung des Provisions Vertrags.</note>
+          <source>Specifies the description of the Commission Contract.</source>
+          <target state="translated">Gibt die Beschreibung des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1132,9 +1138,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 458406397 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the ending date of the Commission Contract.</source>
-          <target state="translated">Das Enddatum des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Das Enddatum des Provisions Vertrags.</note>
+          <source>Specifies the ending date of the Commission Contract.</source>
+          <target state="translated">Gibt das Enddatum des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Enddatum des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Ending Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 458406397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1144,9 +1150,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Ending Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 460889064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the starting date of the Commission Contract.</source>
-          <target state="translated">Das Startdatum des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Das Startdatum des Provisions Vertrags.</note>
+          <source>Specifies the starting date of the Commission Contract.</source>
+          <target state="translated">Gibt das Startdatum des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Startdatum des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Starting Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 460889064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1156,9 +1162,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Starting Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the status of the Commission Contract.</source>
-          <target state="translated">Der Status des Provisions Vertrags.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Der Status des Provisions Vertrags.</note>
+          <source>Specifies the status of the Commission Contract.</source>
+          <target state="translated">Gibt den Status des Provisions Vertrags an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Status des Provisions Vertrags an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Contract List - Control Status - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 518729648 - Control 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1353,6 +1359,12 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Verkäufer</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Mgt. Setup Card - Action PTESalesPersons - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 453009769 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission</source>
+          <target state="translated">Provision</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Provision</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Mgt. Setup Card - Action Category_Category4 - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2911895994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Commission Types</source>
           <target state="translated">Liste der Provisionsarten</target>
@@ -1486,9 +1498,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. List Ext - Action PTEOpenCommissionLedgerEntries - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1396996524 - Control 1403305065 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1352029029">
-          <source>This is the Commission Amount (LCY) of the Salesperson/Purchaser.</source>
-          <target state="translated">Dies ist der Provisionsbetrag (LCY) des Verkäufers/Einkäufers.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisionsbetrag (LCY) des Verkäufers/Einkäufers.</note>
+          <source>Specifies the Commission Amount (LCY) of the Salesperson/Purchaser.</source>
+          <target state="translated">Gibt den Provisionsbetrag (LCY) des Verkäufers/Einkäufers an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisionsbetrag (LCY) des Verkäufers/Einkäufers an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. List Ext - Control PTECommission Amount (LCY) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1396996524 - Control 1403305065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1352029029">
@@ -1498,9 +1510,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. List Ext - Control PTECommission Amount (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1396996524 - Control 806018651 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1352029029">
-          <source>This is the Commission Contract No. of the Salesperson/Purchaser.</source>
-          <target state="translated">Dies ist die Provisionsvertragsnr. des Verkäufers/Einkäufers.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Provisionsvertragsnr. des Verkäufers/Einkäufers.</note>
+          <source>Specifies the Commission Contract No. of the Salesperson/Purchaser.</source>
+          <target state="translated">Gibt die Provisionsvertragsnr. des Verkäufers/Einkäufers an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Provisionsvertragsnr. des Verkäufers/Einkäufers an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. List Ext - Control PTECommission Contract No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1396996524 - Control 806018651 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1352029029">
@@ -1534,9 +1546,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. Page Ext - Action PTEOpenCommissionLedgerEntries - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2949207203 - Control 1403305065 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1258343441">
-          <source>This is the Commission Amount (LCY) of the Salesperson/Purchaser.</source>
-          <target state="translated">Dies ist der Provisionsbetrag (LCY) des Verkäufers/Einkäufers.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisionsbetrag (LCY) des Verkäufers/Einkäufers.</note>
+          <source>Specifies the Commission Amount (LCY) of the Salesperson/Purchaser.</source>
+          <target state="translated">Gibt den Provisionsbetrag (LCY) des Verkäufers/Einkäufers an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisionsbetrag (LCY) des Verkäufers/Einkäufers an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. Page Ext - Control PTECommission Amount (LCY) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2949207203 - Control 1403305065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1258343441">
@@ -1546,9 +1558,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. Page Ext - Control PTECommission Amount (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2949207203 - Control 806018651 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1258343441">
-          <source>This is the Commission Contract No. of the Salesperson/Purchaser.</source>
-          <target state="translated">Dies ist die Provisionsvertragsnr. des Verkäufers/Einkäufers.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Provisionsvertragsnr. des Verkäufers/Einkäufers.</note>
+          <source>Specifies the Commission Contract No. of the Salesperson/Purchaser.</source>
+          <target state="translated">Gibt die Provisionsvertragsnr. des Verkäufers/Einkäufers an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Provisionsvertragsnr. des Verkäufers/Einkäufers an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. Page Ext - Control PTECommission Contract No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2949207203 - Control 806018651 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1258343441">
@@ -1558,9 +1570,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. Page Ext - Control PTECommission Contract No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3118449088 - Field 2337685545 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
-          <source>This is the PTE Commission Amount (LCY) field added to Salesperson/Purchaser table by PTE Commission Management Extension.</source>
-          <target state="translated">Dies ist das Feld PTE Provisionsbetrag (Lokalwährung) zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Feld PTE Provisionsbetrag (Lokalwährung) zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung.</note>
+          <source>Specifies the PTE Commission Amount (LCY) field added to Salesperson/Purchaser table by PTE Commission Management Extension.</source>
+          <target state="translated">Gibt das Feld PTE Provisionsbetrag (Lokalwährung) zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Feld PTE Provisionsbetrag (Lokalwährung) zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Salesperson Com. Table Ext - Field PTE Commission Amount (LCY) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 3118449088 - Field 2337685545 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
@@ -1570,9 +1582,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Salesperson Com. Table Ext - Field PTE Commission Amount (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3118449088 - Field 1387114139 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
-          <source>This is the PTE Commission Contract No. field added to Salesperson/Purchaser table by PTE Commission Management Extension.</source>
-          <target state="translated">Dies ist das Feld PTE Provisionsvertragsnr. zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Feld PTE Provisionsvertragsnr. zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung.</note>
+          <source>Specifies the PTE Commission Contract No. field added to Salesperson/Purchaser table by PTE Commission Management Extension.</source>
+          <target state="translated">Gibt das Feld PTE Provisionsvertragsnr. zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Feld PTE Provisionsvertragsnr. zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Salesperson Com. Table Ext - Field PTE Commission Contract No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 3118449088 - Field 1387114139 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
@@ -1582,9 +1594,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Salesperson Com. Table Ext - Field PTE Commission Contract No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3118449088 - Field 2356680327 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
-          <source>This is the PTE Date Filter field added to Salesperson/Purchaser table by PTE Commission Management Extension.</source>
-          <target state="translated">Dies ist das Feld PTE Datumsfilter zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Feld PTE Datumsfilter zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung.</note>
+          <source>Specifies the PTE Date Filter field added to Salesperson/Purchaser table by PTE Commission Management Extension.</source>
+          <target state="translated">Gibt das Feld PTE Datumsfilter zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Feld PTE Datumsfilter zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Salesperson Com. Table Ext - Field PTE Date Filter - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 3118449088 - Field 2356680327 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">

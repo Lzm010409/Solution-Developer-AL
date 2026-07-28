@@ -68,11 +68,16 @@ page 63600 "PTE Softw. Sales Setup Card"
         }
         area(Promoted)
         {
-            actionref(PTESoftwareChangesRef; PTESoftwareChanges)
+            group(Category_Category4)
             {
-            }
-            actionref(PTESoftwareChangeTemplatesRef; PTESoftwareChangeTemplates)
-            {
+                Caption = 'Software Change', Comment = 'de-DE=Software Anpassung';
+
+                actionref(PTESoftwareChangesRef; PTESoftwareChanges)
+                {
+                }
+                actionref(PTESoftwareChangeTemplatesRef; PTESoftwareChangeTemplates)
+                {
+                }
             }
         }
     }

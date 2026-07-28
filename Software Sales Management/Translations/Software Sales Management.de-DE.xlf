@@ -10,9 +10,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 238246027 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Accounting Type that was used when the Posted Software Change was posted.</source>
-          <target state="translated">Dies ist die Abrechnungsart, die beim Buchen der gebuchten Softwareanpassung verwendet wurde.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Abrechnungsart, die beim Buchen der gebuchten Softwareanpassung verwendet wurde.</note>
+          <source>Specifies the Accounting Type that was used when the Posted Software Change was posted.</source>
+          <target state="translated">Gibt die Abrechnungsart an, die beim Buchen der gebuchten Softwareanpassung verwendet wurde.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Abrechnungsart an, die beim Buchen der gebuchten Softwareanpassung verwendet wurde.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Accounting Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 238246027 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -22,9 +22,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Accounting Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 573373209 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Closing Date of the Posted Software Change.</source>
-          <target state="translated">Dies ist das Abschlussdatum der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Abschlussdatum der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Closing Date of the Posted Software Change.</source>
+          <target state="translated">Gibt das Abschlussdatum der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Abschlussdatum der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Closing Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 573373209 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -34,9 +34,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Closing Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 2611672591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Percentage that was used when the Posted Software Change was posted.</source>
-          <target state="translated">Dies ist der Provisions Prozentsatz, der beim Buchen der gebuchten Softwareanpassung verwendet wurde.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisions Prozentsatz, der beim Buchen der gebuchten Softwareanpassung verwendet wurde.</note>
+          <source>Specifies the Commission Percentage that was used when the Posted Software Change was posted.</source>
+          <target state="translated">Gibt den Provisions Prozentsatz an, der beim Buchen der gebuchten Softwareanpassung verwendet wurde.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisions Prozentsatz an, der beim Buchen der gebuchten Softwareanpassung verwendet wurde.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Commission Percentage - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 2611672591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -46,9 +46,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Commission Percentage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1043218467 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Contact E-Mail of the Posted Software Change.</source>
-          <target state="translated">Dies ist die E-Mail des Kontakts der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die E-Mail des Kontakts der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Contact E-Mail of the Posted Software Change.</source>
+          <target state="translated">Gibt die E-Mail des Kontakts der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die E-Mail des Kontakts der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Contact E-Mail - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1043218467 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -58,9 +58,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Contact E-Mail - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 2378863201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Contact Name of the Posted Software Change.</source>
-          <target state="translated">Dies ist der Kontaktname der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Kontaktname der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Contact Name of the Posted Software Change.</source>
+          <target state="translated">Gibt den Kontaktname der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Kontaktname der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Contact Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 2378863201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -70,9 +70,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Contact Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 202036913 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Contact No. of the Posted Software Change.</source>
-          <target state="translated">Dies ist die Kontaktnr. der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Kontaktnr. der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Contact No. of the Posted Software Change.</source>
+          <target state="translated">Gibt die Kontaktnr. der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Kontaktnr. der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Contact No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 202036913 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -82,9 +82,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Contact No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 3390705917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Contact Phone No. of the Posted Software Change.</source>
-          <target state="translated">Dies ist die Telefonnr. des Kontakts der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Telefonnr. des Kontakts der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Contact Phone No. of the Posted Software Change.</source>
+          <target state="translated">Gibt die Telefonnr. des Kontakts der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Telefonnr. des Kontakts der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Contact Phone No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 3390705917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -94,9 +94,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Contact Phone No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1171137197 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the name of the customer of the Posted Software Change.</source>
-          <target state="translated">Dies ist der Name des Debitors der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Name des Debitors der gebuchten Softwareanpassung.</note>
+          <source>Specifies the name of the customer of the Posted Software Change.</source>
+          <target state="translated">Gibt den Name des Debitors der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Name des Debitors der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Customer Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1171137197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -106,9 +106,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Customer Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4190130733 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Customer No. of the Posted Software Change.</source>
-          <target state="translated">Dies ist die Debitorennr. der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Debitorennr. der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Customer No. of the Posted Software Change.</source>
+          <target state="translated">Gibt die Debitorennr. der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Debitorennr. der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Customer No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -118,9 +118,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Customer No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Description of the Posted Software Change.</source>
-          <target state="translated">Dies ist die Beschreibung der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Beschreibung der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Description of the Posted Software Change.</source>
+          <target state="translated">Gibt die Beschreibung der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -130,9 +130,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 351380797 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the name of the developer resource of the Posted Software Change.</source>
-          <target state="translated">Dies ist der Name der Entwickler-Ressource der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Name der Entwickler-Ressource der gebuchten Softwareanpassung.</note>
+          <source>Specifies the name of the developer resource of the Posted Software Change.</source>
+          <target state="translated">Gibt den Name der Entwickler-Ressource der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Name der Entwickler-Ressource der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Developer Resource Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 351380797 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -142,9 +142,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Developer Resource Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 946366781 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Developer Resource No. of the Posted Software Change.</source>
-          <target state="translated">Dies ist die Entwickler Ressourcennr. der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Entwickler Ressourcennr. der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Developer Resource No. of the Posted Software Change.</source>
+          <target state="translated">Gibt die Entwickler Ressourcennr. der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Entwickler Ressourcennr. der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Developer Resource No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 946366781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -154,9 +154,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Developer Resource No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1627640004 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Entry Date of the Posted Software Change.</source>
-          <target state="translated">Dies ist das Erfassungsdatum der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Erfassungsdatum der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Entry Date of the Posted Software Change.</source>
+          <target state="translated">Gibt das Erfassungsdatum der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Erfassungsdatum der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Entry Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1627640004 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -166,9 +166,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Entry Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 633819257 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Gen. Bus. Posting Group of the Posted Software Change.</source>
-          <target state="translated">Dies ist die Geschäftsbuchungsgruppe der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Geschäftsbuchungsgruppe der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Gen. Bus. Posting Group of the Posted Software Change.</source>
+          <target state="translated">Gibt die Geschäftsbuchungsgruppe der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Geschäftsbuchungsgruppe der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Gen. Bus. Posting Group - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 633819257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -178,9 +178,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Gen. Bus. Posting Group - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the No. of the Posted Software Change.</source>
-          <target state="translated">Dies ist die Nr. der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Nr. der gebuchten Softwareanpassung.</note>
+          <source>Specifies the No. of the Posted Software Change.</source>
+          <target state="translated">Gibt die Nr. der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Nr. der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -190,9 +190,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1351594800 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the No. Series of the Posted Software Change.</source>
-          <target state="translated">Dies ist der Nummernkreis der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Nummernkreis der gebuchten Softwareanpassung.</note>
+          <source>Specifies the No. Series of the Posted Software Change.</source>
+          <target state="translated">Gibt den Nummernkreis der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Nummernkreis der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field No. Series - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -202,9 +202,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field No. Series - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Posting Date of the Posted Software Change.</source>
-          <target state="translated">Dies ist das Buchungsdatum der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Buchungsdatum der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Posting Date of the Posted Software Change.</source>
+          <target state="translated">Gibt das Buchungsdatum der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Buchungsdatum der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Posting Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -214,9 +214,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Posting Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4130293374 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Priority of the Posted Software Change.</source>
-          <target state="translated">Dies ist die Priorität der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Priorität der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Priority of the Posted Software Change.</source>
+          <target state="translated">Gibt die Priorität der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Priorität der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Priority - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4130293374 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -226,9 +226,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Priority - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 3066573651 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the implementation duration of the Posted Software Change in hours.</source>
-          <target state="translated">Dies ist die Umsetzungsdauer der gebuchten Softwareanpassung in Stunden.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Umsetzungsdauer der gebuchten Softwareanpassung in Stunden.</note>
+          <source>Specifies the implementation duration of the Posted Software Change in hours.</source>
+          <target state="translated">Gibt die Umsetzungsdauer der gebuchten Softwareanpassung in Stunden an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Umsetzungsdauer der gebuchten Softwareanpassung in Stunden an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Quantity Implementation (hrs) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 3066573651 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -238,9 +238,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Quantity Implementation (hrs) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 33726994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the number of the posted sales invoice that was created when this document was posted.</source>
-          <target state="translated">Dies ist die Nummer der gebuchten Verkaufsrechnung, die beim Buchen dieses Belegs erstellt wurde.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Nummer der gebuchten Verkaufsrechnung, die beim Buchen dieses Belegs erstellt wurde.</note>
+          <source>Specifies the number of the posted sales invoice that was created when this document was posted.</source>
+          <target state="translated">Gibt die Nummer der gebuchten Verkaufsrechnung an, die beim Buchen dieses Belegs erstellt wurde.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Nummer der gebuchten Verkaufsrechnung an, die beim Buchen dieses Belegs erstellt wurde.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Sales Invoice No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 33726994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -250,9 +250,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Sales Invoice No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 553464652 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Salesperson Code of the Posted Software Change.</source>
-          <target state="translated">Dies ist der Verkäufercode der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Verkäufercode der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Salesperson Code of the Posted Software Change.</source>
+          <target state="translated">Gibt den Verkäufercode der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Verkäufercode der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Salesperson Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 553464652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -262,9 +262,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Salesperson Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 940688118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the name of the salesperson assigned to the Posted Software Change.</source>
-          <target state="translated">Dies ist der Name des Verkäufers, der der gebuchten Softwareanpassung zugewiesen ist.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Name des Verkäufers, der der gebuchten Softwareanpassung zugewiesen ist.</note>
+          <source>Specifies the name of the salesperson assigned to the Posted Software Change.</source>
+          <target state="translated">Gibt den Name des Verkäufers an, der der gebuchten Softwareanpassung zugewiesen ist.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Name des Verkäufers an, der der gebuchten Softwareanpassung zugewiesen ist.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Salesperson Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 940688118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -274,9 +274,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Salesperson Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4186872994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the number of the original Software Change that was deleted when this document was posted.</source>
-          <target state="translated">Dies ist die Nummer der ursprünglichen Softwareanpassung, die beim Buchen dieses Belegs gelöscht wurde.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Nummer der ursprünglichen Softwareanpassung, die beim Buchen dieses Belegs gelöscht wurde.</note>
+          <source>Specifies the number of the original Software Change that was deleted when this document was posted.</source>
+          <target state="translated">Gibt die Nummer der ursprünglichen Softwareanpassung an, die beim Buchen dieses Belegs gelöscht wurde.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Nummer der ursprünglichen Softwareanpassung an, die beim Buchen dieses Belegs gelöscht wurde.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Software Change No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4186872994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -286,9 +286,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Software Change No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 956496040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Software Change Template Code of the Posted Software Change.</source>
-          <target state="translated">Dies ist der Vorlagecode der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Vorlagecode der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Software Change Template Code of the Posted Software Change.</source>
+          <target state="translated">Gibt den Vorlagecode der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Vorlagecode der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Software Change Template Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 956496040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -298,9 +298,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Software Change Template Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4032525346 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the description of the template the Posted Software Change was created from.</source>
-          <target state="translated">Dies ist die Beschreibung der Vorlage, aus der die gebuchte Softwareanpassung erstellt wurde.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Beschreibung der Vorlage, aus der die gebuchte Softwareanpassung erstellt wurde.</note>
+          <source>Specifies the description of the template the Posted Software Change was created from.</source>
+          <target state="translated">Gibt die Beschreibung der Vorlage an, aus der die gebuchte Softwareanpassung erstellt wurde.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung der Vorlage an, aus der die gebuchte Softwareanpassung erstellt wurde.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Software Change Template Desc. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 4032525346 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -310,9 +310,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Software Change Template Desc. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Status of the Posted Software Change.</source>
-          <target state="translated">Dies ist der Status der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Status der gebuchten Softwareanpassung.</note>
+          <source>Specifies the Status of the Posted Software Change.</source>
+          <target state="translated">Gibt den Status der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Status der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Status - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -322,9 +322,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field Status - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the ID of the user who posted the Software Change.</source>
-          <target state="translated">Dies ist die ID des Benutzers, der die Softwareanpassung gebucht hat.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die ID des Benutzers, der die Softwareanpassung gebucht hat.</note>
+          <source>Specifies the ID of the user who posted the Software Change.</source>
+          <target state="translated">Gibt die ID des Benutzers an, der die Softwareanpassung gebucht hat.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die ID des Benutzers an, der die Softwareanpassung gebucht hat.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field User ID - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 2708250016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -334,9 +334,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field User ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1844012642 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the VAT Bus. Posting Group of the Posted Software Change.</source>
-          <target state="translated">Dies ist die MwSt.-Geschäftsbuchungsgruppe der gebuchten Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die MwSt.-Geschäftsbuchungsgruppe der gebuchten Softwareanpassung.</note>
+          <source>Specifies the VAT Bus. Posting Group of the Posted Software Change.</source>
+          <target state="translated">Gibt die MwSt.-Geschäftsbuchungsgruppe der gebuchten Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die MwSt.-Geschäftsbuchungsgruppe der gebuchten Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Posted Software Change - Field VAT Bus. Posting Group - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1344028211 - Field 1844012642 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -352,9 +352,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 238246027 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Accounting Type of the Software Change. It controls whether the commission is taken from the commission contract or from this Software Change.</source>
-          <target state="translated">Dies ist die Abrechnungsart der Softwareanpassung. Sie steuert, ob die Provision aus dem Provisionsvertrag oder aus dieser Softwareanpassung ermittelt wird.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Abrechnungsart der Softwareanpassung. Sie steuert, ob die Provision aus dem Provisionsvertrag oder aus dieser Softwareanpassung ermittelt wird.</note>
+          <source>Specifies the Accounting Type of the Software Change. It controls whether the commission is taken from the commission contract or from this Software Change.</source>
+          <target state="translated">Gibt die Abrechnungsart der Softwareanpassung. Sie steuert an, ob die Provision aus dem Provisionsvertrag oder aus dieser Softwareanpassung ermittelt wird.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Abrechnungsart der Softwareanpassung. Sie steuert an, ob die Provision aus dem Provisionsvertrag oder aus dieser Softwareanpassung ermittelt wird.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Accounting Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 238246027 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -364,9 +364,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Accounting Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 573373209 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Closing Date of the Software Change.</source>
-          <target state="translated">Dies ist das Abschlussdatum der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Abschlussdatum der Softwareanpassung.</note>
+          <source>Specifies the Closing Date of the Software Change.</source>
+          <target state="translated">Gibt das Abschlussdatum der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Abschlussdatum der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Closing Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 573373209 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -382,9 +382,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Closing Date - Method OnValidate - NamedType ClosingDateErr</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 2611672591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Percentage of the Software Change. It is only used when the Accounting Type is Software Change.</source>
-          <target state="translated">Dies ist der Provisions Prozentsatz der Softwareanpassung. Er wird nur verwendet, wenn die Abrechnungsart Software Change ist.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisions Prozentsatz der Softwareanpassung. Er wird nur verwendet, wenn die Abrechnungsart Software Change ist.</note>
+          <source>Specifies the Commission Percentage of the Software Change. It is only used when the Accounting Type is Software Change.</source>
+          <target state="translated">Gibt den Provisions Prozentsatz der Softwareanpassung. Er wird nur verwendet an, wenn die Abrechnungsart Software Change ist.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisions Prozentsatz der Softwareanpassung. Er wird nur verwendet an, wenn die Abrechnungsart Software Change ist.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Commission Percentage - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 2611672591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -394,9 +394,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Commission Percentage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1043218467 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Contact E-Mail of the Software Change.</source>
-          <target state="translated">Dies ist die E-Mail des Kontakts der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die E-Mail des Kontakts der Softwareanpassung.</note>
+          <source>Specifies the Contact E-Mail of the Software Change.</source>
+          <target state="translated">Gibt die E-Mail des Kontakts der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die E-Mail des Kontakts der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Contact E-Mail - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1043218467 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -406,9 +406,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Contact E-Mail - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 2378863201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Contact Name of the Software Change.</source>
-          <target state="translated">Dies ist der Kontaktname der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Kontaktname der Softwareanpassung.</note>
+          <source>Specifies the Contact Name of the Software Change.</source>
+          <target state="translated">Gibt den Kontaktname der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Kontaktname der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Contact Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 2378863201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -418,9 +418,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Contact Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 202036913 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Contact No. of the Software Change.</source>
-          <target state="translated">Dies ist die Kontaktnr. der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Kontaktnr. der Softwareanpassung.</note>
+          <source>Specifies the Contact No. of the Software Change.</source>
+          <target state="translated">Gibt die Kontaktnr. der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Kontaktnr. der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Contact No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 202036913 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -430,9 +430,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Contact No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 3390705917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Contact Phone No. of the Software Change.</source>
-          <target state="translated">Dies ist die Telefonnr. des Kontakts der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Telefonnr. des Kontakts der Softwareanpassung.</note>
+          <source>Specifies the Contact Phone No. of the Software Change.</source>
+          <target state="translated">Gibt die Telefonnr. des Kontakts der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Telefonnr. des Kontakts der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Contact Phone No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 3390705917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -442,9 +442,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Contact Phone No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1171137197 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the name of the customer of the Software Change.</source>
-          <target state="translated">Dies ist der Name des Debitors der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Name des Debitors der Softwareanpassung.</note>
+          <source>Specifies the name of the customer of the Software Change.</source>
+          <target state="translated">Gibt den Name des Debitors der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Name des Debitors der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Customer Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1171137197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -454,9 +454,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Customer Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 4190130733 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Customer No. of the Software Change.</source>
-          <target state="translated">Dies ist die Debitorennr. der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Debitorennr. der Softwareanpassung.</note>
+          <source>Specifies the Customer No. of the Software Change.</source>
+          <target state="translated">Gibt die Debitorennr. der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Debitorennr. der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Customer No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -466,9 +466,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Customer No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Description of the Software Change.</source>
-          <target state="translated">Dies ist die Beschreibung der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Beschreibung der Softwareanpassung.</note>
+          <source>Specifies the Description of the Software Change.</source>
+          <target state="translated">Gibt die Beschreibung der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -478,9 +478,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 351380797 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the name of the developer resource of the Software Change.</source>
-          <target state="translated">Dies ist der Name der Entwickler-Ressource der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Name der Entwickler-Ressource der Softwareanpassung.</note>
+          <source>Specifies the name of the developer resource of the Software Change.</source>
+          <target state="translated">Gibt den Name der Entwickler-Ressource der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Name der Entwickler-Ressource der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Developer Resource Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 351380797 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -490,9 +490,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Developer Resource Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 946366781 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Developer Resource No. of the Software Change.</source>
-          <target state="translated">Dies ist die Entwickler Ressourcennr. der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Entwickler Ressourcennr. der Softwareanpassung.</note>
+          <source>Specifies the Developer Resource No. of the Software Change.</source>
+          <target state="translated">Gibt die Entwickler Ressourcennr. der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Entwickler Ressourcennr. der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Developer Resource No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 946366781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -502,9 +502,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Developer Resource No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1627640004 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Entry Date of the Software Change.</source>
-          <target state="translated">Dies ist das Erfassungsdatum der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Erfassungsdatum der Softwareanpassung.</note>
+          <source>Specifies the Entry Date of the Software Change.</source>
+          <target state="translated">Gibt das Erfassungsdatum der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Erfassungsdatum der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Entry Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1627640004 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -520,9 +520,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Entry Date - Method OnValidate - NamedType EntryDateErr</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 633819257 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Gen. Bus. Posting Group of the Software Change.</source>
-          <target state="translated">Dies ist die Geschäftsbuchungsgruppe der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Geschäftsbuchungsgruppe der Softwareanpassung.</note>
+          <source>Specifies the Gen. Bus. Posting Group of the Software Change.</source>
+          <target state="translated">Gibt die Geschäftsbuchungsgruppe der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Geschäftsbuchungsgruppe der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Gen. Bus. Posting Group - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 633819257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -532,9 +532,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Gen. Bus. Posting Group - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the No. of the Software Change.</source>
-          <target state="translated">Dies ist die Nr. der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Nr. der Softwareanpassung.</note>
+          <source>Specifies the No. of the Software Change.</source>
+          <target state="translated">Gibt die Nr. der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Nr. der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -544,9 +544,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1351594800 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the No. Series of the Software Change.</source>
-          <target state="translated">Dies ist der Nummernkreis der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Nummernkreis der Softwareanpassung.</note>
+          <source>Specifies the No. Series of the Software Change.</source>
+          <target state="translated">Gibt den Nummernkreis der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Nummernkreis der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field No. Series - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -556,9 +556,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field No. Series - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 4130293374 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Priority of the Software Change.</source>
-          <target state="translated">Dies ist die Priorität der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Priorität der Softwareanpassung.</note>
+          <source>Specifies the Priority of the Software Change.</source>
+          <target state="translated">Gibt die Priorität der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Priorität der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Priority - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 4130293374 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -568,9 +568,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Priority - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 3066573651 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the implementation duration of the Software Change in hours. It is invoiced as the quantity of the resource line.</source>
-          <target state="translated">Dies ist die Umsetzungsdauer der Softwareanpassung in Stunden. Sie wird als Menge der Ressourcenzeile fakturiert.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Umsetzungsdauer der Softwareanpassung in Stunden. Sie wird als Menge der Ressourcenzeile fakturiert.</note>
+          <source>Specifies the implementation duration of the Software Change in hours. It is invoiced as the quantity of the resource line.</source>
+          <target state="translated">Gibt die Umsetzungsdauer der Softwareanpassung in Stunden. Sie wird als Menge der Ressourcenzeile fakturiert an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Umsetzungsdauer der Softwareanpassung in Stunden. Sie wird als Menge der Ressourcenzeile fakturiert an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Quantity Implementation (hrs) - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 3066573651 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -580,9 +580,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Quantity Implementation (hrs) - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 553464652 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Salesperson Code of the Software Change.</source>
-          <target state="translated">Dies ist der Verkäufercode der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Verkäufercode der Softwareanpassung.</note>
+          <source>Specifies the Salesperson Code of the Software Change.</source>
+          <target state="translated">Gibt den Verkäufercode der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Verkäufercode der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Salesperson Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 553464652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -592,9 +592,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Salesperson Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 940688118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the name of the salesperson assigned to the Software Change.</source>
-          <target state="translated">Dies ist der Name des Verkäufers, der der Softwareanpassung zugewiesen ist.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Name des Verkäufers, der der Softwareanpassung zugewiesen ist.</note>
+          <source>Specifies the name of the salesperson assigned to the Software Change.</source>
+          <target state="translated">Gibt den Name des Verkäufers an, der der Softwareanpassung zugewiesen ist.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Name des Verkäufers an, der der Softwareanpassung zugewiesen ist.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Salesperson Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 940688118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -604,9 +604,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Salesperson Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 956496040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Software Change Template Code of the Software Change. Selecting a template copies its values into the Software Change.</source>
-          <target state="translated">Dies ist der Vorlagecode der Softwareanpassung. Die Auswahl einer Vorlage überträgt deren Werte in die Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Vorlagecode der Softwareanpassung. Die Auswahl einer Vorlage überträgt deren Werte in die Softwareanpassung.</note>
+          <source>Specifies the Software Change Template Code of the Software Change. Selecting a template copies its values into the Software Change.</source>
+          <target state="translated">Gibt den Vorlagecode der Softwareanpassung. Die Auswahl einer Vorlage überträgt deren Werte in die Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Vorlagecode der Softwareanpassung. Die Auswahl einer Vorlage überträgt deren Werte in die Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Software Change Template Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 956496040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -616,9 +616,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Software Change Template Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 4032525346 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the description of the template the Software Change was created from.</source>
-          <target state="translated">Dies ist die Beschreibung der Vorlage, aus der die Softwareanpassung erstellt wurde.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Beschreibung der Vorlage, aus der die Softwareanpassung erstellt wurde.</note>
+          <source>Specifies the description of the template the Software Change was created from.</source>
+          <target state="translated">Gibt die Beschreibung der Vorlage an, aus der die Softwareanpassung erstellt wurde.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung der Vorlage an, aus der die Softwareanpassung erstellt wurde.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Software Change Template Desc. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 4032525346 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -628,9 +628,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Software Change Template Desc. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Status of the Software Change.</source>
-          <target state="translated">Dies ist der Status der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Status der Softwareanpassung.</note>
+          <source>Specifies the Status of the Software Change.</source>
+          <target state="translated">Gibt den Status der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Status der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Status - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -640,9 +640,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field Status - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1844012642 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the VAT Bus. Posting Group of the Software Change.</source>
-          <target state="translated">Dies ist die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassung.</note>
+          <source>Specifies the VAT Bus. Posting Group of the Software Change.</source>
+          <target state="translated">Gibt die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Field VAT Bus. Posting Group - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 3706884996 - Field 1844012642 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -658,9 +658,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 238246027 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Accounting Type of the Software Change Template. It controls whether the commission is taken from the commission contract or from the software change.</source>
-          <target state="translated">Dies ist die Abrechnungsart der Softwareanpassungsvorlage. Sie steuert, ob die Provision aus dem Provisionsvertrag oder aus der Softwareanpassung ermittelt wird.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Abrechnungsart der Softwareanpassungsvorlage. Sie steuert, ob die Provision aus dem Provisionsvertrag oder aus der Softwareanpassung ermittelt wird.</note>
+          <source>Specifies the Accounting Type of the Software Change Template. It controls whether the commission is taken from the commission contract or from the software change.</source>
+          <target state="translated">Gibt die Abrechnungsart der Softwareanpassungsvorlage. Sie steuert an, ob die Provision aus dem Provisionsvertrag oder aus der Softwareanpassung ermittelt wird.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Abrechnungsart der Softwareanpassungsvorlage. Sie steuert an, ob die Provision aus dem Provisionsvertrag oder aus der Softwareanpassung ermittelt wird.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Accounting Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 238246027 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -670,9 +670,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Accounting Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Code of the Software Change Template.</source>
-          <target state="translated">Dies ist der Code der Softwareanpassungsvorlage.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Code der Softwareanpassungsvorlage.</note>
+          <source>Specifies the Code of the Software Change Template.</source>
+          <target state="translated">Gibt den Code der Softwareanpassungsvorlage an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Code der Softwareanpassungsvorlage an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -682,9 +682,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 2611672591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Commission Percentage of the Software Change Template.</source>
-          <target state="translated">Dies ist der Provisions Prozentsatz der Softwareanpassungsvorlage.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der Provisions Prozentsatz der Softwareanpassungsvorlage.</note>
+          <source>Specifies the Commission Percentage of the Software Change Template.</source>
+          <target state="translated">Gibt den Provisions Prozentsatz der Softwareanpassungsvorlage an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Provisions Prozentsatz der Softwareanpassungsvorlage an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Commission Percentage - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 2611672591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -694,9 +694,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Commission Percentage - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Description of the Software Change Template.</source>
-          <target state="translated">Dies ist die Beschreibung der Softwareanpassungsvorlage.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Beschreibung der Softwareanpassungsvorlage.</note>
+          <source>Specifies the Description of the Software Change Template.</source>
+          <target state="translated">Gibt die Beschreibung der Softwareanpassungsvorlage an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Beschreibung der Softwareanpassungsvorlage an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -706,9 +706,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 946366781 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Developer Resource No. of the Software Change Template.</source>
-          <target state="translated">Dies ist die Entwickler Ressourcennr. der Softwareanpassungsvorlage.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Entwickler Ressourcennr. der Softwareanpassungsvorlage.</note>
+          <source>Specifies the Developer Resource No. of the Software Change Template.</source>
+          <target state="translated">Gibt die Entwickler Ressourcennr. der Softwareanpassungsvorlage an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Entwickler Ressourcennr. der Softwareanpassungsvorlage an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Developer Resource No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 946366781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -718,9 +718,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Developer Resource No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 633819257 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Gen. Bus. Posting Group of the Software Change Template.</source>
-          <target state="translated">Dies ist die Geschäftsbuchungsgruppe der Softwareanpassungsvorlage.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Geschäftsbuchungsgruppe der Softwareanpassungsvorlage.</note>
+          <source>Specifies the Gen. Bus. Posting Group of the Software Change Template.</source>
+          <target state="translated">Gibt die Geschäftsbuchungsgruppe der Softwareanpassungsvorlage an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Geschäftsbuchungsgruppe der Softwareanpassungsvorlage an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Gen. Bus. Posting Group - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 633819257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -730,9 +730,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field Gen. Bus. Posting Group - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 1844012642 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the VAT Bus. Posting Group of the Software Change Template.</source>
-          <target state="translated">Dies ist die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassungsvorlage.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassungsvorlage.</note>
+          <source>Specifies the VAT Bus. Posting Group of the Software Change Template.</source>
+          <target state="translated">Gibt die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassungsvorlage an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassungsvorlage an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change Template - Field VAT Bus. Posting Group - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 1975550628 - Field 1844012642 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -760,9 +760,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Sales Mgt. Setup - Field Posted Software Change Nos. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4243164259 - Field 1663593181 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This is the Primary Key of the Datapoint.</source>
-          <target state="translated">Primärschlüssel des Datensatzes.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Primärschlüssel des Datensatzes.</note>
+          <source>Specifies the Primary Key of the Datapoint.</source>
+          <target state="translated">Gibt Primärschlüssel des Datensatzes an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt Primärschlüssel des Datensatzes an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Sales Mgt. Setup - Field Primary Key - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 4243164259 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -903,6 +903,18 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Bemerkungen</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Posted Softw. Change Card - Action ShowComments - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 66653583 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Software Change</source>
+          <target state="translated">Software Anpassung</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Posted Softw. Change Card - Action Category_Category4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 66653583 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process</source>
+          <target state="translated">Prozess</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Prozess</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Posted Softw. Change Card - Action Category_Process - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2290925093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Software Changes</source>
           <target state="translated">Geb. Softwareanpassungen</target>
@@ -938,6 +950,18 @@
           <target state="translated">Bemerkungen</target>
           <note from="Developer" annotates="general" priority="2">de-DE=Bemerkungen</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Posted Softw. Change List - Action ShowComments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2290925093 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Software Change</source>
+          <target state="translated">Software Anpassung</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Posted Softw. Change List - Action Category_Category4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2290925093 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process</source>
+          <target state="translated">Prozess</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Prozess</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Posted Softw. Change List - Action Category_Process - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 695362950 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Software Change Template</source>
@@ -1022,6 +1046,12 @@
           <target state="translated">Softwareanpassungsvorlagen</target>
           <note from="Developer" annotates="general" priority="2">de-DE=Softwareanpassungsvorlagen</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Softw. Sales Setup Card - Action PTESoftwareChangeTemplates - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 415741599 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Software Change</source>
+          <target state="translated">Software Anpassung</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Softw. Sales Setup Card - Action Category_Category4 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3258448944 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Software Change</source>
@@ -1161,6 +1191,18 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Softwareanpassung kopieren</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Action CopySoftwareChange - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3258448944 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Software Change</source>
+          <target state="translated">Software Anpassung</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Action Category_Category4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3258448944 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process</source>
+          <target state="translated">Prozess</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Prozess</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Action Category_Process - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2606439702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Software Changes</source>
           <target state="translated">Softwareanpassungen</target>
@@ -1214,6 +1256,18 @@
           <target state="translated">Bemerkungen</target>
           <note from="Developer" annotates="general" priority="2">de-DE=Bemerkungen</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change List - Action ShowComments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2606439702 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Software Change</source>
+          <target state="translated">Software Anpassung</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change List - Action Category_Category4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2606439702 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process</source>
+          <target state="translated">Prozess</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Prozess</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change List - Action Category_Process - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2606439702 - View 55175650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open Software Changes</source>
@@ -1312,9 +1366,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyInvoicing - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3924604788 - Control 1460390153 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2716593954">
-          <source>This is the Software Change No. the posted sales credit memo belongs to.</source>
-          <target state="translated">Dies ist die Softwareanpassungsnr., zu der die gebuchte Verkaufsgutschrift gehört.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Softwareanpassungsnr., zu der die gebuchte Verkaufsgutschrift gehört.</note>
+          <source>Specifies the Software Change No. the posted sales credit memo belongs to.</source>
+          <target state="translated">Gibt die Softwareanpassungsnr. an, zu der die gebuchte Verkaufsgutschrift gehört.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Softwareanpassungsnr. an, zu der die gebuchte Verkaufsgutschrift gehört.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Pstd. Sales Cr.M. Sw.Chg. - Control PTESoftware Change No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3924604788 - Control 1460390153 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2716593954">
@@ -1324,9 +1378,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Pstd. Sales Cr.M. Sw.Chg. - Control PTESoftware Change No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 758195013 - Control 1460390153 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
-          <source>This is the Software Change No. the posted sales invoice belongs to.</source>
-          <target state="translated">Dies ist die Softwareanpassungsnr., zu der die gebuchte Verkaufsrechnung gehört.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Softwareanpassungsnr., zu der die gebuchte Verkaufsrechnung gehört.</note>
+          <source>Specifies the Software Change No. the posted sales invoice belongs to.</source>
+          <target state="translated">Gibt die Softwareanpassungsnr. an, zu der die gebuchte Verkaufsrechnung gehört.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Softwareanpassungsnr. an, zu der die gebuchte Verkaufsrechnung gehört.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Pstd. Sales Inv. Sw. Chg. - Control PTESoftware Change No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 758195013 - Control 1460390153 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
@@ -1336,9 +1390,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Pstd. Sales Inv. Sw. Chg. - Control PTESoftware Change No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1028845696 - Control 1460390153 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
-          <source>This is the Software Change No. the sales invoice belongs to.</source>
-          <target state="translated">Dies ist die Softwareanpassungsnr., zu der die Verkaufsrechnung gehört.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Softwareanpassungsnr., zu der die Verkaufsrechnung gehört.</note>
+          <source>Specifies the Software Change No. the sales invoice belongs to.</source>
+          <target state="translated">Gibt die Softwareanpassungsnr. an, zu der die Verkaufsrechnung gehört.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Softwareanpassungsnr. an, zu der die Verkaufsrechnung gehört.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Sales Invoice Sw. Change - Control PTESoftware Change No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1028845696 - Control 1460390153 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
@@ -1408,9 +1462,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Sw. Change Role Center - Action PTESoftwareChangeTemplates - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1948972318 - Field 3669266532 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2319255389">
-          <source>This is the accounting type taken from the software change. It controls whether the commission percentage of the commission contract or of the software change applies.</source>
-          <target state="translated">Dies ist die aus der Softwareanpassung übernommene Abrechnungsart. Sie steuert, ob der Provisions Prozentsatz des Provisionsvertrags oder der Softwareanpassung gilt.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die aus der Softwareanpassung übernommene Abrechnungsart. Sie steuert, ob der Provisions Prozentsatz des Provisionsvertrags oder der Softwareanpassung gilt.</note>
+          <source>Specifies the accounting type taken from the software change. It controls whether the commission percentage of the commission contract or of the software change applies.</source>
+          <target state="translated">Gibt die aus der Softwareanpassung übernommene Abrechnungsart. Sie steuert an, ob der Provisions Prozentsatz des Provisionsvertrags oder der Softwareanpassung gilt.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die aus der Softwareanpassung übernommene Abrechnungsart. Sie steuert an, ob der Provisions Prozentsatz des Provisionsvertrags oder der Softwareanpassung gilt.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Com. Jnl. Line Sw. Change - Field PTE Accounting Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 1948972318 - Field 3669266532 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2319255389">
@@ -1420,9 +1474,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Com. Jnl. Line Sw. Change - Field PTE Accounting Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1948972318 - Field 621106760 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2319255389">
-          <source>This is the deviating commission percentage taken from the software change.</source>
-          <target state="translated">Dies ist der abweichende Provisions Prozentsatz aus der Softwareanpassung.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist der abweichende Provisions Prozentsatz aus der Softwareanpassung.</note>
+          <source>Specifies the deviating commission percentage taken from the software change.</source>
+          <target state="translated">Gibt den abweichende Provisions Prozentsatz aus der Softwareanpassung an.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den abweichende Provisions Prozentsatz aus der Softwareanpassung an.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Com. Jnl. Line Sw. Change - Field PTE Commission Percentage - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 1948972318 - Field 621106760 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2319255389">
@@ -1432,9 +1486,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Com. Jnl. Line Sw. Change - Field PTE Commission Percentage - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1948972318 - Field 544647753 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2319255389">
-          <source>This is the number of the posted software change the commission journal line originates from.</source>
-          <target state="translated">Dies ist die Nummer der gebuchten Softwareanpassung, aus der die Provisions Buch.-Blattzeile stammt.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Nummer der gebuchten Softwareanpassung, aus der die Provisions Buch.-Blattzeile stammt.</note>
+          <source>Specifies the number of the posted software change the commission journal line originates from.</source>
+          <target state="translated">Gibt die Nummer der gebuchten Softwareanpassung an, aus der die Provisions Buch.-Blattzeile stammt.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Nummer der gebuchten Softwareanpassung an, aus der die Provisions Buch.-Blattzeile stammt.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Com. Jnl. Line Sw. Change - Field PTE Software Change No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 1948972318 - Field 544647753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2319255389">
@@ -1444,9 +1498,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Com. Jnl. Line Sw. Change - Field PTE Software Change No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1490102579 - Field 544647753 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1876454807">
-          <source>This is the number of the posted software change the commission ledger entry originates from.</source>
-          <target state="translated">Dies ist die Nummer der gebuchten Softwareanpassung, aus der der Provisionsposten stammt.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist die Nummer der gebuchten Softwareanpassung, aus der der Provisionsposten stammt.</note>
+          <source>Specifies the number of the posted software change the commission ledger entry originates from.</source>
+          <target state="translated">Gibt die Nummer der gebuchten Softwareanpassung an, aus der der Provisionsposten stammt.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Nummer der gebuchten Softwareanpassung an, aus der der Provisionsposten stammt.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Com. Led. Entry Sw. Chg. - Field PTE Software Change No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 1490102579 - Field 544647753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1876454807">
@@ -1456,9 +1510,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Com. Led. Entry Sw. Chg. - Field PTE Software Change No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2906012430 - Field 544647753 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
-          <source>This is the PTE Software Change No. field added to the Sales Cr.Memo Header table by the PTE Software Sales Management Extension.</source>
-          <target state="translated">Dies ist das Feld PTE Softwareanpassungsnr., das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufsgutschriftskopf hinzufügt.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Feld PTE Softwareanpassungsnr., das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufsgutschriftskopf hinzufügt.</note>
+          <source>Specifies the PTE Software Change No. field added to the Sales Cr.Memo Header table by the PTE Software Sales Management Extension.</source>
+          <target state="translated">Gibt das Feld PTE Softwareanpassungsnr. an, das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufsgutschriftskopf hinzufügt.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Feld PTE Softwareanpassungsnr. an, das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufsgutschriftskopf hinzufügt.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Sales Cr.Memo Hdr. Sw.Chg - Field PTE Software Change No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 2906012430 - Field 544647753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
@@ -1468,9 +1522,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Sales Cr.Memo Hdr. Sw.Chg - Field PTE Software Change No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 679299102 - Field 544647753 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
-          <source>This is the PTE Software Change No. field added to the Sales Header table by the PTE Software Sales Management Extension. It carries no table relation because the software change is deleted when it is posted.</source>
-          <target state="translated">Dies ist das Feld PTE Softwareanpassungsnr., das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufskopf hinzufügt. Es hat keine Tabellenrelation, weil die Softwareanpassung beim Buchen gelöscht wird.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Feld PTE Softwareanpassungsnr., das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufskopf hinzufügt. Es hat keine Tabellenrelation, weil die Softwareanpassung beim Buchen gelöscht wird.</note>
+          <source>Specifies the PTE Software Change No. field added to the Sales Header table by the PTE Software Sales Management Extension. It carries no table relation because the software change is deleted when it is posted.</source>
+          <target state="translated">Gibt das Feld PTE Softwareanpassungsnr. an, das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufskopf hinzufügt. Es hat keine Tabellenrelation, weil die Softwareanpassung beim Buchen gelöscht wird.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Feld PTE Softwareanpassungsnr. an, das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufskopf hinzufügt. Es hat keine Tabellenrelation, weil die Softwareanpassung beim Buchen gelöscht wird.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Sales Header Sw. Change - Field PTE Software Change No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 679299102 - Field 544647753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
@@ -1480,9 +1534,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Sales Header Sw. Change - Field PTE Software Change No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 526283378 - Field 544647753 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
-          <source>This is the PTE Software Change No. field added to the Sales Invoice Header table by the PTE Software Sales Management Extension.</source>
-          <target state="translated">Dies ist das Feld PTE Softwareanpassungsnr., das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufsrechnungskopf hinzufügt.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Dies ist das Feld PTE Softwareanpassungsnr., das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufsrechnungskopf hinzufügt.</note>
+          <source>Specifies the PTE Software Change No. field added to the Sales Invoice Header table by the PTE Software Sales Management Extension.</source>
+          <target state="translated">Gibt das Feld PTE Softwareanpassungsnr. an, das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufsrechnungskopf hinzufügt.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Feld PTE Softwareanpassungsnr. an, das die Erweiterung PTE Software Verkaufsmanagement zur Tabelle Verkaufsrechnungskopf hinzufügt.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Sales Inv. Hdr. Sw. Chg. - Field PTE Software Change No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="TableExtension 526283378 - Field 544647753 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">

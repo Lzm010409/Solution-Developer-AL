@@ -13,19 +13,19 @@ table 63601 "PTE Software Change Template"
             DataClassification = CustomerContent;
             NotBlank = true;
             Caption = 'Code', Comment = 'de-DE=Code';
-            ToolTip = 'This is the Code of the Software Change Template.', Comment = 'de-DE=Dies ist der Code der Softwareanpassungsvorlage.';
+            ToolTip = 'Specifies the Code of the Software Change Template.', Comment = 'de-DE=Gibt den Code der Softwareanpassungsvorlage an.';
         }
         field(10; Description; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Description', Comment = 'de-DE=Beschreibung';
-            ToolTip = 'This is the Description of the Software Change Template.', Comment = 'de-DE=Dies ist die Beschreibung der Softwareanpassungsvorlage.';
+            ToolTip = 'Specifies the Description of the Software Change Template.', Comment = 'de-DE=Gibt die Beschreibung der Softwareanpassungsvorlage an.';
         }
         field(20; "Accounting Type"; Enum "PTE Accounting Type")
         {
             DataClassification = CustomerContent;
             Caption = 'Accounting Type', Comment = 'de-DE=Abrechnungsart';
-            ToolTip = 'This is the Accounting Type of the Software Change Template. It controls whether the commission is taken from the commission contract or from the software change.', Comment = 'de-DE=Dies ist die Abrechnungsart der Softwareanpassungsvorlage. Sie steuert, ob die Provision aus dem Provisionsvertrag oder aus der Softwareanpassung ermittelt wird.';
+            ToolTip = 'Specifies the Accounting Type of the Software Change Template. It controls whether the commission is taken from the commission contract or from the software change.', Comment = 'de-DE=Gibt die Abrechnungsart der Softwareanpassungsvorlage. Sie steuert an, ob die Provision aus dem Provisionsvertrag oder aus der Softwareanpassung ermittelt wird.';
         }
         field(30; "Commission Percentage"; Decimal)
         {
@@ -34,14 +34,14 @@ table 63601 "PTE Software Change Template"
             MinValue = 0;
             MaxValue = 100;
             Caption = 'Commission Percentage', Comment = 'de-DE=Provision Prozentsatz';
-            ToolTip = 'This is the Commission Percentage of the Software Change Template.', Comment = 'de-DE=Dies ist der Provisions Prozentsatz der Softwareanpassungsvorlage.';
+            ToolTip = 'Specifies the Commission Percentage of the Software Change Template.', Comment = 'de-DE=Gibt den Provisions Prozentsatz der Softwareanpassungsvorlage an.';
         }
         field(40; "Developer Resource No."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Resource;
             Caption = 'Developer Resource No.', Comment = 'de-DE=Entwickler Ressourcennr.';
-            ToolTip = 'This is the Developer Resource No. of the Software Change Template.', Comment = 'de-DE=Dies ist die Entwickler Ressourcennr. der Softwareanpassungsvorlage.';
+            ToolTip = 'Specifies the Developer Resource No. of the Software Change Template.', Comment = 'de-DE=Gibt die Entwickler Ressourcennr. der Softwareanpassungsvorlage an.';
 
             trigger OnValidate()
             var
@@ -55,14 +55,14 @@ table 63601 "PTE Software Change Template"
             DataClassification = CustomerContent;
             TableRelation = "Gen. Business Posting Group";
             Caption = 'Gen. Bus. Posting Group', Comment = 'de-DE=Geschäftsbuchungsgruppe';
-            ToolTip = 'This is the Gen. Bus. Posting Group of the Software Change Template.', Comment = 'de-DE=Dies ist die Geschäftsbuchungsgruppe der Softwareanpassungsvorlage.';
+            ToolTip = 'Specifies the Gen. Bus. Posting Group of the Software Change Template.', Comment = 'de-DE=Gibt die Geschäftsbuchungsgruppe der Softwareanpassungsvorlage an.';
         }
         field(60; "VAT Bus. Posting Group"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "VAT Business Posting Group";
             Caption = 'VAT Bus. Posting Group', Comment = 'de-DE=MwSt.-Geschäftsbuchungsgruppe';
-            ToolTip = 'This is the VAT Bus. Posting Group of the Software Change Template.', Comment = 'de-DE=Dies ist die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassungsvorlage.';
+            ToolTip = 'Specifies the VAT Bus. Posting Group of the Software Change Template.', Comment = 'de-DE=Gibt die MwSt.-Geschäftsbuchungsgruppe der Softwareanpassungsvorlage an.';
         }
     }
 

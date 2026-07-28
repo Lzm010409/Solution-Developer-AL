@@ -13,37 +13,37 @@ page 63022 "PTE Com. Contract Factbox"
             field(Description; InformationArr[1])
             {
                 Caption = 'Description', Comment = 'de-DE=Beschreibung';
-                ToolTip = 'This is the description of the Commission Contract.', Comment = 'de-DE=Die Beschreibung des Provisions Vertrags.';
+                ToolTip = 'Specifies the description of the Commission Contract.', Comment = 'de-DE=Gibt die Beschreibung des Provisions Vertrags an.';
             }
             field("Commission Type Description"; InformationArr[2])
             {
                 Caption = 'Commission Type Description', Comment = 'de-DE=Provisionsart Beschreibung';
-                ToolTip = 'This is the description of the commission type of the Commission Contract.', Comment = 'de-DE=Die Beschreibung der Provisionsart des Provisions Vertrags.';
+                ToolTip = 'Specifies the description of the commission type of the Commission Contract.', Comment = 'de-DE=Gibt die Beschreibung der Provisionsart des Provisions Vertrags an.';
             }
             field("Starting Date"; InformationArr[3])
             {
                 Caption = 'Starting Date', Comment = 'de-DE=Startdatum';
-                ToolTip = 'This is the starting date of the Commission Contract.', Comment = 'de-DE=Das Startdatum des Provisions Vertrags.';
+                ToolTip = 'Specifies the starting date of the Commission Contract.', Comment = 'de-DE=Gibt das Startdatum des Provisions Vertrags an.';
             }
             field("Ending Date"; InformationArr[4])
             {
                 Caption = 'Ending Date', Comment = 'de-DE=Enddatum';
-                ToolTip = 'This is the ending date of the Commission Contract.', Comment = 'de-DE=Das Enddatum des Provisions Vertrags.';
+                ToolTip = 'Specifies the ending date of the Commission Contract.', Comment = 'de-DE=Gibt das Enddatum des Provisions Vertrags an.';
             }
             field("Commission Percentage"; InformationArr[5])
             {
                 Caption = 'Commission Percentage', Comment = 'de-DE=Provisions Prozentsatz';
-                ToolTip = 'This is the commission percentage of the Commission Contract.', Comment = 'de-DE=Der Provisionsprozentsatz des Provisions Vertrags.';
+                ToolTip = 'Specifies the commission percentage of the Commission Contract.', Comment = 'de-DE=Gibt den Provisionsprozentsatz des Provisions Vertrags an.';
             }
             field("Pay Commission Bonus"; InformationArr[6])
             {
                 Caption = 'Pay Commission Bonus', Comment = 'de-DE=Provisionsbonus zahlen';
-                ToolTip = 'This indicates whether the commission bonus should be paid.', Comment = 'de-DE=Gibt an, ob der Provisionsbonus gezahlt werden soll.';
+                ToolTip = 'Specifies whether the commission bonus should be paid.', Comment = 'de-DE=Gibt an, ob der Provisionsbonus gezahlt werden soll.';
             }
             field(Status; InformationArr[7])
             {
                 Caption = 'Status', Comment = 'de-DE=Status';
-                ToolTip = 'This is the status of the Commission Contract.', Comment = 'de-DE=Der Status des Provisions Vertrags.';
+                ToolTip = 'Specifies the status of the Commission Contract.', Comment = 'de-DE=Gibt den Status des Provisions Vertrags an.';
              }
         }
     }

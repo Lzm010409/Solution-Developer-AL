@@ -8,14 +8,14 @@ table 63000 "PTE Commission Mgt. Setup"
         {
             DataClassification = CustomerContent;
             Caption = 'Primary Key', Comment = 'de-DE=Primärschlüssel';
-            ToolTip = 'This is the Primary Key of the Datapoint.', Comment = 'de-DE=Primärschlüssel des Datensatzes.';
+            ToolTip = 'Specifies the Primary Key of the Datapoint.', Comment = 'de-DE=Gibt Primärschlüssel des Datensatzes an.';
 
         }
         field(10; "Rounding Precision"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Rounding Precision', Comment = 'de-DE=Rundungspräzision';
-            ToolTip = 'This is the Rounding Precision.', Comment = 'de-DE=Die Rundungspräzision mit welcher gerundet wird.';
+            ToolTip = 'Specifies the Rounding Precision.', Comment = 'de-DE=Gibt die Rundungspräzision mit welcher gerundet wird an.';
             NotBlank = true;
         }
         field(11; "Contract Nos."; Code[20])
