@@ -180,6 +180,7 @@ table 63610 "PTE Software Change"
             ToolTip = 'Specifies the Gen. Bus. Posting Group of the Software Change.', Comment = 'de-DE=Gibt die Geschäftsbuchungsgruppe der Softwareanpassung an.';
             trigger OnValidate()
             begin
+                //test
                 if xRec."Gen. Bus. Posting Group" <> "Gen. Bus. Posting Group" then
                     if GenBusinessPostingGroup.ValidateVatBusPostingGroup(GenBusinessPostingGroup, "Gen. Bus. Posting Group") then
                         Validate("VAT Bus. Posting Group", GenBusinessPostingGroup."Def. VAT Bus. Posting Group");
