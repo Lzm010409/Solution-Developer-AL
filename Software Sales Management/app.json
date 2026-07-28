@@ -1,0 +1,40 @@
+{
+  "id": "175c2169-464a-4305-9bba-3fa8dc65aff6",
+  "name": "Software Sales Management",
+  "publisher": "GOB Software und Systeme GmbH & Co. KG",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "c8c8e0da-e740-4159-a463-83431d5e1480",
+      "name": "Commission Management",
+      "publisher": "GOB Software und Systeme GmbH & Co. KG",
+      "version": "1.1.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "26.0.0.0",
+  "application": "26.3.0.0",
+  "idRanges": [
+    {
+      "from": 63600,
+      "to": 63700
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "15.0",
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile"
+  ]
+}

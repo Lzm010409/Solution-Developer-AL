@@ -2,7 +2,7 @@
   "id": "c8c8e0da-e740-4159-a463-83431d5e1480",
   "name": "Commission Management",
   "publisher": "GOB Software und Systeme GmbH & Co. KG",
-  "version": "1.0.0.0",
+  "version": "1.1.0.0",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -27,7 +27,7 @@
   },
   "runtime": "15.0",
   "features": [
-    "NoImplicitWith", 
+    "NoImplicitWith",
     "TranslationFile"
   ]
 }

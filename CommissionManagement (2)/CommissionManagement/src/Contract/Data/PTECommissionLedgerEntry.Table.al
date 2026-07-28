@@ -83,6 +83,13 @@ table 63022 "PTE Commission Ledger Entry"
             Caption = 'Commission Amount (LCY)', Comment = 'de-DE=Provisionsbetrag (Lokalwährung)';
             ToolTip = 'This is the Commission Amount (LCY) of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist der Provisionsbetrag (Lokalwährung) des Provisionsbuchungseintrags.';
         }
+        field(111; "Commission Percentage"; Decimal)
+        {
+            DataClassification = CustomerContent;
+            DecimalPlaces = 0 : 5;
+            Caption = 'Commission Percentage', Comment = 'de-DE=Provisions Prozentsatz';
+            ToolTip = 'This is the Commission Percentage of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist der Provisions Prozentsatz des Provisionsbuchungseintrags.';
+        }
         field(120; "Commission Type"; Enum "PTE Commission Payment Type")
         {
             DataClassification = CustomerContent;
@@ -108,6 +115,32 @@ table 63022 "PTE Commission Ledger Entry"
         {
             SumIndexFields = "Commission Amount (LCY)";
         }
+        key(Key01; "Document No.", "Posting Date")
+        {
+        }
     }
 
+    procedure CopyFromJnlLine(CommissionJournalLine: Record "PTE Commission Journal Line")
+    begin
+        "Posting Date" := CommissionJournalLine."Posting Date";
+        "Document Type" := CommissionJournalLine."Document Type";
+        "Document No." := CommissionJournalLine."Document No.";
+        "Customer No." := CommissionJournalLine."Customer No.";
+        Amount := CommissionJournalLine.Amount;
+        "Amount (LCY)" := CommissionJournalLine."Amount (LCY)";
+        "Salesperson Code" := CommissionJournalLine."Salesperson Code";
+        "Commission Contract No." := CommissionJournalLine."Commission Contract No.";
+        "Posting Description" := CommissionJournalLine."Posting Description";
+        "Currency Code" := CommissionJournalLine."Currency Code";
+        "Commission Amount (LCY)" := CommissionJournalLine."Commission Amount (LCY)";
+        "Commission Percentage" := CommissionJournalLine."Commission Percentage";
+        "Commission Type" := CommissionJournalLine."Commission Type";
+        "Customer Ledger Entry No." := CommissionJournalLine."Customer Ledger Entry No.";
+        OnAfterCopyFromJnlLine(Rec, CommissionJournalLine);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterCopyFromJnlLine(var CommissionLedgerEntry: Record "PTE Commission Ledger Entry"; CommissionJournalLine: Record "PTE Commission Journal Line")
+    begin
+    end;
 }

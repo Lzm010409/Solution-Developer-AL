@@ -2,6 +2,7 @@ codeunit 63022 "PTE Post Com. Ledger Entry"
 {
     Permissions = tabledata "PTE Commission Ledger Entry" = RI;
 
+    [Obsolete('Commission ledger entries are now created from a commission journal line by codeunit PTE Commis. Jnl.-Post Line.', '1.1.0.0')]
     procedure PostNewEntry(SalesPerson: Record "Salesperson/Purchaser"; CustomerLedgerEntry: Record "Cust. Ledger Entry"; CommissionAmountLCY: Decimal)
     var
         NewEntry: Record "PTE Commission Ledger Entry";

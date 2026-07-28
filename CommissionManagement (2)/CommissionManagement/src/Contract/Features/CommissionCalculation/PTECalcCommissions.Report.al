@@ -6,7 +6,6 @@ report 63000 "PTE Calc. Commissions"
 
     ProcessingOnly = true;
 
-
     dataset
     {
         dataitem(Salesperson; "Salesperson/Purchaser")
@@ -19,21 +18,17 @@ report 63000 "PTE Calc. Commissions"
 
                 DataItemLink = "Salesperson Code" = field("Code");
                 DataItemTableView = where("Document Type" = filter(Invoice | "Credit Memo"));
+
                 trigger onAfterGetRecord()
                 var
-                    PTECalculateCommissionCodenunit: Codeunit "PTE Calculate Commission";
-                    PTEPostLedgerEntry: Codeunit "PTE Post Com. Ledger Entry";
-                    CommissionAmount: Decimal;
-                    RoundedCommissionAmount: Decimal;
+                    CalculateCommission: Codeunit "PTE Calculate Commission";
                 begin
                     Counter += 1;
                     UpdateProgress();
-                    if (PTECalculateCommissionCodenunit.IsAlreadyCommissioned(Salesperson.Code, CustLedgEntry."Entry No.")) then
+                    if CalculateCommission.IsAlreadyCommissioned(Salesperson.Code, CustLedgEntry."Entry No.") then
                         CurrReport.Skip();
                     CalcFields(CustLedgEntry."Amount (LCY)");
-                    CommissionAmount := PTECalculateCommissionCodenunit.Calculate(CurrentCommissionPct, CustLedgEntry."Amount (LCY)", CustLedgEntry."Document Type");
-                    RoundedCommissionAmount := Round(CommissionAmount, RoundingValue);
-                    PTEPostLedgerEntry.PostNewEntry(Salesperson, CustLedgEntry, RoundedCommissionAmount);
+                    PostCommissionForCustLedgEntry();
                 end;
             }
 
@@ -49,12 +44,10 @@ report 63000 "PTE Calc. Commissions"
                 TotalCount := CustLedgEntryForSalesperson.Count();
                 UpdateProgress();
 
-                Clear(CurrentCommissionPct);
                 if Salesperson."PTE Commission Contract No." = '' then
                     CurrReport.Skip();
                 Contract.Get(Salesperson."PTE Commission Contract No.");
                 Contract.TestField("Commission Percentage");
-                CurrentCommissionPct := Contract."Commission Percentage";
             end;
 
             trigger OnPreDataItem()
@@ -62,20 +55,25 @@ report 63000 "PTE Calc. Commissions"
                 Dialog.Open(ProgressDlgMsg);
             end;
         }
-
-
     }
 
     var
         Dialog: Dialog;
         CurrentSalespersonName: Text;
         LastSalespersonName: Text;
-        CurrentCommissionPct: Decimal;
-        RoundingValue: Decimal;
         ProgressDlgMsg: Label 'Calculate Commission for: #1 Progress: #2', Comment = 'de-DE=Berechne Provision für: #1 Fortschritt: #2';
         Counter: Integer;
         TotalCount: Integer;
         LastPercent: Integer;
+
+    local procedure PostCommissionForCustLedgEntry()
+    var
+        CommissionJournalLine: Record "PTE Commission Journal Line";
+        CommisJnlPostLine: Codeunit "PTE Commis. Jnl.-Post Line";
+    begin
+        CommissionJournalLine.SetUpNewLine(Salesperson, CustLedgEntry);
+        CommisJnlPostLine.RunWithCheck(CommissionJournalLine);
+    end;
 
     local procedure UpdateProgress()
     var
@@ -105,12 +103,8 @@ report 63000 "PTE Calc. Commissions"
 
     trigger OnPreReport();
     var
-        PTECommissionSetup: Record "PTE Commission Mgt. Setup";
         PTECommissionManagementSetupCodeunit: Codeunit "PTE Com. Mgt. Validation";
     begin
         PTECommissionManagementSetupCodeunit.Run();
-        PTECommissionSetup.Get();
-        RoundingValue := PTECommissionSetup."Rounding Precision";
     end;
-
 }

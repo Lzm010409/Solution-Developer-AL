@@ -7,6 +7,7 @@ permissionset 63001 "PTE Permission RO"
         tabledata "PTE Commission Comment Line" = R,
         tabledata "PTE Commission Contract" = R,
         tabledata "PTE Commission Ledger Entry" = R,
+        tabledata "PTE Commission Journal Line" = R,
         tabledata "PTE Commission Type" = R,
 
         page "PTE Commission Contract List" = X,

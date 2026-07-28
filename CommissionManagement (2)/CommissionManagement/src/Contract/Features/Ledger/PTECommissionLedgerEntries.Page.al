@@ -57,6 +57,10 @@ page 63025 "PTE Commission Ledger Entries"
                 {
                     Caption = 'Currency Code', Comment = 'de-DE=Währungscode';
                 }
+                field("Commission Percentage"; Rec."Commission Percentage")
+                {
+                    Caption = 'Commission Percentage', Comment = 'de-DE=Provisions Prozentsatz';
+                }
                 field("Commission Amount (LCY)"; Rec."Commission Amount (LCY)")
                 {
                     Caption = 'Commission Amount (LCY)', Comment = 'de-DE=Provisionsbetrag (Lokalwährung)';

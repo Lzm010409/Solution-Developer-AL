@@ -144,6 +144,20 @@ table 63020 "PTE Commission Contract"
         end;
     end;
 
+    procedure AssistEditNoSeries(OldCommissionContract: Record "PTE Commission Contract"): Boolean
+    var
+        Setup: Record "PTE Commission Mgt. Setup";
+        NoSeries: Codeunit "No. Series";
+    begin
+        Setup.Get('');
+        Setup.TestField("Contract Nos.");
+        if not NoSeries.LookupRelatedNoSeries(Setup."Contract Nos.", OldCommissionContract."No. Series", "No. Series") then
+            exit(false);
+
+        "No." := NoSeries.GetNextNo("No. Series", WorkDate());
+        exit(true);
+    end;
+
     var
         OnDeleteRemainingSalespersonsErr: Label 'There are still salespersons related to this commission contract. Please remove them from the contract first.', Comment = 'de-DE=Es gibt noch Vertriebsmitarbeiter, die mit diesem Provisions Vertrag verbunden sind. Bitte entferne diese von dem Vertrag zuerst.';
 

@@ -16,6 +16,12 @@ page 63021 "PTE Commission Contract Card"
                 {
                     Caption = 'Contract No.', Comment = 'de-DE=Vertragsnummer';
                     ToolTip = 'This is the unique number of the Commission Contract.', Comment = 'de-DE=Die eindeutige Nummer des Provisions Vertrags.';
+
+                    trigger OnAssistEdit()
+                    begin
+                        if Rec.AssistEditNoSeries(xRec) then
+                            CurrPage.Update();
+                    end;
                 }
                 field(Description; Rec.Description)
                 {

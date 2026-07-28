@@ -5,6 +5,7 @@ permissionset 63003 "PTE Permission PO"
 
     Permissions =
         tabledata "PTE Commission Ledger Entry" = RI,
+        tabledata "PTE Commission Journal Line" = RIMD,
         tabledata "PTE Commission Contract" = R,
         tabledata "PTE Commission Type" = R,
         tabledata "PTE Commission Comment Line"=RI,
@@ -13,6 +14,9 @@ permissionset 63003 "PTE Permission PO"
         codeunit "PTE Calculate Commission"=X,
         codeunit "PTE Com. Mgt. Validation"=X,
         codeunit "PTE Post Com. Ledger Entry"=X,
+        codeunit "PTE Commis. Jnl.-Check Line"=X,
+        codeunit "PTE Commis. Jnl.-Post Line"=X,
+        codeunit "PTE Commission Navigate"=X,
 
         page "PTE Commission Comment List"=X,
         page "PTE Com. Contract Factbox"=X,

@@ -1,0 +1,45 @@
+{
+  "id": "b3f1a0d6-9c47-4f2e-8a51-6d20c7e4b913",
+  "name": "Software Sales Management Test",
+  "publisher": "GOB Software und Systeme GmbH & Co. KG",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "175c2169-464a-4305-9bba-3fa8dc65aff6",
+      "name": "Software Sales Management",
+      "publisher": "GOB Software und Systeme GmbH & Co. KG",
+      "version": "1.0.0.0"
+    },
+    {
+      "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+      "name": "Library Assert",
+      "publisher": "Microsoft",
+      "version": "26.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "26.0.0.0",
+  "application": "26.3.0.0",
+  "idRanges": [
+    {
+      "from": 63701,
+      "to": 63750
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "15.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
