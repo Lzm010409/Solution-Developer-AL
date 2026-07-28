@@ -14,40 +14,40 @@ ausgeliefert werden."
 ### Aufbau
 
 ```al
-permissionset 63000 "GOB Commission Management"
+permissionset 63000 "PTE Commission Management"
 {
     Assignable = true;
     Caption = 'Commission Management';
 
     Permissions =
         // Tabellendaten – Lese-/Schreibrechte
-        tabledata "GOB Commission Mgt. Setup" = RIMD,
-        tabledata "GOB Commission Type" = RIMD,
-        tabledata "GOB Commission Contract" = RIMD,
-        tabledata "GOB Commission Comment Line" = RIMD,
-        tabledata "GOB Commission Ledger Entry" = RIMD,
+        tabledata "PTE Commission Mgt. Setup" = RIMD,
+        tabledata "PTE Commission Type" = RIMD,
+        tabledata "PTE Commission Contract" = RIMD,
+        tabledata "PTE Commission Comment Line" = RIMD,
+        tabledata "PTE Commission Ledger Entry" = RIMD,
 
         // Tabellenobjekte – Ausführungsrecht
-        table "GOB Commission Mgt. Setup" = X,
-        table "GOB Commission Type" = X,
-        table "GOB Commission Contract" = X,
-        table "GOB Commission Comment Line" = X,
-        table "GOB Commission Ledger Entry" = X,
+        table "PTE Commission Mgt. Setup" = X,
+        table "PTE Commission Type" = X,
+        table "PTE Commission Contract" = X,
+        table "PTE Commission Comment Line" = X,
+        table "PTE Commission Ledger Entry" = X,
 
         // Pages
-        page "GOB Commission Mgt. Setup" = X,
-        page "GOB Commission Types" = X,
-        page "GOB Commission Contract List" = X,
-        page "GOB Commission Contract Card" = X,
-        page "GOB Commis. Contract Factbox" = X,
-        page "GOB Commission Comment List" = X,
-        page "GOB Commission Comment Sheet" = X,
-        page "GOB Commission Ledger Entries" = X,
+        page "PTE Commission Mgt. Setup" = X,
+        page "PTE Commission Types" = X,
+        page "PTE Commission Contract List" = X,
+        page "PTE Commission Contract Card" = X,
+        page "PTE Commis. Contract Factbox" = X,
+        page "PTE Commission Comment List" = X,
+        page "PTE Commission Comment Sheet" = X,
+        page "PTE Commission Ledger Entries" = X,
 
         // Codeunits und Reports
-        codeunit "GOB Calculate Commission" = X,
-        codeunit "GOB Post Commission Ledg Entry" = X,
-        report "GOB Calc. Commissions - batch" = X;
+        codeunit "PTE Calculate Commission" = X,
+        codeunit "PTE Post Commission Ledg Entry" = X,
+        report "PTE Calc. Commissions - batch" = X;
 }
 ```
 
@@ -66,26 +66,26 @@ permissionset 63000 "GOB Commission Management"
 Fordert die Spec abgestufte Rechte (Sachbearbeiter vs. Manager), dann:
 
 ```al
-permissionset 63001 "GOB Commission Objects"
+permissionset 63001 "PTE Commission Objects"
 {
     Assignable = false;              // Baustein
     Permissions = table … = X, page … = X, codeunit … = X;
 }
 
-permissionset 63002 "GOB Commission Read"
+permissionset 63002 "PTE Commission Read"
 {
     Assignable = true;
     Caption = 'Commission Management – Read';
-    IncludedPermissionSets = "GOB Commission Objects";
-    Permissions = tabledata "GOB Commission Contract" = R, …;
+    IncludedPermissionSets = "PTE Commission Objects";
+    Permissions = tabledata "PTE Commission Contract" = R, …;
 }
 
-permissionset 63003 "GOB Commission Edit"
+permissionset 63003 "PTE Commission Edit"
 {
     Assignable = true;
     Caption = 'Commission Management – Edit';
-    IncludedPermissionSets = "GOB Commission Objects";
-    Permissions = tabledata "GOB Commission Contract" = RIMD, …;
+    IncludedPermissionSets = "PTE Commission Objects";
+    Permissions = tabledata "PTE Commission Contract" = RIMD, …;
 }
 ```
 
@@ -95,10 +95,10 @@ Unabhängig vom PermissionSet brauchen Buchungs-Codeunits die Property auf Objek
 Posten schreiben dürfen, auch wenn der aufrufende Anwender nur Leserecht hat:
 
 ```al
-codeunit 63032 "GOB Commis. Jnl.-Post Line"
+codeunit 63032 "PTE Commis. Jnl.-Post Line"
 {
-    Permissions = tabledata "GOB Commission Ledger Entry" = rimd,
-                  tabledata "GOB Commission Register" = rimd;
+    Permissions = tabledata "PTE Commission Ledger Entry" = rimd,
+                  tabledata "PTE Commission Register" = rimd;
 ```
 
 Muster: `SolDev/Final/src/permissionset/SMBSemRegistration.PermissionSet.al`
@@ -153,9 +153,9 @@ Vorlage: `SolDev/Final/TestSeminarManagement/app.json`.
 Trennt Testdaten-Erzeugung von den Testfällen. Jede Testdatenart bekommt eine `Create…`-Prozedur.
 
 ```al
-codeunit 63901 "GOB Library - Commission Mgt."
+codeunit 63901 "PTE Library - Commission Mgt."
 {
-    procedure CreateCommissionSetup(var CommissionSetup: Record "GOB Commission Mgt. Setup")
+    procedure CreateCommissionSetup(var CommissionSetup: Record "PTE Commission Mgt. Setup")
     var
         LibraryNoSeries: Codeunit "Library - No. Series";
         NoSeriesCodeTxt: Label 'TESTCOM', Locked = true;
@@ -172,7 +172,7 @@ codeunit 63901 "GOB Library - Commission Mgt."
         CommissionSetup.Modify();
     end;
 
-    procedure CreateCommissionContract(var CommissionContract: Record "GOB Commission Contract")
+    procedure CreateCommissionContract(var CommissionContract: Record "PTE Commission Contract")
     var
         Any: Codeunit Any;
     begin
@@ -194,7 +194,7 @@ Nützliche Standard-Libraries: `Library - Utility` (`GenerateRandomCode20`, `Get
 ### Test-Codeunit
 
 ```al
-codeunit 63900 "GOB Test Commission Mgt."
+codeunit 63900 "PTE Test Commission Mgt."
 {
     Subtype = Test;
     TestPermissions = Disabled;
@@ -204,9 +204,9 @@ codeunit 63900 "GOB Test Commission Mgt."
     [Test]
     procedure TestCommissionContractDates()
     var
-        CommissionContract: Record "GOB Commission Contract";
-        LibraryCommission: Codeunit "GOB Library - Commission Mgt.";
-        CommissionSetup: Record "GOB Commission Mgt. Setup";
+        CommissionContract: Record "PTE Commission Contract";
+        LibraryCommission: Codeunit "PTE Library - Commission Mgt.";
+        CommissionSetup: Record "PTE Commission Mgt. Setup";
     begin
         // [SCENARIO] Ending date before starting date must be rejected
         // [GIVEN] A new commission contract
@@ -280,7 +280,7 @@ Für Tests, die die Oberflächenlogik einbeziehen:
 
 ```al
 var
-    CommissionContractCard: TestPage "GOB Commission Contract Card";
+    CommissionContractCard: TestPage "PTE Commission Contract Card";
 begin
     CommissionContractCard.OpenNew();
     CommissionContractCard.Description.SetValue('Test');

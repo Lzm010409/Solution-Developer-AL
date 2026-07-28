@@ -95,9 +95,9 @@ absoluten Zahlen andere sind.
   Buchungslauf**, also gecacht.
 
 ```al
-codeunit 63031 "GOB Commis. Jnl.-Check Line"
+codeunit 63031 "PTE Commis. Jnl.-Check Line"
 {
-    TableNo = "GOB Commission Journal Line";
+    TableNo = "PTE Commission Journal Line";
 
     trigger OnRun()
     begin
@@ -109,7 +109,7 @@ codeunit 63031 "GOB Commis. Jnl.-Check Line"
         GLSetupRead: Boolean;
         ClosingDateErr: Label 'cannot be a closing date';
 
-    procedure RunCheck(var CommissionJnlLine: Record "GOB Commission Journal Line")
+    procedure RunCheck(var CommissionJnlLine: Record "PTE Commission Journal Line")
     begin
         if CommissionJnlLine.EmptyLine() then
             exit;
@@ -125,7 +125,7 @@ codeunit 63031 "GOB Commis. Jnl.-Check Line"
                 CommissionJnlLine.FieldError("Document Date", ErrorInfo.Create(ClosingDateErr, true));
     end;
 
-    local procedure CheckPostingDate(CommissionJnlLine: Record "GOB Commission Journal Line")
+    local procedure CheckPostingDate(CommissionJnlLine: Record "PTE Commission Journal Line")
     var
         UserSetupManagement: Codeunit "User Setup Management";
     begin
@@ -156,11 +156,11 @@ Muster: `SolDev/Final/src/codeunit/SMBSemJnlCheckLine.Codeunit.al`
 - Stellt bei Bedarf Verknüpfungen zwischen korrespondierenden Posten her.
 
 ```al
-codeunit 63032 "GOB Commis. Jnl.-Post Line"
+codeunit 63032 "PTE Commis. Jnl.-Post Line"
 {
-    Permissions = tabledata "GOB Commission Ledger Entry" = rimd,
-                  tabledata "GOB Commission Register" = rimd;
-    TableNo = "GOB Commission Journal Line";
+    Permissions = tabledata "PTE Commission Ledger Entry" = rimd,
+                  tabledata "PTE Commission Register" = rimd;
+    TableNo = "PTE Commission Journal Line";
 
     trigger OnRun()
     begin
@@ -168,14 +168,14 @@ codeunit 63032 "GOB Commis. Jnl.-Post Line"
     end;
 
     var
-        CommissionJnlLineGlobal: Record "GOB Commission Journal Line";
-        CommissionLedgerEntry: Record "GOB Commission Ledger Entry";
-        CommissionRegister: Record "GOB Commission Register";
-        CommissionContract: Record "GOB Commission Contract";
-        JnlCheckLine: Codeunit "GOB Commis. Jnl.-Check Line";
+        CommissionJnlLineGlobal: Record "PTE Commission Journal Line";
+        CommissionLedgerEntry: Record "PTE Commission Ledger Entry";
+        CommissionRegister: Record "PTE Commission Register";
+        CommissionContract: Record "PTE Commission Contract";
+        JnlCheckLine: Codeunit "PTE Commis. Jnl.-Check Line";
         NextEntryNo: Integer;
 
-    procedure RunWithCheck(var CommissionJnlLine: Record "GOB Commission Journal Line")
+    procedure RunWithCheck(var CommissionJnlLine: Record "PTE Commission Journal Line")
     begin
         CommissionJnlLineGlobal.Copy(CommissionJnlLine);
         Code();
@@ -253,13 +253,13 @@ Muster: `SolDev/Final/src/codeunit/SMBSemJnlPostLine.Codeunit.al`
 Kurze UI-Interaktion, dann Übergabe. Sonst nichts.
 
 ```al
-codeunit 63021 "GOB Commission-Post (Yes/No)"
+codeunit 63021 "PTE Commission-Post (Yes/No)"
 {
-    TableNo = "GOB Commission Doc. Header";
+    TableNo = "PTE Commission Doc. Header";
 
     trigger OnRun()
     var
-        CommissionDocHeader: Record "GOB Commission Doc. Header";
+        CommissionDocHeader: Record "PTE Commission Doc. Header";
     begin
         if not Rec.Find() then
             Error(DocumentErrorsMgt.GetNothingToPostErrorMsg());
@@ -274,12 +274,12 @@ codeunit 63021 "GOB Commission-Post (Yes/No)"
         WantToPostQst: Label 'Do you want to post the %1?',
             Comment = '%1 = TableCaption of the document';
 
-    local procedure "Code"(var CommissionDocHeader: Record "GOB Commission Doc. Header")
+    local procedure "Code"(var CommissionDocHeader: Record "PTE Commission Doc. Header")
     begin
         if not Confirm(WantToPostQst, true, CommissionDocHeader.TableCaption) then
             exit;
 
-        Codeunit.Run(Codeunit::"GOB Commission-Post", CommissionDocHeader);
+        Codeunit.Run(Codeunit::"PTE Commission-Post", CommissionDocHeader);
     end;
 }
 ```
@@ -297,7 +297,7 @@ action(Post)
 
     trigger OnAction()
     begin
-        Codeunit.Run(Codeunit::"GOB Commission-Post (Yes/No)", Rec);
+        Codeunit.Run(Codeunit::"PTE Commission-Post (Yes/No)", Rec);
     end;
 }
 ```
@@ -311,22 +311,22 @@ Muster: `SolDev/Final/src/codeunit/SMBSeminarPostYesNo.Codeunit.al`
 Die längste Codeunit. Ihr Ablauf ist immer derselbe – Vorlage ist Codeunit 80 `Sales-Post`.
 
 ```al
-codeunit 63020 "GOB Commission-Post"
+codeunit 63020 "PTE Commission-Post"
 {
-    Permissions = tabledata "GOB Posted Commis. Doc. Header" = rimd,
-                  tabledata "GOB Posted Commis. Doc. Line" = rimd,
-                  tabledata "GOB Commission Doc. Header" = rimd,
-                  tabledata "GOB Commission Doc. Line" = rimd;
-    TableNo = "GOB Commission Doc. Header";
+    Permissions = tabledata "PTE Posted Commis. Doc. Header" = rimd,
+                  tabledata "PTE Posted Commis. Doc. Line" = rimd,
+                  tabledata "PTE Commission Doc. Header" = rimd,
+                  tabledata "PTE Commission Doc. Line" = rimd;
+    TableNo = "PTE Commission Doc. Header";
 
     trigger OnRun()
     begin
         RunWithCheck(Rec);
     end;
 
-    internal procedure RunWithCheck(var DocHeader2: Record "GOB Commission Doc. Header")
+    internal procedure RunWithCheck(var DocHeader2: Record "PTE Commission Doc. Header")
     var
-        DocHeader: Record "GOB Commission Doc. Header";
+        DocHeader: Record "PTE Commission Doc. Header";
     begin
         ClearAllVariables();          // 1. Alle Globals zurücksetzen
         GetSetup();                   //    Einrichtung einmalig lesen
@@ -345,7 +345,7 @@ codeunit 63020 "GOB Commission-Post"
 ### `CheckAndUpdate` – die Kopfverarbeitung
 
 ```al
-    local procedure CheckAndUpdate(var DocHeader: Record "GOB Commission Doc. Header")
+    local procedure CheckAndUpdate(var DocHeader: Record "PTE Commission Doc. Header")
     var
         SourceCodeSetup: Record "Source Code Setup";
         ModifyHeader: Boolean;
@@ -365,7 +365,7 @@ codeunit 63020 "GOB Commission-Post"
 
         // d) Herkunftscode setzen
         SourceCodeSetup.Get();
-        SrcCode := SourceCodeSetup."GOB Commission";
+        SrcCode := SourceCodeSetup."PTE Commission";
 
         // e) Gebuchten Kopf erzeugen
         InsertPostedHeaders(DocHeader);
@@ -375,7 +375,7 @@ codeunit 63020 "GOB Commission-Post"
 ### `CheckDocument` – die Prüfkaskade
 
 ```al
-    procedure CheckDocument(var DocHeader: Record "GOB Commission Doc. Header")
+    procedure CheckDocument(var DocHeader: Record "PTE Commission Doc. Header")
     var
         UserSetupManagement: Codeunit "User Setup Management";
     begin
@@ -385,9 +385,9 @@ codeunit 63020 "GOB Commission-Post"
         InitProgressWindow(DocHeader);                      // Fortschrittsfenster öffnen
     end;
 
-    local procedure CheckLinesExistToPost(DocHeader: Record "GOB Commission Doc. Header")
+    local procedure CheckLinesExistToPost(DocHeader: Record "PTE Commission Doc. Header")
     var
-        DocLine: Record "GOB Commission Doc. Line";
+        DocLine: Record "PTE Commission Doc. Line";
     begin
         DocLine.SetRange("Document No.", DocHeader."No.");
         DocLine.SetRange(Posted, false);
@@ -399,7 +399,7 @@ codeunit 63020 "GOB Commission-Post"
 ### Zeilenverarbeitung
 
 ```al
-    local procedure ProcessPostingLines(var DocHeader: Record "GOB Commission Doc. Header")
+    local procedure ProcessPostingLines(var DocHeader: Record "PTE Commission Doc. Header")
     var
         LineCount: Integer;
     begin
@@ -423,9 +423,9 @@ codeunit 63020 "GOB Commission-Post"
 ### Gebuchten Beleg erzeugen
 
 ```al
-    local procedure InsertPostedDocHeader(var DocHeader: Record "GOB Commission Doc. Header")
+    local procedure InsertPostedDocHeader(var DocHeader: Record "PTE Commission Doc. Header")
     var
-        CommentLine: Record "GOB Commission Comment Line";
+        CommentLine: Record "PTE Commission Comment Line";
         RecordLinkManagement: Codeunit "Record Link Management";
     begin
         PostedDocHeader.Init();
@@ -458,8 +458,8 @@ gibt sie an die Post-Line-Codeunit:
 ```al
     local procedure PostJnlLine(var DocHeader: …; var DocLine: …)
     var
-        CommissionJnlLine: Record "GOB Commission Journal Line";
-        JnlPostLine: Codeunit "GOB Commis. Jnl.-Post Line";
+        CommissionJnlLine: Record "PTE Commission Journal Line";
+        JnlPostLine: Codeunit "PTE Commis. Jnl.-Post Line";
     begin
         CommissionJnlLine.Init();
         CommissionJnlLine."Posting Date" := DocHeader."Posting Date";
@@ -479,10 +479,10 @@ gibt sie an die Post-Line-Codeunit:
 ### Abschluss
 
 ```al
-    local procedure FinalizeDocument(var DocHeader: Record "GOB Commission Doc. Header")
+    local procedure FinalizeDocument(var DocHeader: Record "PTE Commission Doc. Header")
     var
-        DocLine: Record "GOB Commission Doc. Line";
-        CommentLine: Record "GOB Commission Comment Line";
+        DocLine: Record "PTE Commission Doc. Line";
+        CommentLine: Record "PTE Commission Comment Line";
     begin
         if EverythingPosted() then begin
             DocLine.SetRange("Document No.", DocHeader."No.");
@@ -570,7 +570,7 @@ Anforderungen wie „Der periodische Stapellauf ‚Provisionen ermitteln' muss f
 beliebig viele Verkäufer ausgeführt werden können" ergeben einen **ProcessingOnly-Report**.
 
 ```al
-report 63000 "GOB Calc. Commissions - batch"
+report 63000 "PTE Calc. Commissions - batch"
 {
     Caption = 'Calculate Commissions';
     ProcessingOnly = true;

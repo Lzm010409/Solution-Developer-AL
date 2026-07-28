@@ -764,11 +764,19 @@ Ebenfalls unklar und im Projekt zu klären:
 
 - Welche **`ApplicationArea`** in Kundenprojekten zu verwenden ist (`GOBunitop` ist die
   unitop-Ausprägung).
-- Ob im Projekt der Präfix **`PTE`** statt `GOB` gilt – die Upgrade-Tag-Regel legt das nahe
-  („`GOB` – oder im Projekt `PTE`"), die Spezifikation des Provisionsmanagements fordert
-  dagegen ausdrücklich `GOB`. **Im Zweifel der Spezifikation folgen** und nachfragen.
 - Der Abschnitt **„Option vs. Enum"** ist in der vorliegenden Fassung ohne Inhalt
   („Die Verwendung wird folgendermaßen entschieden:" – danach bricht der Text ab).
+
+### Geklärt: Präfix im Projekt
+
+Die Upgrade-Tag-Regel nennt „`GOB` – oder im Projekt `PTE`". Für das Provisionsmanagement
+ist entschieden: **Im Projekt gilt `PTE`.** Das deckt sich mit der gestellten Basis-App, die
+durchgängig `PTE` verwendet — obwohl die Spezifikation `GOB` fordert.
+
+`GOB` bleibt der bei Microsoft registrierte Präfix der unitop-Produktentwicklung; alle
+Zitate und Codebeispiele **dieses** Dokuments stammen aus der Richtlinie und zeigen ihn
+deshalb weiterhin. In den Regeldokumenten `10-`…`70-` und in allem, was neu entsteht,
+gilt `PTE`.
 
 **Bis diese Lücken geschlossen sind:** Bei Entscheidungen, die davon abhängen könnten,
 **nachfragen** statt annehmen.

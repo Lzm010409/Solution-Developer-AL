@@ -1,12 +1,11 @@
-# 90 – Domänenkontext: Provisionsmanagement
+# 90 – Domänenkontext: Provisionsmanagement (Basis-App)
 
-Dieses Dokument beschreibt das **gestellte Grundprojekt**. Der Agent baut es nicht – er
-erweitert es. Der Zweck dieses Dokuments ist, dass der Agent weiß, was er vorfindet und wie
-sich die Muster der Seminar-Musterlösung auf diese Domäne übertragen.
+Dieses Dokument beschreibt die **tatsächlich gestellte Basis-App**, wie sie im Repository
+unter `CommissionManagement (2)/CommissionManagement/` liegt. Der Agent baut sie nicht –
+er erweitert sie.
 
-⚠️ Der Stand hier entspricht der Spezifikation **Version 1.02**. Die tatsächlich gestellte App
-kann abweichen. **Die vorgefundene App ist maßgeblich**, nicht dieses Dokument. Phase 0 der
-Bestandsaufnahme (siehe `00-workflow.md`) ist trotzdem durchzuführen.
+Die Angaben stammen aus dem Code, nicht aus der Spezifikation. Wo Spezifikation und Code
+auseinandergehen, **gilt der Code**.
 
 ---
 
@@ -14,135 +13,264 @@ Bestandsaufnahme (siehe `00-workflow.md`) ist trotzdem durchzuführen.
 
 | | |
 |---|---|
-| Extension-Name | Provisionsmanagement (de) / Commission Management (en) |
-| Objekt-Prefix | `GOB` |
-| Objektnummernkreis | 63000 – 63500 |
-| Sprachen | `de-DE` und `en-US` |
-| Fachbegriff „Provision" in AL | `Commission` |
-| Integrationsbereich | Sales |
-| Einstieg für den Anwender | Manuelle Einrichtung **oder** Rollencenter „Verkaufsauftragbearbeitung" (`Order Processor Role Center`) |
+| Ordner | `CommissionManagement (2)/CommissionManagement/` |
+| Name | `Commission Management` |
+| Publisher | `GOB Software und Systeme GmbH & Co. KG` |
+| App-ID | `c8c8e0da-e740-4159-a463-83431d5e1480` |
+| Version | `1.0.0.0` |
+| **Objekt-Prefix** | **`PTE`** |
+| ID-Bereich | 63000 – 63500 |
+| Platform / Application | `26.0.0.0` / `26.3.0.0` |
+| Runtime | `15.0` |
+| Features | `NoImplicitWith`, `TranslationFile` |
+| Dependencies | **keine** – die App steht allein auf der BaseApp |
+| Übersetzungen | `de-DE`, `en-US`, `.g.xlf` unter `Translations/` |
+
+> ⚠️ **Der Prefix ist `PTE`, nicht `GOB`.** Die Spezifikation nennt `GOB`; die gestellte App
+> verwendet durchgängig `PTE`. `GOB` ist der bei Microsoft registrierte Produktprefix für
+> unitop – im Projekt gilt `PTE`. Alle neuen Objekte tragen ebenfalls `PTE`.
 
 ---
 
-## Fachliche Kernprozesse (Release 1.00)
+## Objektinventar (belegte IDs)
 
-1. Provisionsverträge anlegen und Verkäufern zuordnen
-2. Auf den Verkäufer-Masken die Provisionshöhe anzeigen, filterbar auf Perioden
-3. Provisionsverträge dürfen nicht gelöscht werden, solange sie einem Verkäufer zugeordnet sind
-4. Periodischer Stapellauf „Provisionen ermitteln" für einen oder viele Verkäufer, auf Basis
-   gebuchter Verkaufsrechnungen und -gutschriften; Ergebnis sind Provisionsposten je Verkaufsbeleg
-5. Integration in den Sales-Bereich mit BC-typischer User Experience
+### Tabellen
 
-**Ausdrücklich nicht in Release 1.00:** die Auszahlung von Provisionsboni. Die Stammdatenfelder
-dafür existieren (`Pay Commission Bonus`, `Target Achievement Amount`, `Commission Bonus Amount`),
-tragen aber **keine Geschäftslogik**. Das ist der wahrscheinlichste Ansatzpunkt für eine
-Folgeaufgabe.
+| ID | Name | Archetyp |
+|---|---|---|
+| 63000 | `PTE Commission Mgt. Setup` | Setup |
+| 63001 | `PTE Commission Type` | Supplemental |
+| 63020 | `PTE Commission Contract` | Master |
+| 63021 | `PTE Commission Comment Line` | Bemerkungen |
+| 63022 | `PTE Commission Ledger Entry` | Ledger Entry |
 
----
+### Table Extension
 
-## Datenmodell des Grundprojekts
+| ID | Name | erweitert |
+|---|---|---|
+| 63000 | `PTE Salesperson Com. Table Ext` | `Salesperson/Purchaser` |
 
-```
-   Salesperson/Purchaser  ────────▶  Commission Contract  ────────▶  Commission Comment Line
-   (Standard, erweitert)                    │      │                  (Table Name, No., Line No.)
-   Code (PK)                                │      │
-   Commission Contract No. ◀────────────────┘      │
-                                                   ▼
-                                           Commission Type
-                                           Code (PK), Description
+Felder darin: `PTE Commission Contract No.` (63020), `PTE Commission Amount (LCY)`
+(63021, FlowField), `PTE Date Filter` (63022, FlowFilter).
 
-   Cust. Ledger Entry  ─────────┐
-   Entry No. (PK)               │
-   Posting Date                 ▼
-   Document No.          Commission Ledger Entry
-                         Entry No. (PK)
-                         Posting Date
-                         Salesperson Code        ──▶ Salesperson/Purchaser
-                         Commission Contract No. ──▶ Commission Contract
-                         Document No.
-                         Customer Ldg. Entry No. ──▶ Cust. Ledger Entry
-```
+### Pages
 
-Kurz: **Kein Beleg, kein Buch.-Blatt, kein Register.** Die Posten entstehen direkt aus dem
-Batch-Report heraus. Genau hier setzen die Erweiterungsaufgaben an.
+| ID | Name | Typ |
+|---|---|---|
+| 63000 | `PTE Commission Mgt. Setup Card` | Card (Setup) |
+| 63001 | `PTE Commission Type List` | List |
+| 63020 | `PTE Commission Contract List` | List |
+| 63021 | `PTE Commission Contract Card` | Card |
+| 63022 | `PTE Com. Contract Factbox` | CardPart |
+| 63023 | `PTE Commission Comment List` | List |
+| 63024 | `PTE Commission Comment Sheet` | List |
+| 63025 | `PTE Commission Ledger Entries` | List |
 
----
+### Page Extensions
 
-## Objektliste des Grundprojekts
+| ID | Name | erweitert |
+|---|---|---|
+| 63000 | `PTE Com. Contract Role Center` | `Order Processor Role Center` |
+| 63001 | `PTE Salesperson Com. Page Ext` | `Salesperson/Purchaser Card` |
+| 63002 | `PTE Salesperson Com. List Ext` | `Salespersons/Purchasers` |
 
-Laut Spezifikation, Abschnitt „Beispiel: Objektliste". Enums sind dort nicht aufgeführt.
+### Codeunits
+
+| ID | Name | Rolle |
+|---|---|---|
+| 63000 | `PTE Com. Mgt. Validation` | prüft, ob der Setup-Satz existiert |
+| 63001 | `PTE Com. Mgt. Inst. Lib` | Subscriber auf `OnRegisterManualSetup` (Manuelle Einrichtung) |
+| 63021 | `PTE Calculate Commission` | Provisionsberechnung, Doppelerfassungsprüfung |
+| 63022 | `PTE Post Com. Ledger Entry` | erzeugt Provisionsposten |
+| 63023 | `PTE Commission Contract` | Vertragslogik für den `OnDelete`-Trigger |
+
+### Enums
+
+| ID | Name |
+|---|---|
+| 63000 | `PTE Commission Contract Status` |
+| 63001 | `PTE Comment Line Table Name` |
+| 63002 | `PTE Com. Led. Ent. Doc. Type` |
+| 63004 | `PTE Commission Payment Type` |
+
+### Report und PermissionSets
 
 | Typ | ID | Name |
 |---|---|---|
-| Table | 63000 | GOB Commission Mgt. Setup |
-| Table | 63001 | GOB Commission Type |
-| Table | 63020 | GOB Commission Contract |
-| Table | 63021 | GOB Commission Comment Line |
-| Table | 63022 | GOB Commission Ledger Entry |
-| Report | 63000 | GOB Calc. Commissions - batch |
-| Codeunit | 63000 | GOB Commis. Mgt Install Lib. |
-| Codeunit | 63021 | GOB Calculate Commission |
-| Codeunit | 63022 | GOB Post Commission Ledg Entry |
-| Page | 63000 | GOB Commission Mgt. Setup |
-| Page | 63001 | GOB Commission Types |
-| Page | 63020 | GOB Commission Contract List |
-| Page | 63021 | GOB Commission Contract Card |
-| Page | 63022 | GOB Commis. Contract Factbox |
-| Page | 63023 | GOB Commission Comment List |
-| Page | 63024 | GOB Commission Comment Sheet |
-| Page | 63025 | GOB Commission Ledger Entries |
+| Report | 63000 | `PTE Calc. Commissions` |
+| PermissionSet | 63000 | `PTE Permission GL` |
+| PermissionSet | 63001 | `PTE Permission RO` |
+| PermissionSet | 63003 | `PTE Permission PO` |
+| PermissionSet | 63004 | `PTE Permission SE` |
 
-Dazu kommen die Erweiterungen des Standards (`tableextension`/`pageextension` auf
-`Salesperson/Purchaser` und das Rollencenter) sowie mindestens ein PermissionSet.
-
-**Freie IDs für Erweiterungen:** alles Übrige zwischen 63000 und 63500 – konkret bestätigen
-lässt sich das nur über das Objektinventar aus Phase 0.
+**Freie IDs im Bereich 63000–63500:** unter anderem 63002–63019 (teilweise), 63026–63500.
+Vor der Vergabe eigener IDs das Inventar erneut prüfen — und beachten: **Eine separate
+Erweiterungs-App bekommt einen eigenen ID-Bereich**, nicht diesen.
 
 ---
 
-## Vorhandene Muster im Grundprojekt
+## Ordnerstruktur der Basis-App
 
-Der Agent kann davon ausgehen, dass diese Muster bereits im Code stehen und als Vorlage für
-Neues dienen:
+Featureorientiert, nicht objekttyporientiert wie die Musterlösung:
 
-| Muster | Wo |
+```
+src/
+├── Comment/
+│   ├── Data/               PTECommissionCommentLine.Table.al
+│   ├── Enums/              PTECommentLineTableName.Enum.al
+│   └── Features/CommentManagement/   Comment List + Comment Sheet
+├── Contract/
+│   ├── Data/               Contract, Ledger Entry, Commission Type
+│   ├── Enums/              Status, Doc. Type, Payment Type
+│   ├── Extensions/         Salesperson TableExt + 2 PageExt + Role Center PageExt
+│   └── Features/
+│       ├── CommissionCalculation/    Report + Calculate-Codeunit
+│       ├── CommissionTypes/          Type List
+│       ├── ContractManagement/       Card, List, Factbox, Contract-Codeunit
+│       └── Ledger/                   Ledger Entries Page + Post-Codeunit
+├── Permission/             4 PermissionSets
+└── Setup/
+    ├── Data/               Setup-Tabelle
+    └── Features/SetupManagement/   Setup Card, Install Lib, Validation
+```
+
+**Neue Objekte folgen diesem Schema**: `<Feature>/Data|Enums|Extensions|Features/<Bereich>/`.
+
+---
+
+## Hausstil der Basis-App
+
+Das ist verbindlich für alles, was dazukommt — er hat Vorrang vor dem Stil der Musterlösung.
+
+### Übersetzung direkt am Property
+
+Captions, ToolTips und Labels tragen die deutsche Übersetzung als `Comment`:
+
+```al
+field(30; "Starting Date"; Date)
+{
+    DataClassification = CustomerContent;
+    Caption = 'Starting Date', Comment = 'de-DE=Startdatum';
+    ToolTip = 'This is the Starting Date of the Commission Contract.',
+        Comment = 'de-DE=Das Startdatum des Provisions Vertrags.';
+}
+```
+
+Die XLIFF-Dateien unter `Translations/` werden daraus erzeugt. **Nicht** von Hand pflegen.
+
+### Weitere Merkmale
+
+| Merkmal | Ausprägung |
 |---|---|
-| Setup-Tabelle mit Nummernserien und Rundungsfeld | `GOB Commission Mgt. Setup` |
-| Master mit Nummernserie und `AssistEdit` | `GOB Commission Contract` |
-| Supplemental mit editierbarer Listenpage | `GOB Commission Type` |
-| Eigene Bemerkungstabelle (nicht die Standard-`Comment Line`) | `GOB Commission Comment Line` |
-| Postentabelle nach Postenkonzept | `GOB Commission Ledger Entry` |
-| ProcessingOnly-Report als Stapellauf | `GOB Calc. Commissions - batch` |
-| FactBox über Array | `GOB Commis. Contract Factbox` |
-| FlowField + FlowFilter auf dem Standardstammsatz | `tableextension` auf `Salesperson/Purchaser` |
-| Rollencenter-Erweiterung | `pageextension` auf `Order Processor Role Center` |
+| `DataClassification` | an der Tabelle **und** je Feld, Wert `CustomerContent` |
+| ToolTips | **an der Tabelle**, nicht an der Page |
+| ToolTip-Formulierung | `'This is the <Feld> of the <Entität>.'` bzw. `'This indicates whether …'` |
+| Schlüsselname | `key(PK; …)` mit `Clustered = true` ✓ entspricht der GOB-Konvention |
+| Feldnummern | in Zehnerschritten, thematisch geblockt (1, 10, 20/21, 30, 40, 50, 60, 70/71/72, 80, 107) |
+| Labels | **lokal im Trigger/in der Prozedur** deklariert, Suffix `Err` |
+| Tabellenlogik | delegiert an Codeunits (`OnDelete` ruft `PTE Commission Contract`) |
+| Nummernserie | `Setup.Get('')`, dann `NoSeries.AreRelated` / `GetNextNo("No. Series", WorkDate())` |
+| Prozeduren | durchgängig **public** – kein `local`, kein `internal`, kein `Access = Internal` |
 
-**Neue Objekte übernehmen den Stil dieser Objekte**, nicht den der Seminar-Musterlösung, wo
-beide sich unterscheiden.
+### Bekannte Abweichungen von den GOB-Coderichtlinien
+
+Auch die Basis-App ist nicht lupenrein. **Nicht ungefragt reparieren**, aber auch nicht
+nachahmen:
+
+| Abweichung | Wo |
+|---|---|
+| `DataClassification` fehlt an TableExt-Feldern | `PTESalespersonComTableExt.TableExt.al` |
+| `DataClassification` fehlt am Setup-Feld `Contract Nos.` | `PTECommissionMgtSetup.Table.al` |
+| `IsEmpty()` vor `FindSet()` | `PTECommissionContract.Codeunit.al`, `ClearLedgerEntriesForContract` |
+| Posten werden nachträglich geändert | ebenda – setzt `Commission Contract No.` in bestehenden Posten auf leer |
+| Kleinschreibung von Methoden (`setRange`, `deleteAll`, `onValidate`) | mehrere Dateien |
 
 ---
 
-## Mapping Seminar-Musterlösung → Provisionsmanagement
+## Fachliche Struktur
 
-Wenn eine Erweiterungsaufgabe ein Muster aus `SolDev/Final/` verlangt, ist das die Übersetzung:
+```
+   Salesperson/Purchaser  ─────▶  PTE Commission Contract  ─────▶  PTE Commission Comment Line
+   (TableExt 63000)                       │      │
+   PTE Commission Contract No. ◀──────────┘      │
+   PTE Commission Amount (LCY)                   ▼
+   PTE Date Filter                       PTE Commission Type
 
-| Rolle im Datenmodell | Seminar (`SMB`) | Provision (`GOB`) |
+   Cust. Ledger Entry  ──────────▶  PTE Commission Ledger Entry
+                                    Entry No. · Posting Date · Document Type · Document No.
+                                    Customer No. · Amount (LCY) · Salesperson Code
+                                    Commission Contract No. · Customer Ledger Entry No.
+                                    Commission Amount (LCY) · Currency Code
+```
+
+**Kein Beleg, kein Buch.-Blatt, kein Register, keine gebuchten Belege.** Die Posten entstehen
+direkt aus dem Report `PTE Calc. Commissions` heraus, der `PTE Calculate Commission` zur
+Berechnung und `PTE Post Com. Ledger Entry` zum Schreiben nutzt.
+
+### Öffentliche Schnittstellen der Basis-App
+
+Aus einer separaten App heraus nutzbar:
+
+| Codeunit | Prozedur |
+|---|---|
+| `PTE Calculate Commission` | `Calculate(SalesmanCommission: Decimal; SalesAmount: Decimal; DocumentType: Enum "Gen. Journal Document Type"): Decimal` |
+| `PTE Calculate Commission` | `IsAlreadyCommissioned(SalespersonCode: Code[20]; LedgerEntryNo: Integer): Boolean` |
+| `PTE Post Com. Ledger Entry` | `PostNewEntry(SalesPerson: Record "Salesperson/Purchaser"; CustomerLedgerEntry: Record "Cust. Ledger Entry"; CommissionAmountLCY: Decimal)` |
+| `PTE Commission Contract` | `HasRemainingSalesman`, `ClearLedgerEntriesForContract`, `DeleteCommentsForContract` |
+| `PTE Commission Comment Line` | `SetUpNewLine()` |
+
+> ⚠️ **Die Basis-App publiziert keine Events.** Es gibt weder `IntegrationEvent` noch
+> `BusinessEvent`. Ihre Bausteine sind also **aufrufbar, aber ihre Abläufe nicht
+> erweiterbar**. Muss eine neue App in einen bestehenden Ablauf eingreifen (etwa in die
+> Berechnung im Report), gibt es dafür keinen Einstiegspunkt — das ist ein Blocker, der
+> zu melden ist, kein Grund für Code-Duplikation.
+
+---
+
+## Fachliche Regeln aus der Spezifikation
+
+Gelten weiter, auch wenn eine Erweiterungsaufgabe sie nicht wiederholt:
+
+- **Provisionsformel:** `Provisionsbetrag = (Rechnungsbetrag / 100) * Provision in Prozent`
+- **Gutschriften ergeben einen negativen Betrag**
+- **Rundung über das Einrichtungsfeld** `Rounding Precision`
+- **Beträge 1:1 aus den Debitorenposten** – keine erneute Währungsumrechnung
+- **`Commission Percentage` zwischen 1 und 100**
+- **Keine Doppelerfassung** – bereits verarbeitete Belege werden erkannt und übersprungen
+  (`IsAlreadyCommissioned`)
+- **Provisionsposten bleiben dauerhaft erhalten**
+- **Ein Vertrag darf nicht gelöscht werden, solange ihm ein Verkäufer zugeordnet ist**
+- **Das Standardfeld `Commission %` am Verkäufer bleibt ausgeblendet**
+
+### Rollencenter-Menü
+
+Die Gruppe im `Order Processor Role Center` (PageExt 63000) enthält laut Spezifikation:
+Provisionsarten, Verkäufer, Provisionsverträge, Provisionsposten, Provisionen berechnen.
+Neue Einstiegspunkte gehören in dieselbe Gruppe.
+
+---
+
+## Mapping Musterlösung → Provisionsmanagement
+
+Wenn eine Erweiterungsaufgabe ein Muster aus `SolDev/Final/` verlangt:
+
+| Rolle im Datenmodell | Seminar (`SMB`) | Provision (`PTE`) |
 |---|---|---|
-| Setup | `SMB Seminar Setup` | `GOB Commission Mgt. Setup` |
-| Master | `SMB Seminar` | `GOB Commission Contract` |
-| Supplemental | `SMB Seminar Room`, `SMB Instructor` | `GOB Commission Type` |
-| Bemerkungen | `SMB Seminar Comment Line` | `GOB Commission Comment Line` |
+| Setup | `SMB Seminar Setup` | `PTE Commission Mgt. Setup` |
+| Master | `SMB Seminar` | `PTE Commission Contract` |
+| Supplemental | `SMB Seminar Room`, `SMB Instructor` | `PTE Commission Type` |
+| Bemerkungen | `SMB Seminar Comment Line` | `PTE Commission Comment Line` |
 | Angebundener Standard-Stammsatz | `Contact`, `Customer` | `Salesperson/Purchaser` |
-| Posten | `SMB Seminar Ledger Entry` | `GOB Commission Ledger Entry` |
+| Posten | `SMB Seminar Ledger Entry` | `PTE Commission Ledger Entry` |
 | Auslösender Standardbeleg | `Sales Invoice` (Fakturierung) | `Cust. Ledger Entry` (Berechnungsgrundlage) |
-| Stapellauf | `SMB Create Seminar Invoices` | `GOB Calc. Commissions - batch` |
-| FactBox | `SMB Seminar Details FactBox` | `GOB Commis. Contract Factbox` |
-| Rollencenter | `SMB Seminar Role Center` (eigenes) | `pageextension` auf `Order Processor Role Center` |
+| Stapellauf | `SMB Create Seminar Invoices` | `PTE Calc. Commissions` |
+| FactBox | `SMB Seminar Details FactBox` | `PTE Com. Contract Factbox` |
+| Rollencenter | `SMB Seminar Role Center` (eigenes) | PageExt auf `Order Processor Role Center` |
 
-### Was im Grundprojekt (noch) fehlt
+### Was in der Basis-App fehlt
 
-Diese Bausteine der Musterlösung haben **kein** Pendant im Grundprojekt. Sie sind die
-wahrscheinlichen Inhalte kommender Aufgaben – und für jeden gibt es ein fertiges Muster:
+Diese Bausteine der Musterlösung haben **kein** Pendant. Sie sind die wahrscheinlichen
+Inhalte kommender Aufgaben – und für jeden gibt es ein fertiges Muster:
 
 | Fehlender Baustein | Muster in der Musterlösung |
 |---|---|
@@ -162,37 +290,6 @@ wahrscheinlichen Inhalte kommender Aufgaben – und für jeden gibt es ein ferti
 | Statistik-Page | im Schulungsskript beschrieben (S. 46), in `Final` nicht ausprogrammiert |
 | Test-App | `SolDev/Final/TestSeminarManagement/` |
 
----
-
-## Fachliche Regeln, die bei jeder Erweiterung gelten
-
-Aus der Spezifikation, auch wenn die Erweiterungsaufgabe sie nicht wiederholt:
-
-- **Provisionsformel:** `Provisionsbetrag = (Rechnungsbetrag / 100) * Provision in Prozent`
-- **Gutschriften ergeben einen negativen Betrag**
-- **Der Provisionsbetrag wird gerundet**, und zwar über das Rundungsfeld aus der Einrichtung
-- **Beträge werden 1:1 aus den Debitorenposten übernommen** – keine erneute
-  Währungsumrechnung
-- **`Commission Percentage` liegt zwischen 1 und 100**
-- **Belege, die bereits als Provisionsposten erfasst sind, werden nicht doppelt erfasst** –
-  das System erkennt sie und ignoriert sie
-- **Provisionsposten sind historisch und bleiben dauerhaft erhalten** – sie werden auch beim
-  Löschen eines Vertrags nicht mitgelöscht
-- **Ein Vertrag darf nicht gelöscht werden, solange er einem Verkäufer zugeordnet ist**
-- **Das Standardfeld `Commission %` am Verkäufer bleibt ausgeblendet** – beide Features sollen
-  nicht parallel genutzt werden
-
----
-
-## Rollencenter-Menü
-
-Die Gruppe „Provisionsmanagement" im `Order Processor Role Center` enthält laut Spezifikation:
-
-1. Provisionsarten
-2. Verkäufer
-3. Provisionsverträge
-4. Provisionsposten
-5. Provisionen berechnen
-
-Kommt durch eine Erweiterung ein neuer Einstiegspunkt hinzu (z. B. gebuchte Belege oder ein
-Journal), gehört er in dieselbe Gruppe – nicht in eine neue.
+Der **Bonus-Prozess** ist der wahrscheinlichste Kandidat für eine Folgeaufgabe: Die Felder
+`Pay Commission Bonus`, `Target Achievement Amount` und `Commission Bonus Amount` sowie der
+Enum `PTE Commission Payment Type` existieren bereits, tragen aber **keine Geschäftslogik**.

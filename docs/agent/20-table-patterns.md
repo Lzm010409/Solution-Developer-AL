@@ -25,7 +25,7 @@ Subsidiary                                      Register
 Eine einzige Zeile pro Mandant, PK ist ein leerer Code.
 
 ```al
-table 63000 "GOB Commission Mgt. Setup"
+table 63000 "PTE Commission Mgt. Setup"
 {
     Caption = 'Commission Management Setup';
     DataClassification = CustomerContent;
@@ -123,7 +123,7 @@ field(1; "No."; Code[20])
 }
 
 // 2. Nummernserienauswahl, aufgerufen aus dem Page-Control OnAssistEdit()
-procedure AssistEdit(OldRec: Record "GOB Commission Contract") Result: Boolean
+procedure AssistEdit(OldRec: Record "PTE Commission Contract") Result: Boolean
 begin
     RecLocal := Rec;
     SetupRec.Get();
@@ -188,7 +188,7 @@ Die Reihenfolge ist zwingend: **erst prüfen (und ggf. abbrechen), dann weiterge
 trigger OnDelete()
 var
     DependentRec: Record "…";
-    CommentLine: Record "GOB Commission Comment Line";
+    CommentLine: Record "PTE Commission Comment Line";
 begin
     // 1. Blockierende Prüfung – Verweise, die das Löschen verbieten
     DependentRec.SetRange("Commission Contract No.", "No.");
@@ -244,9 +244,9 @@ Zwei Varianten:
 erweitern, keine eigene Tabelle:
 
 ```al
-enumextension 63000 "GOB Comment Line Table Name" extends "Comment Line Table Name"
+enumextension 63000 "PTE Comment Line Table Name" extends "Comment Line Table Name"
 {
-    value(63000; "GOB Commission Contract") { Caption = 'Commission Contract'; }
+    value(63000; "PTE Commission Contract") { Caption = 'Commission Contract'; }
 }
 ```
 
@@ -258,13 +258,13 @@ field(27; Comment; Boolean)
     Caption = 'Comment';
     Editable = false;
     FieldClass = FlowField;
-    CalcFormula = exist("Comment Line" where("Table Name" = const("GOB Commission Contract"),
+    CalcFormula = exist("Comment Line" where("Table Name" = const("PTE Commission Contract"),
                                              "No." = field("No.")));
 }
 
 trigger OnRename()
 begin
-    CommentLine.RenameCommentLine(CommentLine."Table Name"::"GOB Commission Contract", xRec."No.", "No.");
+    CommentLine.RenameCommentLine(CommentLine."Table Name"::"PTE Commission Contract", xRec."No.", "No.");
 end;
 ```
 
@@ -599,7 +599,7 @@ field(2; "Contracts - Active"; Integer)
     Caption = 'Contracts - Active';
     Editable = false;
     FieldClass = FlowField;
-    CalcFormula = count("GOB Commission Contract" where(Status = const(Active),
+    CalcFormula = count("PTE Commission Contract" where(Status = const(Active),
                                                         "Date Filter" = field("Date Filter")));
     ToolTip = 'Specifies the number of active commission contracts.';
 }
@@ -622,18 +622,18 @@ Verkäufer bekommt. Dieser Wert soll auch auf Perioden filterbar sein" ist die
 Standard-Beschreibung eines **FlowField mit FlowFilter**:
 
 ```al
-field(63000; "GOB Commission Amount"; Decimal)
+field(63000; "PTE Commission Amount"; Decimal)
 {
     Caption = 'Commission Amount';
     Editable = false;
     FieldClass = FlowField;
     AutoFormatType = 1;
-    CalcFormula = sum("GOB Commission Ledger Entry"."Commission Amount"
+    CalcFormula = sum("PTE Commission Ledger Entry"."Commission Amount"
                       where("Salesperson Code" = field(Code),
-                            "Posting Date" = field("GOB Date Filter")));
+                            "Posting Date" = field("PTE Date Filter")));
     ToolTip = 'Specifies the total commission amount for the salesperson.';
 }
-field(63001; "GOB Date Filter"; Date)
+field(63001; "PTE Date Filter"; Date)
 {
     Caption = 'Date Filter';
     FieldClass = FlowFilter;

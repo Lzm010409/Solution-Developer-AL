@@ -4,20 +4,25 @@
 
 ## Objekt-Prefix
 
+**Im Projekt Provisionsmanagement gilt `PTE`** – so wie in der gestellten Basis-App.
+`GOB` ist der Präfix der unitop-Produktentwicklung und kommt hier nicht zum Einsatz, auch
+wenn die Spezifikation ihn nennt. Siehe [`05-gob-richtlinien.md`](05-gob-richtlinien.md),
+Abschnitt „Geklärt: Präfix im Projekt".
+
 Jedes neue Objekt, jedes neue Feld in einer `tableextension` und jede neue Enum-Value trägt den
 Prefix der App. Der Prefix ist genau drei Zeichen lang, steht am Anfang, gefolgt von einem
 Leerzeichen im Objektnamen.
 
 ```al
-table 63023 "GOB Commission Bonus Entry"    // ✔
+table 63023 "PTE Commission Bonus Entry"    // ✔
 table 63023 "Commission Bonus Entry"        // ✘ Prefix fehlt
-table 63023 "GOBCommission Bonus Entry"     // ✘ Leerzeichen fehlt
+table 63023 "PTECommission Bonus Entry"     // ✘ Leerzeichen fehlt
 ```
 
 In `tableextension`-Feldern steht der Prefix ebenfalls im Feldnamen:
 
 ```al
-field(63000; "GOB Commission Contract No."; Code[20]) { … }
+field(63000; "PTE Commission Contract No."; Code[20]) { … }
 ```
 
 Referenz: `SolDev/Final/src/tableextension/SMBSalesLine.TableExt.al`
@@ -61,32 +66,50 @@ und darf nicht frei gewählt werden. Siehe `40-posting-architecture.md`.
 
 ## Dateinamen und Ordner
 
+⚠️ **Die Basis-App ordnet featureorientiert, nicht objekttyporientiert.** Neue Objekte folgen
+ihrem Schema, nicht dem der Musterlösung:
+
 ```
 src/
-  table/            <Prefix><Name>.Table.al
-  tableextension/   <Prefix><Name>.TableExt.al
-  page/             <Prefix><Name>.Page.al
-  pageextension/    <Prefix><Name>.PageExt.al
-  pagecustomization/<Prefix><Name>.PageCust.al
-  codeunit/         <Prefix><Name>.Codeunit.al
-  report/           <Prefix><Name>.Report.al
-  enum/             <Prefix><Name>.Enum.al
-  enumextension/    <Prefix><Name>.EnumExt.al
-  permissionset/    <Prefix><Name>.PermissionSet.al
-  profile/          <Prefix><Name>.Profile.al
+├── <Feature>/                     z. B. Contract, Comment, Setup
+│   ├── Data/                      Tabellen
+│   ├── Enums/                     Enums
+│   ├── Extensions/                TableExt, PageExt, EnumExt
+│   └── Features/<Bereich>/        Pages, Codeunits, Reports
+└── Permission/                    PermissionSets
+```
+
+Beispiele aus der Basis-App:
+
+```
+src/Contract/Data/PTECommissionContract.Table.al
+src/Contract/Extensions/PTESalespersonComTableExt.TableExt.al
+src/Contract/Features/ContractManagement/PTECommissionContractCard.Page.al
+src/Contract/Features/CommissionCalculation/PTECalcCommissions.Report.al
+src/Setup/Data/PTECommissionMgtSetup.Table.al
+src/Permission/PTEPermissionGL.PermissionSet.al
+```
+
+Die **Dateinamensendungen** bleiben dieselben wie in der Musterlösung:
+
+```
+<Prefix><Name>.Table.al · .TableExt.al · .Page.al · .PageExt.al · .PageCust.al
+<Prefix><Name>.Codeunit.al · .Report.al · .Enum.al · .EnumExt.al
+<Prefix><Name>.PermissionSet.al · .Profile.al
 ```
 
 Der Dateiname enthält den Objektnamen **ohne Leerzeichen und ohne Sonderzeichen**:
 
 ```
-"SMB Seminar Reg. Header"  →  SMBSeminarRegHeader.Table.al
-"SMB Sem. Jnl.-Post Line"  →  SMBSemJnlPostLine.Codeunit.al
+"PTE Commission Contract"       →  PTECommissionContract.Table.al
+"PTE Post Com. Ledger Entry"    →  PTEPostComLedgerEntry.Codeunit.al
+"SMB Sem. Jnl.-Post Line"       →  SMBSemJnlPostLine.Codeunit.al   (Musterlösung)
 ```
 
 **Ein Objekt pro Datei.** Keine Sammeldateien.
 
-Wenn die Basis-App eine andere Ordnerstruktur verwendet (z. B. featureweise statt typweise),
-folge der Basis-App.
+Die Musterlösung `SolDev/Final/src/` ordnet objekttyporientiert (`src/table/`, `src/page/`, …).
+Das ist **nicht** das Schema dieses Projekts – halte dich an die Basis-App.
 
 ---
 
@@ -97,7 +120,7 @@ GOB-Konvention – gilt vor dem, was die Musterlösung zeigt:
 | Schlüssel | Name |
 |---|---|
 | Primärschlüssel | **`PK`** |
-| Sekundärschlüssel | **`Key01`, `Key02`, …** – in Extension-Objekten `GOBKey01`, `GOBKey02`, … |
+| Sekundärschlüssel | **`Key01`, `Key02`, …** – in Extension-Objekten `PTEKey01`, `PTEKey02`, … |
 | Ausnahme | Ein sprechender Name ist nur zulässig, wenn der Schlüssel genau einem Zweck dient und Mehrfachverwendung nicht absehbar ist. Der Reviewer kann das unterbinden. |
 
 ```al

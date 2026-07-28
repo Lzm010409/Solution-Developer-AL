@@ -28,15 +28,15 @@ Die Spezifikationen schreiben die UI meist wörtlich vor („nicht editierbare L
 Beide zusammen entscheiden, ob eine Page über „Suchen" (Alt+Q) auffindbar ist.
 
 ```al
-page 63020 "GOB Commission Contract List"
+page 63020 "PTE Commission Contract List"
 {
     PageType = List;
-    SourceTable = "GOB Commission Contract";
+    SourceTable = "PTE Commission Contract";
     Caption = 'Commission Contracts';
     UsageCategory = Lists;         // ← auffindbar
     ApplicationArea = All;
     Editable = false;
-    CardPageId = "GOB Commission Contract Card";
+    CardPageId = "PTE Commission Contract Card";
 ```
 
 Regeln:
@@ -52,15 +52,15 @@ Regeln:
 ## List-Page
 
 ```al
-page 63020 "GOB Commission Contract List"
+page 63020 "PTE Commission Contract List"
 {
     ApplicationArea = All;
     Caption = 'Commission Contracts';
     PageType = List;
-    SourceTable = "GOB Commission Contract";
+    SourceTable = "PTE Commission Contract";
     UsageCategory = Lists;
     Editable = false;
-    CardPageId = "GOB Commission Contract Card";
+    CardPageId = "PTE Commission Contract Card";
 
     layout
     {
@@ -144,11 +144,11 @@ wird.
 Die Setup-Tabelle hat genau eine Zeile. Die Page legt sie an, wenn sie fehlt:
 
 ```al
-page 63000 "GOB Commission Mgt. Setup"
+page 63000 "PTE Commission Mgt. Setup"
 {
     Caption = 'Commission Management Setup';
     PageType = Card;
-    SourceTable = "GOB Commission Mgt. Setup";
+    SourceTable = "PTE Commission Mgt. Setup";
     UsageCategory = Administration;
     ApplicationArea = All;
     InsertAllowed = false;
@@ -185,10 +185,10 @@ Muster: `SolDev/Final/src/page/SMBSeminarSetup.Page.al`
 ## Document-Page + Subpage
 
 ```al
-page 63030 "GOB Commission Document"
+page 63030 "PTE Commission Document"
 {
     PageType = Document;
-    SourceTable = "GOB Commission Doc. Header";
+    SourceTable = "PTE Commission Doc. Header";
     Caption = '…';
     UsageCategory = None;
     ApplicationArea = All;
@@ -199,7 +199,7 @@ page 63030 "GOB Commission Document"
         {
             group(General) { … }
 
-            part(Lines; "GOB Commission Doc. Subpage")
+            part(Lines; "PTE Commission Doc. Subpage")
             {
                 SubPageLink = "Document No." = field("No.");
                 Caption = 'Lines';
@@ -210,7 +210,7 @@ page 63030 "GOB Commission Document"
         }
         area(FactBoxes)
         {
-            part(MasterDetails; "GOB Commis. Contract Factbox")
+            part(MasterDetails; "PTE Commis. Contract Factbox")
             {
                 SubPageLink = "No." = field("Commission Contract No.");
             }
@@ -229,10 +229,10 @@ page 63030 "GOB Commission Document"
 Die Subpage:
 
 ```al
-page 63031 "GOB Commission Doc. Subpage"
+page 63031 "PTE Commission Doc. Subpage"
 {
     PageType = ListPart;
-    SourceTable = "GOB Commission Doc. Line";
+    SourceTable = "PTE Commission Doc. Line";
     ApplicationArea = All;
     Caption = 'Lines';
     AutoSplitKey = true;        // Zeilennummern automatisch in 10.000er-Schritten
@@ -280,10 +280,10 @@ ist die FactBox eine schlichte `CardPart` mit dieser Tabelle als `SourceTable`, 
 über `SubPageLink`:
 
 ```al
-page 63022 "GOB Commis. Contract Factbox"
+page 63022 "PTE Commis. Contract Factbox"
 {
     PageType = CardPart;
-    SourceTable = "GOB Commission Contract";
+    SourceTable = "PTE Commission Contract";
     Caption = 'Commission Contract Details';
     ApplicationArea = All;
 
@@ -306,7 +306,7 @@ page 63022 "GOB Commis. Contract Factbox"
 
     local procedure ShowDetails()
     begin
-        Page.Run(Page::"GOB Commission Contract Card", Rec);
+        Page.Run(Page::"PTE Commission Contract Card", Rec);
     end;
 }
 ```
@@ -316,10 +316,10 @@ Einbindung:
 ```al
 area(factboxes)
 {
-    part(ContractDetails; "GOB Commis. Contract Factbox")
+    part(ContractDetails; "PTE Commis. Contract Factbox")
     {
         ApplicationArea = All;
-        SubPageLink = "No." = field("GOB Commission Contract No.");
+        SubPageLink = "No." = field("PTE Commission Contract No.");
     }
 }
 ```
@@ -334,7 +334,7 @@ Zeilen aus einem Array globaler Variablen gespeist werden – Beschriftung und W
 Laufzeit gefüllt:
 
 ```al
-page 63022 "GOB Commis. Contract Factbox"
+page 63022 "PTE Commis. Contract Factbox"
 {
     PageType = CardPart;
     Caption = 'Commission Contract Details';
@@ -369,11 +369,11 @@ page 63022 "GOB Commis. Contract Factbox"
 
     local procedure UpdateContractInfo()
     var
-        CommissionContract: Record "GOB Commission Contract";
-        CommissionType: Record "GOB Commission Type";
+        CommissionContract: Record "PTE Commission Contract";
+        CommissionType: Record "PTE Commission Type";
     begin
         Clear(ContractInfo);
-        if not CommissionContract.Get(Rec."GOB Commission Contract No.") then
+        if not CommissionContract.Get(Rec."PTE Commission Contract No.") then
             exit;
 
         ContractInfo[1] := CommissionContract.Description;
@@ -415,7 +415,7 @@ action("Commission Ledger Entries")
     ApplicationArea = All;
     Caption = 'Commission Ledger E&ntries';
     Image = LedgerEntries;
-    RunObject = Page "GOB Commission Ledger Entries";
+    RunObject = Page "PTE Commission Ledger Entries";
     RunPageLink = "Salesperson Code" = field(Code);
     RunPageView = sorting("Salesperson Code", "Posting Date") order(descending);
     ShortCutKey = 'Ctrl+F7';
@@ -458,8 +458,8 @@ area(Promoted)
 ```al
 action(NewCommissionDocument)
 {
-    AccessByPermission = TableData "GOB Commission Doc. Header" = RIM;
-    RunObject = Page "GOB Commission Document";
+    AccessByPermission = TableData "PTE Commission Doc. Header" = RIM;
+    RunObject = Page "PTE Commission Document";
     RunPageLink = "Salesperson Code" = field(Code);
     RunPageMode = Create;
     …
@@ -475,10 +475,10 @@ Stammsatz" – der Fremdschlüssel wird im `OnInsert` des Kopfes aus dem Filter 
 ## Posten-Page
 
 ```al
-page 63025 "GOB Commission Ledger Entries"
+page 63025 "PTE Commission Ledger Entries"
 {
     PageType = List;
-    SourceTable = "GOB Commission Ledger Entry";
+    SourceTable = "PTE Commission Ledger Entry";
     Caption = 'Commission Ledger Entries';
     UsageCategory = History;
     ApplicationArea = All;
@@ -520,7 +520,7 @@ Zwei Aufgaben: Kacheln anzeigen (`area(RoleCenter)`) und Navigation bereitstelle
 (`area(Sections)` und `area(Embedding)`).
 
 ```al
-page 63050 "GOB Commission Role Center"
+page 63050 "PTE Commission Role Center"
 {
     PageType = RoleCenter;
     Caption = '…';
@@ -531,9 +531,9 @@ page 63050 "GOB Commission Role Center"
     {
         area(RoleCenter)
         {
-            part(Activities; "GOB Commission Activities")
+            part(Activities; "PTE Commission Activities")
             {
-                AccessByPermission = TableData "GOB Commission Ledger Entry" = R;
+                AccessByPermission = TableData "PTE Commission Ledger Entry" = R;
             }
             part(Emails; "Email Activities") { ApplicationArea = Basic, Suite; }
             part(Control21; "Report Inbox Part")
@@ -555,7 +555,7 @@ page 63050 "GOB Commission Role Center"
                 {
                     ApplicationArea = All;
                     Caption = 'Commission Types';
-                    RunObject = page "GOB Commission Types";
+                    RunObject = page "PTE Commission Types";
                     ToolTip = 'Open the list of commission types.';
                 }
                 …
@@ -570,7 +570,7 @@ page 63050 "GOB Commission Role Center"
             action(CalculateCommissions)
             {
                 Caption = 'Calculate Commissions';
-                RunObject = report "GOB Calc. Commissions - batch";
+                RunObject = report "PTE Calc. Commissions - batch";
                 ApplicationArea = All;
                 ToolTip = 'Calculate the commissions for one or more salespeople.';
             }
@@ -588,23 +588,23 @@ hinzugefügt", dann ist das eine **`pageextension`** auf `"Order Processor Role 
 kein neues Rollencenter:
 
 ```al
-pageextension 63050 "GOB Order Processor RC" extends "Order Processor Role Center"
+pageextension 63050 "PTE Order Processor RC" extends "Order Processor Role Center"
 {
     actions
     {
         addlast(Sections)
         {
-            group("GOB Commission Management")
+            group("PTE Commission Management")
             {
                 Caption = 'Commission Management';
-                action("GOB Commission Types")
+                action("PTE Commission Types")
                 {
                     ApplicationArea = All;
                     Caption = 'Commission Types';
-                    RunObject = page "GOB Commission Types";
+                    RunObject = page "PTE Commission Types";
                     ToolTip = 'Open the list of commission types.';
                 }
-                action("GOB Salespersons")
+                action("PTE Salespersons")
                 {
                     ApplicationArea = All;
                     Caption = 'Salespeople';
@@ -626,10 +626,10 @@ Muster: `SolDev/Final/src/page/SMBSeminarRoleCenter.Page.al` (neues Rollencenter
 ## Aktivitäten-Part (Cues)
 
 ```al
-page 63051 "GOB Commission Activities"
+page 63051 "PTE Commission Activities"
 {
     PageType = CardPart;
-    SourceTable = "GOB Commission Cue";
+    SourceTable = "PTE Commission Cue";
     Caption = 'Activities';
     ApplicationArea = All;
     UsageCategory = None;
@@ -644,7 +644,7 @@ page 63051 "GOB Commission Activities"
                 Caption = 'Contracts';
                 field("Contracts - Active"; Rec."Contracts - Active")
                 {
-                    DrillDownPageId = "GOB Commission Contract List";
+                    DrillDownPageId = "PTE Commission Contract List";
                     ToolTip = 'Specifies the number of active commission contracts.';
                 }
             }
@@ -699,12 +699,12 @@ Muster: `SolDev/Final/src/page/SMBSeminarMgtActivities.Page.al`
 ## Profile
 
 ```al
-profile "GOB Commission Manager"
+profile "PTE Commission Manager"
 {
     Caption = 'Commission Manager';
     Description = 'Commission Manager';
-    RoleCenter = "GOB Commission Role Center";
-    Customizations = "GOB Commission Contract List";
+    RoleCenter = "PTE Commission Role Center";
+    Customizations = "PTE Commission Contract List";
 }
 ```
 
@@ -713,7 +713,7 @@ profile "GOB Commission Manager"
 Passt eine Page **profilspezifisch** an, ohne sie für alle zu ändern:
 
 ```al
-pagecustomization "GOB Commission Contract List" customizes "GOB Commission Contract List"
+pagecustomization "PTE Commission Contract List" customizes "PTE Commission Contract List"
 {
     layout
     {
@@ -747,18 +747,18 @@ eingefügt" und „Das Business Central Feld ‚Commission %' soll auf der Karte
 werden" ergeben zusammen eine `pageextension`:
 
 ```al
-pageextension 63001 "GOB Salesperson Card" extends "Salesperson/Purchaser Card"
+pageextension 63001 "PTE Salesperson Card" extends "Salesperson/Purchaser Card"
 {
     layout
     {
         addlast(General)
         {
-            field("GOB Commission Contract No."; Rec."GOB Commission Contract No.")
+            field("PTE Commission Contract No."; Rec."PTE Commission Contract No.")
             {
                 ApplicationArea = All;
                 ToolTip = 'Specifies the commission contract assigned to the salesperson.';
             }
-            field("GOB Commission Amount"; Rec."GOB Commission Amount")
+            field("PTE Commission Amount"; Rec."PTE Commission Amount")
             {
                 ApplicationArea = All;
                 Editable = false;
@@ -771,7 +771,7 @@ pageextension 63001 "GOB Salesperson Card" extends "Salesperson/Purchaser Card"
         }
         addlast(factboxes)
         {
-            part(CommissionContractDetails; "GOB Commis. Contract Factbox")
+            part(CommissionContractDetails; "PTE Commis. Contract Factbox")
             {
                 ApplicationArea = All;
                 SubPageLink = Code = field(Code);
@@ -783,12 +783,12 @@ pageextension 63001 "GOB Salesperson Card" extends "Salesperson/Purchaser Card"
     {
         addlast(Navigation)
         {
-            group("GOB Commission")
+            group("PTE Commission")
             {
                 Caption = 'Commission';
                 Image = Costs;
-                action("GOB Commission Contract") { … }
-                action("GOB Commission Ledger Entries") { … }
+                action("PTE Commission Contract") { … }
+                action("PTE Commission Ledger Entries") { … }
             }
         }
 

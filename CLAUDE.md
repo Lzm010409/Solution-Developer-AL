@@ -8,7 +8,7 @@ Spezifikation erweitert.
 
 | | |
 |---|---|
-| **Was gestellt wird** | Eine fertige Basis-App (z. B. „Provisionsmanagement / Commission Management", Prefix `GOB`, ID-Bereich 63000–63500) **und** eine Spezifikation im GOB-Format. |
+| **Was gestellt wird** | Eine fertige Basis-App (z. B. „Provisionsmanagement / Commission Management", Prefix `PTE`, ID-Bereich 63000–63500) **und** eine Spezifikation im GOB-Format. |
 | **Was der Agent tut** | Er **erweitert** diese Basis-App um die spezifizierten Funktionen. Er baut die Basis **nicht** neu und schreibt sie nicht um, außer die Spezifikation verlangt es. |
 | **Woran er sich hält** | Den BC-Standardpattern. Referenz ist die Musterlösung unter `SolDev/Final/` und die Regeldokumente unter `docs/agent/`. |
 

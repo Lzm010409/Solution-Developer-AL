@@ -13,29 +13,29 @@ Das heißt konkret: Erweitern, nicht danebenbauen.
 ### `tableextension`
 
 ```al
-tableextension 63000 "GOB Salesperson/Purchaser" extends "Salesperson/Purchaser"
+tableextension 63000 "PTE Salesperson/Purchaser" extends "Salesperson/Purchaser"
 {
     fields
     {
-        field(63000; "GOB Commission Contract No."; Code[20])
+        field(63000; "PTE Commission Contract No."; Code[20])
         {
             Caption = 'Commission Contract No.';
             DataClassification = CustomerContent;
-            TableRelation = "GOB Commission Contract";
+            TableRelation = "PTE Commission Contract";
             ToolTip = 'Specifies the commission contract assigned to the salesperson.';
         }
-        field(63001; "GOB Commission Amount"; Decimal)
+        field(63001; "PTE Commission Amount"; Decimal)
         {
             Caption = 'Commission Amount';
             Editable = false;
             FieldClass = FlowField;
             AutoFormatType = 1;
-            CalcFormula = sum("GOB Commission Ledger Entry"."Commission Amount"
+            CalcFormula = sum("PTE Commission Ledger Entry"."Commission Amount"
                               where("Salesperson Code" = field(Code),
-                                    "Posting Date" = field("GOB Date Filter")));
+                                    "Posting Date" = field("PTE Date Filter")));
             ToolTip = 'Specifies the total commission amount calculated for the salesperson.';
         }
-        field(63002; "GOB Date Filter"; Date)
+        field(63002; "PTE Date Filter"; Date)
         {
             Caption = 'Date Filter';
             FieldClass = FlowFilter;
@@ -60,9 +60,9 @@ Siehe `30-page-patterns.md`.
 ### `enumextension`
 
 ```al
-enumextension 63000 "GOB Comment Line Table Name" extends "Comment Line Table Name"
+enumextension 63000 "PTE Comment Line Table Name" extends "Comment Line Table Name"
 {
-    value(63000; "GOB Commission Contract") { Caption = 'Commission Contract'; }
+    value(63000; "PTE Commission Contract") { Caption = 'Commission Contract'; }
 }
 ```
 
@@ -77,11 +77,11 @@ Jedes Fragment, das eine Buchung erzeugt, muss eine Herkunft tragen. Dafür wird
 Standard-Einrichtung erweitert:
 
 ```al
-tableextension 63001 "GOB Source Code Setup" extends "Source Code Setup"
+tableextension 63001 "PTE Source Code Setup" extends "Source Code Setup"
 {
     fields
     {
-        field(63000; "GOB Commission"; Code[10])
+        field(63000; "PTE Commission"; Code[10])
         {
             Caption = 'Commission';
             DataClassification = CustomerContent;
@@ -91,16 +91,16 @@ tableextension 63001 "GOB Source Code Setup" extends "Source Code Setup"
     }
 }
 
-pageextension 63001 "GOB Source Code Setup" extends "Source Code Setup"
+pageextension 63001 "PTE Source Code Setup" extends "Source Code Setup"
 {
     layout
     {
         addlast(Content)
         {
-            group("GOB Commission Group")
+            group("PTE Commission Group")
             {
                 Caption = 'Commission';
-                field("GOB Commission"; Rec."GOB Commission")
+                field("PTE Commission"; Rec."PTE Commission")
                 {
                     ApplicationArea = All;
                 }
@@ -124,19 +124,19 @@ Der Weg, in Standardprozesse einzugreifen, ohne sie zu verändern.
 ### Aufbau
 
 ```al
-codeunit 63010 "GOB Commission Invoicing"
+codeunit 63010 "PTE Commission Invoicing"
 {
-    Permissions = tabledata "GOB Commission Ledger Entry" = rimd;
+    Permissions = tabledata "PTE Commission Ledger Entry" = rimd;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", OnAfterTestSalesLine, '', false, false)]
     local procedure CheckCommissionOnAfterTestSalesLine(SalesHeader: Record "Sales Header"; SalesLine: Record "Sales Line"; …)
     var
-        CommissionLedgerEntry: Record "GOB Commission Ledger Entry";
+        CommissionLedgerEntry: Record "PTE Commission Ledger Entry";
     begin
-        if (SalesLine."GOB Apply-to Commission Entry" <> 0) and
+        if (SalesLine."PTE Apply-to Commission Entry" <> 0) and
            (SalesHeader."Document Type" = SalesHeader."Document Type"::Invoice)
         then begin
-            CommissionLedgerEntry.Get(SalesLine."GOB Apply-to Commission Entry");
+            CommissionLedgerEntry.Get(SalesLine."PTE Apply-to Commission Entry");
             CommissionLedgerEntry.TestField("Closed by Document No.", '', ErrorInfo.Create());
         end;
     end;
@@ -176,7 +176,7 @@ Für Code, der nach dem Validate eines **Standardfelds** laufen soll, ist der Tr
 Table Extension der empfohlene Weg – nicht ein `OnAfterValidateEvent`-Subscriber:
 
 ```al
-tableextension 63000 "GOB Salesperson/Purchaser" extends "Salesperson/Purchaser"
+tableextension 63000 "PTE Salesperson/Purchaser" extends "Salesperson/Purchaser"
 {
     fields
     {
@@ -205,7 +205,7 @@ Muster: `SolDev/Final/src/codeunit/SMBSeminarInvoicing.Codeunit.al`
 Das Muster, mit dem eigene Posten über den Standard-Verkaufsprozess abgerechnet und
 geschlossen werden:
 
-1. `tableextension` auf `"Sales Line"` mit Feld `"GOB Apply-to Commission Entry"` (Integer)
+1. `tableextension` auf `"Sales Line"` mit Feld `"PTE Apply-to Commission Entry"` (Integer)
 2. `tableextension` auf `"Sales Invoice Line"` mit demselben Feld
    (damit es beim Buchen mitwandert — `Sales-Post` überträgt gleichnamige Felder)
 3. Feld `"Closed by Document No."` in der eigenen Postentabelle
@@ -216,10 +216,10 @@ geschlossen werden:
 [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", OnAfterSalesInvLineInsert, '', false, false)]
 local procedure CloseCommissionEntryOnAfterSalesInvLineInsert(var SalesInvLine: Record "Sales Invoice Line"; …; SalesLine: Record "Sales Line"; …)
 var
-    CommissionLedgerEntry: Record "GOB Commission Ledger Entry";
+    CommissionLedgerEntry: Record "PTE Commission Ledger Entry";
 begin
-    if SalesLine."GOB Apply-to Commission Entry" <> 0 then begin
-        CommissionLedgerEntry.Get(SalesLine."GOB Apply-to Commission Entry");
+    if SalesLine."PTE Apply-to Commission Entry" <> 0 then begin
+        CommissionLedgerEntry.Get(SalesLine."PTE Apply-to Commission Entry");
         CommissionLedgerEntry."Closed by Document No." := SalesInvLine."Document No.";
         CommissionLedgerEntry.Modify();
     end;
@@ -233,11 +233,11 @@ end;
 Damit die eigenen gebuchten Belege und Posten in der Standard-Navigate-Funktion auftauchen.
 
 ```al
-codeunit 63004 "GOB Commission Navigate"
+codeunit 63004 "PTE Commission Navigate"
 {
     var
-        PostedDocHeader: Record "GOB Posted Commis. Doc. Header";
-        CommissionLedgerEntry: Record "GOB Commission Ledger Entry";
+        PostedDocHeader: Record "PTE Posted Commis. Doc. Header";
+        CommissionLedgerEntry: Record "PTE Commission Ledger Entry";
 
     [EventSubscriber(ObjectType::Page, Page::Navigate, OnAfterFindRecords, '', false, false)]
     local procedure InsertRecordsOnAfterFindRecords(var Sender: Page Navigate; var DocumentEntry: Record "Document Entry"; DocNoFilter: Text; PostingDateFilter: Text)
@@ -250,12 +250,12 @@ codeunit 63004 "GOB Commission Navigate"
     local procedure ShowRecordsOnAfterShowRecords(var Sender: Page Navigate; var DocumentEntry: Record "Document Entry"; DocNoFilter: Text; PostingDateFilter: Text; …)
     begin
         case DocumentEntry."Table ID" of
-            Database::"GOB Posted Commis. Doc. Header":
+            Database::"PTE Posted Commis. Doc. Header":
                 begin
                     SetPostedDocFilter(DocNoFilter, PostingDateFilter);
-                    Page.Run(Page::"GOB Posted Commission Document", PostedDocHeader);
+                    Page.Run(Page::"PTE Posted Commission Document", PostedDocHeader);
                 end;
-            Database::"GOB Commission Ledger Entry":
+            Database::"PTE Commission Ledger Entry":
                 begin
                     SetLedgerEntryFilter(DocNoFilter, PostingDateFilter);
                     Page.Run(0, CommissionLedgerEntry);
@@ -270,7 +270,7 @@ codeunit 63004 "GOB Commission Navigate"
         if CommissionLedgerEntry.ReadPermission() then begin        // ← Berechtigung prüfen!
             SetLedgerEntryFilter(DocNoFilter, PostingDateFilter);
             DocumentEntry.InsertIntoDocEntry(
-                Database::"GOB Commission Ledger Entry",
+                Database::"PTE Commission Ledger Entry",
                 CommissionLedgerEntry.TableCaption(),
                 CommissionLedgerEntry.Count());
         end;
@@ -304,13 +304,13 @@ Muster: `SolDev/Final/src/codeunit/SMBSeminarNavigate.Codeunit.al`
 Erlaubt Filter wie `%MYCONTRACT` in jedem Filterfeld.
 
 ```al
-codeunit 63030 "GOB Commission Filter Token"
+codeunit 63030 "PTE Commission Filter Token"
 {
     // GOB-Richtlinie: letzte beide Parameter immer false, false
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Filter Tokens", 'OnResolveTextFilterToken', '', false, false)]
     local procedure ResolveMyContractToken(TextToken: Text; var TextFilter: Text; var Handled: Boolean)
     var
-        MyContract: Record "GOB My Commission Contract";
+        MyContract: Record "PTE My Commission Contract";
         MaxCount: Integer;
         MyTokenTxt: Label 'MYCONTRACT', Comment = 'Must be uppercase', Locked = true;
     begin

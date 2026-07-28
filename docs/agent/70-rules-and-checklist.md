@@ -23,7 +23,7 @@
 | **`#region` / `#endregion` verboten** | GOB-Richtlinie |
 | **Bezeichner immer englisch und sprechend** | GOB-Namenskonvention |
 | **`DataClassification` an jeder Tabelle und jedem Feld, `ToBeClassified` unzulässig** | GOB-Richtlinie; temporäre Tabellen: `SystemMetaData` |
-| **Primärschlüssel heißt `PK`, Sekundärschlüssel `Key01`, `Key02`, … (`GOBKey01` in Extensions)** | GOB-Key-Konvention; sprechende Namen nur im Ausnahmefall |
+| **Primärschlüssel heißt `PK`, Sekundärschlüssel `Key01`, `Key02`, … (`PTEKey01` in Extensions)** | GOB-Key-Konvention; sprechende Namen nur im Ausnahmefall |
 
 ### Datenzugriff
 
@@ -158,7 +158,7 @@ selbstverständlich zulässig.
 - **Warnungen eigenmächtig unterdrücken** – weder per Pragma noch über `app.json`/`ruleset.json`; nur mit Freigabe der Entwicklungsleitung
 - **Funktionalen Code auf Pages** unterbringen – Pages tragen nur Darstellungslogik
 - **Sammelcodeunits** für unzusammenhängende Funktionen anlegen
-- **Kommentare, die Feld- oder Objektnamen referenzieren** („… wenn im Feld ‚GOB X' …")
+- **Kommentare, die Feld- oder Objektnamen referenzieren** („… wenn im Feld ‚PTE X' …")
 - **Kommentare, die durch bessere Struktur überflüssig wären**
 
 > Die Musterlösung in `SolDev/Final/` enthält an einigen Stellen auskommentierte
@@ -196,7 +196,7 @@ Vor dem Abschlussbericht vollständig abarbeiten.
 - [ ] Kein `#region`, keine ungarische Notation, keine Text-Literale
 - [ ] Formatierung per AutoFormat
 - [ ] `DataClassification` überall konkret gesetzt (nie `ToBeClassified`)
-- [ ] Schlüssel heißen `PK` / `Key01` / `Key02` (bzw. `GOBKey01`)
+- [ ] Schlüssel heißen `PK` / `Key01` / `Key02` (bzw. `PTEKey01`)
 - [ ] Kein `IsEmpty()` vor `Get`/`Find`; `SetLoadFields()` eingesetzt
 - [ ] Pages tragen nur Darstellungslogik
 - [ ] Jede Funktion erfüllt genau einen Zweck und ist ohne Scrollen lesbar
@@ -291,7 +291,7 @@ ist, eng begrenzt per Pragma:
 
 ```al
 #pragma warning disable PTE0002
-        field(63000; "GOB Commission"; Code[10])
+        field(63000; "PTE Commission"; Code[10])
 #pragma warning restore PTE0002
 ```
 
