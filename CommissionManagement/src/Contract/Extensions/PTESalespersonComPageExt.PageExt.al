@@ -11,13 +11,13 @@ pageextension 63001 "PTE Salesperson Com. Page Ext" extends "Salesperson/Purchas
             field("PTECommission Contract No."; Rec."PTE Commission Contract No.")
             {
                 Caption = 'Commission Contract No.', Comment = 'de-DE=Provisionsvertragsnr.';
-                ToolTip = 'This is the Commission Contract No. of the Salesperson/Purchaser.', Comment = 'de-DE=Dies ist die Provisionsvertragsnr. des Verkäufers/Einkäufers.';
+                ToolTip = 'Specifies the Commission Contract No. of the Salesperson/Purchaser.', Comment = 'de-DE=Gibt die Provisionsvertragsnr. des Verkäufers/Einkäufers an.';
                 ApplicationArea = All;
             }
             field("PTECommission Amount (LCY)"; Rec."PTE Commission Amount (LCY)")
             {
                 Caption = 'Commission Amount (LCY)', Comment = 'de-DE=Provisionsbetrag (Lokalwährung)';
-                ToolTip = 'This is the Commission Amount (LCY) of the Salesperson/Purchaser.', Comment = 'de-DE=Dies ist der Provisionsbetrag (LCY) des Verkäufers/Einkäufers.';
+                ToolTip = 'Specifies the Commission Amount (LCY) of the Salesperson/Purchaser.', Comment = 'de-DE=Gibt den Provisionsbetrag (LCY) des Verkäufers/Einkäufers an.';
                 ApplicationArea = All;
                 trigger OnDrillDown()
                 var

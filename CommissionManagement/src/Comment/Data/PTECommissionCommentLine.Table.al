@@ -8,40 +8,40 @@ table 63021 "PTE Commission Comment Line"
         {
             DataClassification = CustomerContent;
             Caption = 'Table Name', Comment = 'de-DE=Tabellenname';
-            ToolTip = 'This is the Table Name of the Commission Comment Line.', Comment = 'de-DE=Dies ist der Tabellenname der Provisionskommentarzeile.';
+            ToolTip = 'Specifies the Table Name of the Commission Comment Line.', Comment = 'de-DE=Gibt den Tabellenname der Provisionskommentarzeile an.';
             NotBlank = true;
         }
         field(2; "No."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Contract No.', Comment = 'de-DE=Vertrags Nr.';
-            ToolTip = 'This is the Contract No. of the Commission Comment Line.', Comment = 'de-DE=Dies ist die Vertrags Nr. des Provisionskommentarzeile.';
+            ToolTip = 'Specifies the Contract No. of the Commission Comment Line.', Comment = 'de-DE=Gibt die Vertrags Nr. des Provisionskommentarzeile an.';
             NotBlank = true;
         }
         field(3; "Line No."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Line No.', Comment = 'de-DE=Zeilennr.';
-            ToolTip = 'This is the Line No. of the Commission Comment Line.', Comment = 'de-DE=Dies ist die Zeilennr. der Provisionskommentarzeile.';
+            ToolTip = 'Specifies the Line No. of the Commission Comment Line.', Comment = 'de-DE=Gibt die Zeilennr. der Provisionskommentarzeile an.';
             NotBlank = true;
         }
         field(10; "Date"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Date', Comment = 'de-DE=Datum';
-            ToolTip = 'This is the Date of the Commission Comment Line.', Comment = 'de-DE=Dies ist das Datum der Provisionskommentarzeile.';
+            ToolTip = 'Specifies the Date of the Commission Comment Line.', Comment = 'de-DE=Gibt das Datum der Provisionskommentarzeile an.';
         }
         field(20; "Code"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Code', Comment = 'de-DE=Code';
-            ToolTip = 'This is the Code of the Commission Comment Line.', Comment = 'de-DE=Dies ist der Code der Provisionskommentarzeile.';
+            ToolTip = 'Specifies the Code of the Commission Comment Line.', Comment = 'de-DE=Gibt den Code der Provisionskommentarzeile an.';
         }
         field(30; Comment; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'Comment', Comment = 'de-DE=Kommentar';
-            ToolTip = 'This is the Comment of the Commission Comment Line.', Comment = 'de-DE=Dies ist der Kommentar der Provisionskommentarzeile.';
+            ToolTip = 'Specifies the Comment of the Commission Comment Line.', Comment = 'de-DE=Gibt den Kommentar der Provisionskommentarzeile an.';
         }
     }
     

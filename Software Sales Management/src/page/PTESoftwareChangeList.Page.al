@@ -119,11 +119,24 @@ page 63610 "PTE Software Change List"
         }
         area(Promoted)
         {
-            actionref(PostRef; Post)
+            group(Category_Process)
             {
+                Caption = 'Process', Comment = 'de-DE=Prozess';
+
+                actionref(PostRef; Post)
+                {
+                }
             }
-            actionref(CopySoftwareChangeRef; CopySoftwareChange)
+            group(Category_Category4)
             {
+                Caption = 'Software Change', Comment = 'de-DE=Software Anpassung';
+
+                actionref(CopySoftwareChangeRef; CopySoftwareChange)
+                {
+                }
+                actionref(ShowCommentsRef; ShowComments)
+                {
+                }
             }
         }
     }

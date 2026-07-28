@@ -8,7 +8,7 @@ table 63022 "PTE Commission Ledger Entry"
         {
             DataClassification = CustomerContent;
             Caption = 'Entry No.', Comment = 'de-DE=Belegnr.';
-            ToolTip = 'This is the Entry No. of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist die Belegnr. des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Entry No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Belegnr. des Provisionsbuchungseintrags an.';
             NotBlank = true;
             Editable = false;
             AutoIncrement = true;
@@ -17,91 +17,91 @@ table 63022 "PTE Commission Ledger Entry"
         {
             DataClassification = CustomerContent;
             Caption = 'Posting Date', Comment = 'de-DE=Buchungsdatum';
-            ToolTip = 'This is the Posting Date of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist das Buchungsdatum des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Posting Date of the Commission Ledger Entry.', Comment = 'de-DE=Gibt das Buchungsdatum des Provisionsbuchungseintrags an.';
         }
         field(20; "Document Type"; Enum "PTE Com. Led. Ent. Doc. Type")
         {
             DataClassification = CustomerContent;
             Caption = 'Document Type', Comment = 'de-DE=Belegart';
-            ToolTip = 'This is the Document Type of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist die Belegart des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Document Type of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Belegart des Provisionsbuchungseintrags an.';
         }
         field(30; "Document No."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Document No.', Comment = 'de-DE=Belegnr.';
-            ToolTip = 'This is the Document No. of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist die Belegnr. des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Document No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Belegnr. des Provisionsbuchungseintrags an.';
         }
         field(40; "Customer No."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Customer;
             Caption = 'Customer No.', Comment = 'de-DE=Kundennr.';
-            ToolTip = 'This is the Customer No. of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist die Kundennr. des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Customer No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Kundennr. des Provisionsbuchungseintrags an.';
         }
         field(50; Amount; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Amount', Comment = 'de-DE=Betrag';
-            ToolTip = 'This is the Amount of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist der Betrag des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Amount of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Betrag des Provisionsbuchungseintrags an.';
         }
         field(60; "Amount (LCY)"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Amount (LCY)', Comment = 'de-DE=Betrag (Lokalwährung)';
-            ToolTip = 'This is the Amount (LCY) of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist der Betrag (Lokalwährung) des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Amount (LCY) of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Betrag (Lokalwährung) des Provisionsbuchungseintrags an.';
         }
         field(70; "Salesperson Code"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";
             Caption = 'Salesperson Code', Comment = 'de-DE=Verkäufercode';
-            ToolTip = 'This is the Salesperson Code of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist der Verkäufercode des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Salesperson Code of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Verkäufercode des Provisionsbuchungseintrags an.';
         }
         field(80; "Commission Contract No."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "PTE Commission Contract";
             Caption = 'Commission Contract No.', Comment = 'de-DE=Provisionsvertragsnr.';
-            ToolTip = 'This is the Commission Contract No. of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist die Provisionsvertragsnr. des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Commission Contract No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Provisionsvertragsnr. des Provisionsbuchungseintrags an.';
         }
         field(90; "Posting Description"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Posting Description', Comment = 'de-DE=Buchungsbeschreibung';
-            ToolTip = 'This is the Posting Description of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist die Buchungsbeschreibung des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Posting Description of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Buchungsbeschreibung des Provisionsbuchungseintrags an.';
         }
         field(100; "Currency Code"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Currency;
             Caption = 'Currency Code', Comment = 'de-DE=Währungscode';
-            ToolTip = 'This is the Currency Code of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist der Währungscode des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Currency Code of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Währungscode des Provisionsbuchungseintrags an.';
         }
         field(110; "Commission Amount (LCY)"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Commission Amount (LCY)', Comment = 'de-DE=Provisionsbetrag (Lokalwährung)';
-            ToolTip = 'This is the Commission Amount (LCY) of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist der Provisionsbetrag (Lokalwährung) des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Commission Amount (LCY) of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Provisionsbetrag (Lokalwährung) des Provisionsbuchungseintrags an.';
         }
         field(111; "Commission Percentage"; Decimal)
         {
             DataClassification = CustomerContent;
             DecimalPlaces = 0 : 5;
             Caption = 'Commission Percentage', Comment = 'de-DE=Provisions Prozentsatz';
-            ToolTip = 'This is the Commission Percentage of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist der Provisions Prozentsatz des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Commission Percentage of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Provisions Prozentsatz des Provisionsbuchungseintrags an.';
         }
         field(120; "Commission Type"; Enum "PTE Commission Payment Type")
         {
             DataClassification = CustomerContent;
             Caption = 'Commission Type', Comment = 'de-DE=Provisionsart';
-            ToolTip = 'This is the Commission Type of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist die Provisionsart des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Commission Type of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Provisionsart des Provisionsbuchungseintrags an.';
         }
         field(130; "Customer Ledger Entry No."; Integer)
         {
             DataClassification = CustomerContent;
             TableRelation = "Cust. Ledger Entry";        
             Caption = 'Customer Ledger Entry No.', Comment = 'de-DE=Kundenbuchungsnr.';
-            ToolTip = 'This is the Customer Ledger Entry No. of the Commission Ledger Entry.', Comment = 'de-DE=Dies ist die Kundenbuchungsnr. des Provisionsbuchungseintrags.';
+            ToolTip = 'Specifies the Customer Ledger Entry No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Kundenbuchungsnr. des Provisionsbuchungseintrags an.';
         }
     }
 

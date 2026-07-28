@@ -33,6 +33,7 @@ page 63611 "PTE Software Change Card"
                 }
                 field("Closing Date"; Rec."Closing Date")
                 {
+                    Importance = Additional;
                 }
                 field(Status; Rec.Status)
                 {
@@ -202,14 +203,24 @@ page 63611 "PTE Software Change Card"
         }
         area(Promoted)
         {
-            actionref(PostRef; Post)
+            group(Category_Process)
             {
+                Caption = 'Process', Comment = 'de-DE=Prozess';
+
+                actionref(PostRef; Post)
+                {
+                }
             }
-            actionref(CopySoftwareChangeRef; CopySoftwareChange)
+            group(Category_Category4)
             {
-            }
-            actionref(ShowCommentsRef; ShowComments)
-            {
+                Caption = 'Software Change', Comment = 'de-DE=Software Anpassung';
+
+                actionref(CopySoftwareChangeRef; CopySoftwareChange)
+                {
+                }
+                actionref(ShowCommentsRef; ShowComments)
+                {
+                }
             }
         }
     }

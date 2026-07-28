@@ -9,7 +9,7 @@ table 63600 "PTE Software Sales Mgt. Setup"
         {
             DataClassification = CustomerContent;
             Caption = 'Primary Key', Comment = 'de-DE=Primärschlüssel';
-            ToolTip = 'This is the Primary Key of the Datapoint.', Comment = 'de-DE=Primärschlüssel des Datensatzes.';
+            ToolTip = 'Specifies the Primary Key of the Datapoint.', Comment = 'de-DE=Gibt Primärschlüssel des Datensatzes an.';
         }
         field(10; "Software Change Nos."; Code[20])
         {
