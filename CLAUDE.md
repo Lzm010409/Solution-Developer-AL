@@ -32,8 +32,11 @@ Bei Widersprüchen gilt von oben nach unten:
 5. Die **Musterlösung** `SolDev/Final/`
 6. Die Regeldokumente `10-`…`70-` dieses Repos
 
-⚠️ Von den internen Richtlinien liegt derzeit **nur die Struktur** vor, nicht der Regeltext.
-Details und Konsequenzen: [`05-gob-richtlinien.md`](docs/agent/05-gob-richtlinien.md).
+Vorliegend sind die **Coderichtlinien** und die Richtlinie zu **Test Units**; sie überschreiben
+mehrere Regeln der Dokumente `10-`…`70-` (u. a. Promoted Actions, `Importance`, `IsEmpty` vor
+`Find`, Schlüsselnamen, Subscriber-Parameter). Noch offen sind Struktur einer Extension,
+Übersetzung, Code-Review-Checkliste und die Werkzeugseiten.
+Details: [`05-gob-richtlinien.md`](docs/agent/05-gob-richtlinien.md).
 
 ## Reihenfolge – verbindlich
 

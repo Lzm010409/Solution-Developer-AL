@@ -16,16 +16,23 @@
 | `"features": [ "NoImplicitWith" ]` – kein `with`-Statement | Abgelöst; `Rec.` explizit schreiben |
 | Reservierte Schlüsselwörter klein schreiben (`begin`, `end`, `if`, `then`, `var`) | AL-Styleguide |
 | Nach dem Variablennamen: Doppelpunkt, ein Leerzeichen, Typ | AL-Styleguide |
-| Vier Leerzeichen Einrückung, keine Tabs | Konsistenz |
+| **Formatierung ausschließlich über AutoFormat (`Shift+Alt+F`)** | GOB: abweichende Formatierung ist falsch |
 | Ein Objekt pro Datei | Auffindbarkeit |
 | Keine Wildcards (`%`, `&`) in Feld- und Variablennamen | Kompatibilität |
+| **Keine ungarische Notation** (`recItem`, `decAmount`, `locCustomer`) | GOB-Namenskonvention |
+| **`#region` / `#endregion` verboten** | GOB-Richtlinie |
+| **Bezeichner immer englisch und sprechend** | GOB-Namenskonvention |
+| **`DataClassification` an jeder Tabelle und jedem Feld, `ToBeClassified` unzulässig** | GOB-Richtlinie; temporäre Tabellen: `SystemMetaData` |
+| **Primärschlüssel heißt `PK`, Sekundärschlüssel `Key01`, `Key02`, … (`GOBKey01` in Extensions)** | GOB-Key-Konvention; sprechende Namen nur im Ausnahmefall |
 
 ### Datenzugriff
 
 | Regel | Statt | Warum |
 |---|---|---|
-| `IsEmpty()` verwenden | `Count() = 0` oder `FindFirst()` | Kein Datensatz wird geladen |
-| `SetLoadFields()` vor `Get`/`Find`/`FindSet` | alles laden | Nur benötigte Spalten |
+| **Kein `IsEmpty()` vor `Get`/`Find`/`FindSet`** | `if not X.IsEmpty() then if X.FindSet() …` | GOB-Richtlinie seit 2024: doppelter Zugriff kostet Performance |
+| `IsEmpty()` **vor `DeleteAll`/`ModifyAll`** | direkt löschen | Dort ist die Prüfung erwünscht |
+| `IsEmpty()` als reine **Existenzprüfung** (ohne folgenden Find) | `Count() = 0` | Kein Datensatz wird geladen |
+| `SetLoadFields()` vor `Get`/`Find`/`FindSet` – **obligatorisch** | alles laden | GOB-Richtlinie: Nutzung partieller Datensätze ist Pflicht |
 | `ReadIsolation(IsolationLevel::ReadUncommitted)` bei reinen Existenzprüfungen | Standardisolation | Weniger Sperren |
 | `FindSet()` + `repeat … until Next() = 0` | `Find('-')` | Aktuelle Syntax |
 | `FindSet(true)` nur, wenn wirklich geändert wird | `FindSet(true)` überall | Sperrverhalten |
@@ -41,6 +48,25 @@ begin
         Setup.Get();
     SetupRead := true;
 end;
+```
+
+```al
+// FALSCH – GOB-Richtlinie: kein IsEmpty vor Find
+if not Line.IsEmpty() then
+    if Line.FindSet() then
+        repeat … until Line.Next() = 0;
+
+// RICHTIG
+if Line.FindSet() then
+    repeat … until Line.Next() = 0;
+
+// RICHTIG – reine Existenzprüfung, kein Find folgt
+if not Line.IsEmpty() then
+    Error(LineExistErr);
+
+// RICHTIG – vor DeleteAll/ModifyAll weiterhin erwünscht
+if not CommentLine.IsEmpty() then
+    CommentLine.DeleteAll();
 ```
 
 ### Fehlerbehandlung
@@ -61,6 +87,19 @@ end;
 | Kein UI in Check-Line- und Post-Line-Codeunits | Architekturregel |
 | Kein UI in Event-Subscribern, die in Buchungsläufen feuern | |
 | `CurrFieldNo <> 0` prüfen, wenn nur bei Anwendereingabe gefragt werden soll | |
+| **Confirm-Aufbau: Sachverhalt + `\\Do you want to continue?`; bei Nein `Canceled by user.`** | GOB-Richtlinie, englische Texte verpflichtend |
+| **Confirm über `Codeunit "Confirm Management"`.`GetResponse()`** | muss ohne GUI beeinflussbar sein |
+
+### Event-Subscriber
+
+| Regel | |
+|---|---|
+| **`SkipOnMissingLicense` und `SkipOnMissingPermission` immer `false`** | GOB-Richtlinie – sonst laufen Programmteile unerkannt nicht |
+| **Kein Code im Subscriber – nur ein Funktionsaufruf** | Projekte müssen die Logik übersteuern können |
+| Früher Ausstieg: `if not IsRelevantStuff() then exit;` | |
+| `if not RunTrigger() then exit;` | Trigger nicht ungewollt auslösen |
+| `if Rec.IsTemporary() then exit;` | sonst werden echte Daten durch temporäre zerstört |
+| **Feldvalidierung bevorzugt per `modify(...)` + `OnAfterValidate()` in der TableExtension** statt `OnAfterValidateEvent`-Subscriber | GOB-Empfehlung: auffindbarer, Zugriff auf `protected var` |
 
 ### Strings
 
@@ -112,10 +151,15 @@ selbstverständlich zulässig.
 - Primärschlüssel bestehender Tabellen ändern
 - Den ID-Bereich der `app.json` verlassen
 - Standardobjekte per `modify` funktional aushebeln
-- Auskommentierten Code einchecken
+- **Auskommentierten Code einchecken** – zu ändernder Code wird überschrieben oder gelöscht, die Historie leistet git
 - `//FIXME` oder `//TODO` ohne Rücksprache hinterlassen
 - Text-Literale statt `Label`
 - Felder ohne `Caption`, sichtbare Felder ohne `ToolTip`
+- **Warnungen eigenmächtig unterdrücken** – weder per Pragma noch über `app.json`/`ruleset.json`; nur mit Freigabe der Entwicklungsleitung
+- **Funktionalen Code auf Pages** unterbringen – Pages tragen nur Darstellungslogik
+- **Sammelcodeunits** für unzusammenhängende Funktionen anlegen
+- **Kommentare, die Feld- oder Objektnamen referenzieren** („… wenn im Feld ‚GOB X' …")
+- **Kommentare, die durch bessere Struktur überflüssig wären**
 
 > Die Musterlösung in `SolDev/Final/` enthält an einigen Stellen auskommentierte
 > Codeblöcke, `//FIXME`-Marker und Platzhalter-ToolTips wie `'Bla bla.'`. Das sind
@@ -145,6 +189,21 @@ Vor dem Abschlussbericht vollständig abarbeiten.
 - [ ] Buchungs-Codeunits folgen der Endziffern-Konvention
 - [ ] Dateinamen entsprechen `<Prefix><Name>.<Typ>.al`
 - [ ] Ein Objekt pro Datei, im passenden Ordner
+
+### B2 – GOB-Coderichtlinien
+
+- [ ] Kompiliert **ohne Warnungen**; keine eigenmächtig unterdrückten Cops
+- [ ] Kein `#region`, keine ungarische Notation, keine Text-Literale
+- [ ] Formatierung per AutoFormat
+- [ ] `DataClassification` überall konkret gesetzt (nie `ToBeClassified`)
+- [ ] Schlüssel heißen `PK` / `Key01` / `Key02` (bzw. `GOBKey01`)
+- [ ] Kein `IsEmpty()` vor `Get`/`Find`; `SetLoadFields()` eingesetzt
+- [ ] Pages tragen nur Darstellungslogik
+- [ ] Jede Funktion erfüllt genau einen Zweck und ist ohne Scrollen lesbar
+- [ ] Subscriber enthalten nur einen Funktionsaufruf, `false, false` am Attribut
+- [ ] Confirm-Dialoge nach dem vorgegebenen Schema
+- [ ] Auf Standard-Pages **kein** `area(Promoted)` / `actionref`, keine `Importance` ohne PO-Vorgabe
+- [ ] Präfix auch an neuen Controls, Control-Gruppen und globalen Prozeduren in Extensions
 
 ### C – Tabellen
 

@@ -107,10 +107,25 @@ Muster: `SolDev/Final/src/permissionset/SMBSemRegistration.PermissionSet.al`
 
 ## Tests
 
+> **GOB-Richtlinie – zuerst lesen:** Automatisierte Tests sind in Kundenprojekten **empfohlen,
+> aber nicht verpflichtend**. Ob sie gefordert sind, legt die Entwicklungsleitung bzw. der
+> zuständige Lead Developer fest. Es gelten drei Leitlinien: Tests müssen **wirtschaftlich**
+> sein, sie müssen **Kernprozesse absichern**, und sie *können* Nebenprozesse absichern, wenn
+> sie dabei wirtschaftlich bleiben.
+> Kriterien für Wirtschaftlichkeit und das vollständige Regelwerk:
+> [`05-gob-richtlinien.md`](05-gob-richtlinien.md), Teil H.
+
 ### Eigene Test-App
 
-Tests liegen in einer **separaten App** mit eigenem Prefix und eigenem ID-Bereich. Sie hängt per
-`dependencies` an der zu testenden App.
+Tests liegen in einer **separaten App**. Sie liegt in einem **eigenen Ordner im Workspace** mit
+dem verbindlichen Namensschema:
+
+```
+[NAME DER EXTENSION][ ]Test          →  z. B.  "Commission Management Test"
+```
+
+Sie hat eine Abhängigkeit **von der zu testenden Extension und normalerweise keine weiteren** –
+Ausnahme: Test-Apps von Microsoft und ggf. unitop sind immer erlaubt.
 
 ```jsonc
 {
@@ -227,12 +242,18 @@ codeunit 63900 "GOB Test Commission Mgt."
 
 ### Konventionen
 
+Das `Feature/Scenario/Given/When/Then`-Schema ist **verbindlich** – in Unit Tests sind diese
+Kommentare laut GOB-Coderichtlinie *zwingend erforderlich*.
+
 | Konvention | |
 |---|---|
 | `Subtype = Test` | Macht die Codeunit zur Test-Codeunit |
-| `// [FEATURE] […]` | Ordnet die Codeunit einem Feature zu |
-| `// [SCENARIO] …` | Beschreibt den Testfall |
-| `// [GIVEN] / [WHEN] / [THEN]` | Gliedert den Testkörper |
+| `// [FEATURE] […]` | Das Feature, für das die **gesamte Codeunit** ausgelegt ist |
+| `// [Scenario] …` | Das Szenario **der einzelnen Testfunktion** |
+| `// [Given] …` | Ausgangszustand – danach die Funktionen, die ihn herstellen |
+| `// [When] …` | Ablauf – danach die konkreten Funktionen |
+| `// [Then] …` | Erwartetes Ergebnis – **je Assertion ein eigenes `[Then]` unmittelbar davor** |
+| Aussagekräftige Meldung an jeder Assertion | `Assert.AreEqual(Expected, Actual, 'CustomerId not set correctly')` |
 | `asserterror` | Erwartet einen Fehler – die Zeile *muss* fehlschlagen |
 | `[HandlerFunctions('…')]` | Fängt Dialoge ab; ohne sie schlägt jeder Dialog den Test |
 | Handler-Typen | `ConfirmHandler`, `MessageHandler`, `PageHandler`, `ModalPageHandler`, `ReportHandler`, `RequestPageHandler`, `StrMenuHandler` |
@@ -240,13 +261,18 @@ codeunit 63900 "GOB Test Commission Mgt."
 
 ### Was zu testen ist
 
-Mindestens:
+Sofern im Projekt Tests gefordert sind, sind das die wirtschaftlich sinnvollen Kandidaten –
+sie sichern Kernprozesse und sind ohne Testautomat nur mit aufwändiger Datenaufbereitung
+prüfbar:
 
 1. Jede in der Spec beschriebene **Plausibilitätsprüfung** (positiv und negativ)
 2. Jede **Löschbedingung** („darf nicht gelöscht werden, solange …")
 3. Der **Berechnungslauf**: korrekter Betrag, korrektes Vorzeichen bei Gutschriften,
    korrekte Rundung, keine Doppelerfassung
 4. Die **Buchung**: erzeugt sie Posten, Register und gebuchten Beleg?
+
+Punkt 3 und 4 erfüllen typischerweise gleich mehrere Wirtschaftlichkeitskriterien: viele
+Schritte über mehrere Komponenten, komplexe Datenaufbereitung für den manuellen Test.
 
 ### TestPages
 

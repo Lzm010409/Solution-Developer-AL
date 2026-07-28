@@ -1,5 +1,11 @@
 # 20 – Tabellenarchetypen
 
+> **GOB-Vorgaben, die in allen Beispielen dieses Dokuments gelten:** Schlüssel heißen `PK` und
+> `Key01`, `Key02`, … (nicht sprechend); `DataClassification` ist an jeder Tabelle und jedem
+> Feld konkret zu setzen (`ToBeClassified` ist unzulässig, temporäre Tabellen bekommen
+> `SystemMetaData`); vor `Get`/`Find` steht **kein** `IsEmpty()`.
+> Siehe [`05-gob-richtlinien.md`](05-gob-richtlinien.md).
+
 BC kennt eine feste Menge von Tabellenarten. Jede Anforderung lässt sich einer davon zuordnen.
 Die Zuordnung entscheidet über Primärschlüssel, Trigger, Löschverhalten und Pages.
 
@@ -523,11 +529,11 @@ legen (d. h. es werden nie Posten gelöscht, nur hinzugefügt)" meint exakt dies
 keys
 {
     key(PK; "Entry No.") { Clustered = true; }
-    key(Nav; "Document No.", "Posting Date") { }                 // für Navigate
-    key(Inv; "Bill-to Customer No.", "Closed by Document No.") { }
-    key(Analysis; "Salesperson Code", "Posting Date")
+    key(Key01; "Document No.", "Posting Date") { }                // für Navigate
+    key(Key02; "Bill-to Customer No.", "Closed by Document No.") { }
+    key(Key03; "Salesperson Code", "Posting Date")
     {
-        SumIndexFields = "Commission Amount";                     // für FlowFields/Statistik
+        SumIndexFields = "Commission Amount";                      // für FlowFields/Statistik
     }
 }
 

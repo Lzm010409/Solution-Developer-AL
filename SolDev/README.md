@@ -8,6 +8,14 @@ ausführlich, dass sich jeder Sachverhalt eigenständig nachbauen lässt.
 eine vollständige, standardkonforme BC-Lösung mit Belegen, Buchungslogik, Posten und
 Standardintegration bauen will.
 
+> ⚠️ **Die Musterlösung ist Schulungsmaterial, kein Produktivcode.** Sie zeigt Architektur und
+> Muster korrekt, verletzt aber an mehreren Stellen die internen GOB-Coderichtlinien –
+> `DataClassification = ToBeClassified`, auskommentierte Codeblöcke, `//FIXME`-Marker,
+> sprechende Schlüsselnamen statt `PK`/`Key01`, `true, true` an einem Event-Subscriber,
+> Platzhalter-ToolTips. Die vollständige Liste steht in
+> [`../docs/agent/05-gob-richtlinien.md`](../docs/agent/05-gob-richtlinien.md).
+> **Übernimm aus diesem Handbuch die Struktur, nicht diese Rückstände.**
+
 ---
 
 ## Inhalt

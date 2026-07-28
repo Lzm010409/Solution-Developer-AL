@@ -153,14 +153,48 @@ codeunit 63010 "GOB Commission Invoicing"
 | Subscriber-Codeunits nach Thema gruppieren | Eine Codeunit pro Integrationsthema |
 | Kein UI in Subscribern innerhalb von Buchungsläufen | Bricht Hintergrundverarbeitung |
 | Die Signatur **nicht raten** | Im Symbol nachsehen oder per Go-to-Definition holen |
+| **Kein Code im Subscriber – nur ein Funktionsaufruf** | GOB-Richtlinie: Projekte müssen die Logik übersteuern können |
+| **Früh aussteigen**, wenn das Szenario nicht zutrifft | `if not IsRelevantStuff() then exit;` |
+| **`if not RunTrigger() then exit;`** | Insert/Modify/Delete-Trigger nicht ungewollt auslösen |
+| **`if Rec.IsTemporary() then exit;`** | Sonst zerstört kaskadierende Logik echte Daten |
 
-### Die zwei letzten Parameter
+### Die zwei letzten Parameter – **immer `false, false`**
 
 `[EventSubscriber(…, '', SkipOnMissingLicense, SkipOnMissingPermission)]`
 
-- `false, false` → Standardfall: Subscriber läuft immer.
-- `true, true` → Subscriber wird übersprungen, wenn Lizenz/Berechtigung fehlen (bei
-  Filter-Token-Subscribern üblich, siehe unten).
+> ⚠️ **GOB-Richtlinie:** Beide müssen **immer `false`** sein. Subscriber sollen zur Laufzeit mit
+> Fehler abbrechen, wenn Lizenz oder Berechtigung fehlen – sonst werden Programmteile unerkannt
+> nicht durchlaufen und Daten werden inkonsistent.
+> Siehe [`05-gob-richtlinien.md`](05-gob-richtlinien.md), Teil F.
+
+Das gilt auch für Filter-Token-Subscriber: Die Musterlösung verwendet dort `true, true` – das
+ist nach dieser Regel unzulässig.
+
+### Feldvalidierung: Trigger statt Subscriber
+
+Für Code, der nach dem Validate eines **Standardfelds** laufen soll, ist der Trigger in der
+Table Extension der empfohlene Weg – nicht ein `OnAfterValidateEvent`-Subscriber:
+
+```al
+tableextension 63000 "GOB Salesperson/Purchaser" extends "Salesperson/Purchaser"
+{
+    fields
+    {
+        modify("Commission %")
+        {
+            trigger OnAfterValidate()
+            begin
+                PreventCommissionPctWhenContractAssigned(Rec, xRec, CurrFieldNo);
+            end;
+        }
+    }
+}
+```
+
+Vorteile: Pro App gibt es nur **eine** Table Extension, der Code ist also auffindbar, und man
+kommt an `protected var` der Tabelle heran. Dasselbe gilt für Page Extensions, wo im
+`modify(Control)`-Block `OnBeforeValidate`, `OnAfterValidate`, `OnLookup`, `OnDrilldown`,
+`OnAssistEdit` und `OnAfterAfterLookup` zur Verfügung stehen.
 
 Muster: `SolDev/Final/src/codeunit/SMBSeminarInvoicing.Codeunit.al`
 
@@ -272,7 +306,8 @@ Erlaubt Filter wie `%MYCONTRACT` in jedem Filterfeld.
 ```al
 codeunit 63030 "GOB Commission Filter Token"
 {
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Filter Tokens", 'OnResolveTextFilterToken', '', true, true)]
+    // GOB-Richtlinie: letzte beide Parameter immer false, false
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Filter Tokens", 'OnResolveTextFilterToken', '', false, false)]
     local procedure ResolveMyContractToken(TextToken: Text; var TextFilter: Text; var Handled: Boolean)
     var
         MyContract: Record "GOB My Commission Contract";
@@ -300,9 +335,6 @@ codeunit 63030 "GOB Commission Filter Token"
     end;
 }
 ```
-
-Beachte die letzten beiden Parameter `true, true` – der Subscriber wird bei fehlender Lizenz
-oder Berechtigung übersprungen, statt einen Fehler zu werfen.
 
 Zum Token gehören eine „My …"-Tabelle (PK `User ID` + Fremdschlüssel) und eine „My …"-Page für
 das Rollencenter.

@@ -90,8 +90,12 @@ page 63020 "GOB Commission Contract List"
 
 ## Card-Page
 
-Felder in fachliche Gruppen. Selten benutzte Felder bekommen `Importance = Additional`,
-zentrale `Importance = Promoted`.
+Felder in fachliche Gruppen.
+
+> ⚠️ **GOB-Richtlinie:** Felder werden **ohne explizite `Importance`** entwickelt.
+> `Importance = Additional / Promoted / Optional` ist nur auf **ausdrückliche Forderung des
+> Product Owners** erlaubt. Das folgende Beispiel zeigt die Properties der Musterlösung – setze
+> sie nur, wenn sie gefordert sind. Siehe [`05-gob-richtlinien.md`](05-gob-richtlinien.md).
 
 ```al
 layout
@@ -421,10 +425,17 @@ action("Commission Ledger Entries")
 
 Das `&` im Caption setzt den Tastatur-Shortcut – wie im Standard üblich.
 
-### Promoted: nur `actionref`
+### Promoted – nur in **eigenen** Pages
 
-Die alten `Promoted*`-Properties sind abgelöst. Promotion geschieht ausschließlich über
-`area(Promoted)` mit Verweisen:
+> ⚠️ **GOB-Richtlinie:** Actions und Groups, die **Standard-Pages** hinzugefügt werden, werden
+> **nie** promoted entwickelt. In `pageextension`-Objekten auf BC-Standard-Pages sind
+> `area(Promoted)` und `actionref(…)` **verboten** – auch wenn der PO es fordert. Promotion auf
+> Standard-Pages läuft je Branche über **Profile und PageCustomization**.
+> Siehe [`05-gob-richtlinien.md`](05-gob-richtlinien.md), Teil E.
+
+In **eigenen** Pages ist Promotion erlaubt. Die alten `Promoted*`-Properties (`Promoted`,
+`PromotedIsBig`, `PromotedCategory`, `PromotedOnly`) sind **generell verboten** – Promotion
+geschieht ausschließlich über `area(Promoted)` mit Verweisen:
 
 ```al
 area(Promoted)
@@ -780,17 +791,15 @@ pageextension 63001 "GOB Salesperson Card" extends "Salesperson/Purchaser Card"
                 action("GOB Commission Ledger Entries") { … }
             }
         }
-        addlast(Promoted)
-        {
-            group(Category_GOBCommission)
-            {
-                Caption = 'Commission';
-                actionref("GOB Commission Contract_Promoted"; "GOB Commission Contract") { }
-            }
-        }
+
+        // ⚠️ KEIN addlast(Promoted) auf Standard-Pages – siehe 05-gob-richtlinien.md, Teil E.
+        //    Promotion erfolgt hier über Profile und PageCustomization.
     }
 }
 ```
+
+Beachte den Präfix an Gruppen- und Action-Namen: Neue **Controls und Control-Gruppen** auf
+Standard-Pages tragen ihn ebenso wie Objekte und Felder.
 
 Verfügbare Anker: `addfirst`, `addlast`, `addbefore`, `addafter`, `movefirst`, `movelast`,
 `movebefore`, `moveafter`, `modify`.

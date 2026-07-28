@@ -23,6 +23,16 @@ field(63000; "GOB Commission Contract No."; Code[20]) { … }
 Referenz: `SolDev/Final/src/tableextension/SMBSalesLine.TableExt.al`
 → Feld `"SMB Apply-to Seminar Entry"`.
 
+**Der Prefix ist außerdem überall dort Pflicht, wo der Microsoft-Standard erweitert wird:**
+
+- `global procedure`s in Table-, Page-, Report- und Enum-Extensions
+- Zugriffsmodifikatoren in Extension-Objekten, z. B. `protected var`
+- neue **Controls und Control-Gruppen** auf Pages und Reports
+
+Feldnummern in Table Extensions müssen aus dem eigenen Nummernkreis kommen **und über den
+gesamten Workspace eindeutig sein** – zwei Table Extensions auf dieselbe Tabelle dürfen dieselbe
+Feldnummer nicht doppelt vergeben.
+
 ---
 
 ## Objekt-IDs
@@ -80,9 +90,29 @@ folge der Basis-App.
 
 ---
 
+## Schlüsselnamen
+
+GOB-Konvention – gilt vor dem, was die Musterlösung zeigt:
+
+| Schlüssel | Name |
+|---|---|
+| Primärschlüssel | **`PK`** |
+| Sekundärschlüssel | **`Key01`, `Key02`, …** – in Extension-Objekten `GOBKey01`, `GOBKey02`, … |
+| Ausnahme | Ein sprechender Name ist nur zulässig, wenn der Schlüssel genau einem Zweck dient und Mehrfachverwendung nicht absehbar ist. Der Reviewer kann das unterbinden. |
+
+```al
+keys
+{
+    key(PK; "Entry No.") { Clustered = true; }
+    key(Key01; "Document No.", "Posting Date") { }
+    key(Key02; "Salesperson Code", "Posting Date") { SumIndexFields = "Commission Amount"; }
+}
+```
+
 ## Variablennamen
 
-Record- und Codeunit-Variablen heißen wie das Objekt, ohne Leerzeichen und Sonderzeichen:
+Record- und Codeunit-Variablen heißen wie das Objekt, ohne Leerzeichen und Sonderzeichen.
+**Ungarische Notation ist verboten** – kein `recCustomer`, `decAmount`, `locItem`:
 
 ```al
 var
