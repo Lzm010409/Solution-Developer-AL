@@ -792,7 +792,7 @@
         <trans-unit id="Codeunit 2068197576 - NamedType 563373164" size-unit="char" translate="yes" xml:space="preserve">
           <source>The software change has been posted as the posted software change %1.</source>
           <target state="translated">The software change has been posted as the posted software change %1.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Softwareanpassung wurde als gebuchte Softwareanpassung %1 gebucht.|%1 = number of the posted software change</note>
+          <note from="Developer" annotates="general" priority="2">de-DE=Die Softwareanpassung wurde als gebuchte Softwareanpassung %1 gebucht.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Softw. Change-Post (Y/N) - NamedType PostedMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 2068197576 - NamedType 2810172481" size-unit="char" translate="yes" xml:space="preserve">
@@ -822,13 +822,13 @@
         <trans-unit id="Codeunit 3706884996 - Method 2561479223 - NamedType 1905097733" size-unit="char" translate="yes" xml:space="preserve">
           <source>The %1 %2 is blocked for privacy reasons and cannot be used in a software change.</source>
           <target state="translated">The %1 %2 is blocked for privacy reasons and cannot be used in a software change.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=%1 %2 ist aus Datenschutzgründen gesperrt und kann in einer Softwareanpassung nicht verwendet werden.|%1 = TableCaption of the blocked record, %2 = number or code of the blocked record</note>
+          <note from="Developer" annotates="general" priority="2">de-DE=%1 %2 ist aus Datenschutzgründen gesperrt und kann in einer Softwareanpassung nicht verwendet werden.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Software Change - Method CheckNotPrivacyBlocked - NamedType PrivacyBlockedErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 2394095431 - NamedType 3215995947" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posting software change  #1##################\</source>
           <target state="translated">Posting software change  #1##################\</target>
-          <note from="Developer" annotates="general" priority="2">#1 = number of the software change that is posted</note>
+          <note from="Developer" annotates="general" priority="2">de-DE=Buche Softwareanpassung  #1##################\\</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Software Change-Post - NamedType PostingMsg</note>
         </trans-unit>
         <trans-unit id="Page 66653583 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1242,7 +1242,7 @@
         <trans-unit id="Report 3716281679 - NamedType 4201156655" size-unit="char" translate="yes" xml:space="preserve">
           <source>The software change %1 has been copied to the new software change %2.</source>
           <target state="translated">The software change %1 has been copied to the new software change %2.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Die Softwareanpassung %1 wurde in die neue Softwareanpassung %2 kopiert.|%1 = number of the copied software change, %2 = number of the new software change</note>
+          <note from="Developer" annotates="general" priority="2">de-DE=Die Softwareanpassung %1 wurde in die neue Softwareanpassung %2 kopiert.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - NamedType CopiedMsg</note>
         </trans-unit>
         <trans-unit id="Report 3716281679 - Control 2346885236 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
