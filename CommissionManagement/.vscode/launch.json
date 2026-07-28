@@ -1,0 +1,35 @@
+{
+    // Je Umgebung eine Konfiguration. Im Multi-Root-Workspace erscheinen sie in der
+    // Auswahlliste von "Ausfuehren und Debuggen", jeweils mit dem Ordnernamen davor.
+    // Die nicht benoetigte Konfiguration einfach loeschen und die Platzhalter fuellen.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Commission Management - Cloud Sandbox",
+            "type": "al",
+            "request": "launch",
+            "environmentType": "Sandbox",
+            "environmentName": "<Name der Sandbox>",
+            "startupObjectType": "Page",
+            "startupObjectId": 63020,
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "schemaUpdateMode": "Synchronize"
+        },
+        {
+            "name": "Commission Management - OnPrem",
+            "type": "al",
+            "request": "launch",
+            "environmentType": "OnPrem",
+            "server": "http://localhost",
+            "serverInstance": "BC260",
+            "port": 7049,
+            "authentication": "UserPassword",
+            "startupObjectType": "Page",
+            "startupObjectId": 63020,
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "schemaUpdateMode": "Synchronize"
+        }
+    ]
+}

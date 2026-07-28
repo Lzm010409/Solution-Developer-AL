@@ -1,2 +1,4 @@
 .alpackages/
+.alpackages-shared/
 .snapshots/
+.altemplates/
