@@ -20,11 +20,6 @@
             "${PerTenantExtensionCop}"
         ],
         "al.enableCodeAnalysis": true,
-        "al.backgroundCodeAnalysis": "Project",
-        "files.exclude": {
-            "**/.alpackages": true,
-            "**/.snapshots": true,
-            "**/.altemplates": true
-        }
+        "al.backgroundCodeAnalysis": "Project"
     }
 }
