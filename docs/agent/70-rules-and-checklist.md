@@ -1,5 +1,10 @@
 # 70 – Harte Regeln und Abnahme-Checkliste
 
+> ⚠️ **Diese Checkliste ersetzt nicht die interne „Checkliste Code Review"** der
+> GOB-Projektentwicklungsrichtlinien. Sie ist eine Ableitung aus Musterlösung und
+> Microsoft-Standard. Liegt die interne Checkliste vor, hat sie Vorrang –
+> siehe [`05-gob-richtlinien.md`](05-gob-richtlinien.md).
+
 ---
 
 ## Teil 1 – Harte Regeln

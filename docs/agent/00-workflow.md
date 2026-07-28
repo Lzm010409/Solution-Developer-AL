@@ -9,6 +9,19 @@ Verbindliche Reihenfolge. Phasen werden nicht übersprungen und nicht vertauscht
 **Bevor eine einzige Zeile geschrieben wird.** Die Basis-App ist gesetzt; ihr Stil ist das
 Gesetz für alles, was dazukommt.
 
+### 0.0 Interne Richtlinien heranziehen
+
+Über allem stehen die **GOB-Projektentwicklungsrichtlinien** – die Spezifikation fordert ihre
+Einhaltung ausdrücklich. Siehe [`05-gob-richtlinien.md`](05-gob-richtlinien.md) für
+Geltungsrangfolge und Aufbau.
+
+Solange deren Regeltext nicht im Repo vorliegt, gilt: Bei jeder Entscheidung, die von einer
+internen Vorgabe abhängen könnte – Formatierung, Benennung, Branch- und Commit-Konvention,
+Teststrategie, Reviewkriterien, Übersetzungs-Workflow – **nachfragen** statt annehmen.
+
+Prüfe außerdem, ob die gestellte App von **unitop-Apps** abhängt (`dependencies` in der
+`app.json`). Falls ja, gelten deren Konventionen und Erweiterungspunkte zusätzlich.
+
 ### 0.1 `app.json` lesen
 
 Notiere und halte dich daran:

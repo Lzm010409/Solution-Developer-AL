@@ -275,6 +275,11 @@ Muster: `SolDev/Final/TestSeminarManagement/`
 Die Spezifikationen fordern: „Es wird mehrsprachig in Deutsch und Englisch entwickelt
 (Sprachcode de-DE und en-US)."
 
+> **Interne Vorgabe:** Die GOB-Richtlinien nennen **Xliff Sync** (VS-Code-Extension) als
+> Werkzeug für die Übersetzung und haben eine eigene Seite „Übersetzen einer App". Der
+> unten beschriebene manuelle Weg ist der Plattformstandard – **der interne Workflow geht
+> vor**, sobald er vorliegt. Siehe [`05-gob-richtlinien.md`](05-gob-richtlinien.md).
+
 ### Vorgehen
 
 1. In der `app.json`:

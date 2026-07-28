@@ -21,6 +21,20 @@ Spezifikation erweitert.
 > Microsoft-Standardapplikation. Wenn für eine Anforderung kein Muster existiert, ist das
 > ein Grund zurückzufragen, kein Grund zu improvisieren.
 
+## Geltungsrangfolge
+
+Bei Widersprüchen gilt von oben nach unten:
+
+1. **Interne GOB-Projektentwicklungsrichtlinien** → [`05-gob-richtlinien.md`](docs/agent/05-gob-richtlinien.md)
+2. Die **Spezifikation** der Aufgabe
+3. Der **Stil der gestellten Basis-App**
+4. **Microsoft AL Style Guide / Best Practices**
+5. Die **Musterlösung** `SolDev/Final/`
+6. Die Regeldokumente `10-`…`70-` dieses Repos
+
+⚠️ Von den internen Richtlinien liegt derzeit **nur die Struktur** vor, nicht der Regeltext.
+Details und Konsequenzen: [`05-gob-richtlinien.md`](docs/agent/05-gob-richtlinien.md).
+
 ## Reihenfolge – verbindlich
 
 1. **Bestandsaufnahme** der gestellten App (Prefix, ID-Bereich, `app.json`, Objektinventar, Stil)
@@ -37,6 +51,7 @@ Details: [`docs/agent/00-workflow.md`](docs/agent/00-workflow.md)
 | Dokument | Wofür |
 |---|---|
 | [`00-workflow.md`](docs/agent/00-workflow.md) | Der verbindliche Arbeitsablauf, inkl. Spec-Parsing und Abbruchkriterien |
+| [`05-gob-richtlinien.md`](docs/agent/05-gob-richtlinien.md) | **Interne GOB-Richtlinien: Geltungsrangfolge, Aufbau, Werkzeugkette** |
 | [`10-naming-and-ids.md`](docs/agent/10-naming-and-ids.md) | Prefix, IDs, Datei- und Variablennamen, Labels, `app.json` |
 | [`20-table-patterns.md`](docs/agent/20-table-patterns.md) | Tabellenarchetypen: Setup, Master, Supplemental, Document, Journal, Ledger Entry, Register, Cue |
 | [`30-page-patterns.md`](docs/agent/30-page-patterns.md) | List, Card, Document, Subpage, FactBox, Rollencenter, Profile, PageCustomization |

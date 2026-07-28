@@ -111,3 +111,6 @@ die konkretere Quelle.
   Hinweis geben, aber die Umsetzung folgt der offiziellen Dokumentation oder der Musterlösung.
 - Wenn Dokumentation und `SolDev/Final/` sich widersprechen: Die Dokumentation gewinnt bei
   **APIs**, die Musterlösung gewinnt bei **Architektur und Stil**.
+- Wenn die **internen GOB-Richtlinien** etwas anderes sagen als learn.microsoft.com, gewinnen
+  die internen Richtlinien – siehe [`05-gob-richtlinien.md`](05-gob-richtlinien.md). Die
+  Microsoft-Dokumentation bleibt maßgeblich für alles, was intern nicht geregelt ist.
