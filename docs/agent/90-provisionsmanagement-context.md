@@ -1,7 +1,7 @@
 # 90 – Domänenkontext: Provisionsmanagement (Basis-App)
 
 Dieses Dokument beschreibt die **tatsächlich gestellte Basis-App**, wie sie im Repository
-unter `CommissionManagement (2)/CommissionManagement/` liegt. Der Agent baut sie nicht –
+unter `CommissionManagement/` liegt. Der Agent baut sie nicht –
 er erweitert sie.
 
 Die Angaben stammen aus dem Code, nicht aus der Spezifikation. Wo Spezifikation und Code
@@ -13,7 +13,7 @@ auseinandergehen, **gilt der Code**.
 
 | | |
 |---|---|
-| Ordner | `CommissionManagement (2)/CommissionManagement/` |
+| Ordner | `CommissionManagement/` |
 | Name | `Commission Management` |
 | Publisher | `GOB Software und Systeme GmbH & Co. KG` |
 | App-ID | `c8c8e0da-e740-4159-a463-83431d5e1480` |
