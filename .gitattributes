@@ -1,0 +1,11 @@
+# Zeilenenden normalisieren: im Repository LF, im Arbeitsverzeichnis
+# plattformueblich. Verhindert, dass jeder Build unter Windows die
+# vom Compiler erzeugten Dateien komplett als geaendert meldet.
+* text=auto
+
+*.al      text
+*.xlf     text
+*.json    text
+*.md      text
+
+*.app     binary
