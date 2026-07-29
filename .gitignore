@@ -6,3 +6,9 @@
 
 # Buildergebnisse aus F5 / AL: Package
 *.app
+
+# Zwischenstand des Rapid Application Publishing
+rad.json
+
+# Kein AL-Projekt an der Wurzel, daher auch keine Startkonfiguration
+/.vscode/
