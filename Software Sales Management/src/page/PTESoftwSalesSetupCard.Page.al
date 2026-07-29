@@ -20,10 +20,12 @@ page 63600 "PTE Softw. Sales Setup Card"
 
                     field("Software Change Nos."; Rec."Software Change Nos.")
                     {
+                        ShowMandatory = true;
                         ApplicationArea = All;
                     }
                     field("Posted Software Change Nos."; Rec."Posted Software Change Nos.")
                     {
+                        ShowMandatory = true;
                         ApplicationArea = All;
                     }
                 }

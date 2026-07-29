@@ -16,10 +16,12 @@ page 63000 "PTE Commission Mgt. Setup Card"
 
                 field("Rounding Precision"; Rec."Rounding Precision")
                 {
+                    ShowMandatory = true;
                     ApplicationArea = All;
                 }
                 field("Contract Nos."; Rec."Contract Nos.")
                 {
+                    ShowMandatory = true;
                     ApplicationArea = Basic, Suite;
                 }
             }
