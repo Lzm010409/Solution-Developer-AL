@@ -39,7 +39,8 @@ table 63601 "PTE Software Change Template"
         field(40; "Developer Resource No."; Code[20])
         {
             DataClassification = CustomerContent;
-            TableRelation = Resource;
+            TableRelation = Resource where(Type = const(Person),
+                                            Blocked = const(false));
             Caption = 'Developer Resource No.', Comment = 'de-DE=Entwickler Ressourcennr.';
             ToolTip = 'Specifies the Developer Resource No. of the Software Change Template.', Comment = 'de-DE=Gibt die Entwickler Ressourcennr. der Softwareanpassungsvorlage an.';
 
@@ -56,6 +57,12 @@ table 63601 "PTE Software Change Template"
             TableRelation = "Gen. Business Posting Group";
             Caption = 'Gen. Bus. Posting Group', Comment = 'de-DE=Geschäftsbuchungsgruppe';
             ToolTip = 'Specifies the Gen. Bus. Posting Group of the Software Change Template.', Comment = 'de-DE=Gibt die Geschäftsbuchungsgruppe der Softwareanpassungsvorlage an.';
+            trigger OnValidate()
+            begin
+                if xRec."Gen. Bus. Posting Group" <> "Gen. Bus. Posting Group" then
+                    if GenBusinessPostingGroup.ValidateVatBusPostingGroup(GenBusinessPostingGroup, "Gen. Bus. Posting Group") then
+                        Validate("VAT Bus. Posting Group", GenBusinessPostingGroup."Def. VAT Bus. Posting Group");
+            end;
         }
         field(60; "VAT Bus. Posting Group"; Code[20])
         {
@@ -80,4 +87,7 @@ table 63601 "PTE Software Change Template"
         {
         }
     }
+
+    var
+        GenBusinessPostingGroup: Record "Gen. Business Posting Group";
 }

@@ -106,6 +106,33 @@ table 63610 "PTE Software Change"
             TableRelation = Contact;
             Caption = 'Contact No.', Comment = 'de-DE=Kontaktnr.';
             ToolTip = 'Specifies the Contact No. of the Software Change.', Comment = 'de-DE=Gibt die Kontaktnr. der Softwareanpassung an.';
+            trigger OnLookup()
+            var
+                Contact: Record Contact;
+                ContactBusinessRelation: Record "Contact Business Relation";
+                PTESoftwareChange: Record "PTE Software Change";
+            begin
+                TestField("Customer No.");
+
+                if not ContactBusinessRelation.FindByRelation(
+                    ContactBusinessRelation."Link to Table"::Customer,
+                    "Customer No.")
+                then
+                    Error(NoContactErr, Contact.TableCaption);
+
+                PTESoftwareChange := Rec;
+                Contact.FilterGroup(2);
+                Contact.SetRange("Company No.", ContactBusinessRelation."Contact No.");
+                Contact.FilterGroup(0);
+                Contact."No." := PTESoftwareChange."Contact No.";
+                Contact.SetCurrentKey(Name);
+
+                if Page.RunModal(Page::"Contact List", Contact) = Action::LookupOK then begin
+                    PTESoftwareChange.Validate("Contact No.", Contact."No.");
+                    Rec := PTESoftwareChange;
+                end;
+
+            end;
 
             trigger OnValidate()
             var
@@ -180,7 +207,6 @@ table 63610 "PTE Software Change"
             ToolTip = 'Specifies the Gen. Bus. Posting Group of the Software Change.', Comment = 'de-DE=Gibt die Geschäftsbuchungsgruppe der Softwareanpassung an.';
             trigger OnValidate()
             begin
-                //test
                 if xRec."Gen. Bus. Posting Group" <> "Gen. Bus. Posting Group" then
                     if GenBusinessPostingGroup.ValidateVatBusPostingGroup(GenBusinessPostingGroup, "Gen. Bus. Posting Group") then
                         Validate("VAT Bus. Posting Group", GenBusinessPostingGroup."Def. VAT Bus. Posting Group");
@@ -198,6 +224,21 @@ table 63610 "PTE Software Change"
             DataClassification = CustomerContent;
             Caption = 'Accounting Type', Comment = 'de-DE=Abrechnungsart';
             ToolTip = 'Specifies the Accounting Type of the Software Change. It controls whether the commission is taken from the commission contract or from this Software Change.', Comment = 'de-DE=Gibt die Abrechnungsart der Softwareanpassung. Sie steuert an, ob die Provision aus dem Provisionsvertrag oder aus dieser Softwareanpassung ermittelt wird.';
+            trigger OnValidate()
+            var
+                PTECommissionContract: Record "PTE Commission Contract";
+                SalespersonPurchaser: Record "Salesperson/Purchaser";
+            begin
+                if "Accounting Type" = "Accounting Type"::"Commission Contract" then
+                    if "Salesperson Code" <> '' then
+                        if SalespersonPurchaser.Get("Salesperson Code") then
+                            if SalespersonPurchaser."PTE Commission Contract No." <> '' then
+                                if PTECommissionContract.Get(SalespersonPurchaser."PTE Commission Contract No.") then
+                                    "Commission Percentage" := PTECommissionContract."Commission Percentage"
+                                else
+                                    "Commission Percentage" := 0;
+            end;
+
         }
         field(120; "Commission Percentage"; Decimal)
         {
@@ -211,7 +252,8 @@ table 63610 "PTE Software Change"
         field(130; "Developer Resource No."; Code[20])
         {
             DataClassification = CustomerContent;
-            TableRelation = Resource;
+            TableRelation = Resource where(Type = const(Person),
+                                            Blocked = const(false));
             Caption = 'Developer Resource No.', Comment = 'de-DE=Entwickler Ressourcennr.';
             ToolTip = 'Specifies the Developer Resource No. of the Software Change.', Comment = 'de-DE=Gibt die Entwickler Ressourcennr. der Softwareanpassung an.';
 
@@ -257,6 +299,7 @@ table 63610 "PTE Software Change"
         fieldgroup(DropDown; "No.", Description, "Customer No.")
         {
         }
+        fieldgroup(Brick; "No.", Description, "Customer No.") { }
     }
 
     trigger OnInsert()
@@ -284,10 +327,7 @@ table 63610 "PTE Software Change"
         SoftwareChange.DeleteComments("No.");
     end;
 
-    /// <summary>
-    /// Lets the user pick a related number series and draws the next number from it. Returns
-    /// false when the user leaves the selection without choosing.
-    /// </summary>
+
     procedure AssistEditNoSeries(OldSoftwareChange: Record "PTE Software Change"): Boolean
     var
         Setup: Record "PTE Software Sales Mgt. Setup";
@@ -310,7 +350,8 @@ table 63610 "PTE Software Change"
     end;
 
 
-    
+
     var
         GenBusinessPostingGroup: Record "Gen. Business Posting Group";
+        NoContactErr: Label 'There are no related %1', Comment = 'de-DE=Es gibt keine zugehörigen %1';
 }

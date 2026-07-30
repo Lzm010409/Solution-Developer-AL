@@ -21,6 +21,7 @@ pageextension 63600 "PTE Sales Invoice Sw. Change" extends "Sales Invoice"
                         exit(false);
 
                     SoftwareChangeList.GetRecord(SoftwareChange);
+                    Rec.UpdateSalesHeaderWithSoftwareChange(SoftwareChange."No.");
                     Text := SoftwareChange."No.";
                     exit(true);
                 end;

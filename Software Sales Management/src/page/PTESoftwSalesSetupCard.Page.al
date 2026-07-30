@@ -10,22 +10,17 @@ page 63600 "PTE Softw. Sales Setup Card"
     {
         area(Content)
         {
-            group(General)
+            group(NumberSeries)
             {
-                Caption = 'General', Comment = 'de-DE=Allgemein';
+                Caption = 'Number Series', Comment = 'de-DE=Nummernserie';
 
-                group(NumberSeries)
+                field("Software Change Nos."; Rec."Software Change Nos.")
                 {
-                    Caption = 'Number Series', Comment = 'de-DE=Nummernserie';
-
-                    field("Software Change Nos."; Rec."Software Change Nos.")
-                    {
-                        ApplicationArea = All;
-                    }
-                    field("Posted Software Change Nos."; Rec."Posted Software Change Nos.")
-                    {
-                        ApplicationArea = All;
-                    }
+                    ApplicationArea = All;
+                }
+                field("Posted Software Change Nos."; Rec."Posted Software Change Nos.")
+                {
+                    ApplicationArea = All;
                 }
             }
         }
@@ -68,7 +63,7 @@ page 63600 "PTE Softw. Sales Setup Card"
         }
         area(Promoted)
         {
-            group(Category_Category4)
+            group(SoftwareChange)
             {
                 Caption = 'Software Change', Comment = 'de-DE=Software Anpassung';
 

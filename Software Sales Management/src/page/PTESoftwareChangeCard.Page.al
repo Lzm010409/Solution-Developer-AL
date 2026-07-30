@@ -52,6 +52,10 @@ page 63611 "PTE Software Change Card"
                 field("Customer No."; Rec."Customer No.")
                 {
                 }
+                field("Customer Name"; Rec."Customer Name")
+                {
+                    Importance = Additional;
+                }
                 field("Gen. Bus. Posting Group"; Rec."Gen. Bus. Posting Group")
                 {
                 }
@@ -71,9 +75,17 @@ page 63611 "PTE Software Change Card"
 
                     field("Accounting Type"; Rec."Accounting Type")
                     {
+                        trigger OnValidate()
+                        begin
+                            if Rec."Accounting Type" = Rec."Accounting Type"::"Commission Contract" then
+                                IsCommissionPercentageEditable := false
+                            else
+                                IsCommissionPercentageEditable := true;               
+                        end;
                     }
                     field("Commission Percentage"; Rec."Commission Percentage")
                     {
+                        Editable = IsCommissionPercentageEditable;
                     }
                 }
             }
@@ -146,59 +158,53 @@ page 63611 "PTE Software Change Card"
         }
         area(Navigation)
         {
-            group(RelatedInformation)
+            action(ShowContact)
             {
-                Caption = 'Software Change', Comment = 'de-DE=Software Anpassung';
-                Image = Document;
+                ApplicationArea = All;
+                Caption = 'Contact', Comment = 'de-DE=Kontakt';
+                ToolTip = 'Open the contact assigned to the Software Change.', Comment = 'de-DE=Öffnet den der Softwareanpassung zugewiesenen Kontakt.';
+                Image = ContactPerson;
+                RunObject = page "Contact Card";
+                RunPageLink = "No." = field("Contact No.");
+            }
+            action(ShowCustomer)
+            {
+                ApplicationArea = All;
+                Caption = 'Customer', Comment = 'de-DE=Debitor';
+                ToolTip = 'Open the customer assigned to the Software Change.', Comment = 'de-DE=Öffnet den der Softwareanpassung zugewiesenen Debitor.';
+                Image = Customer;
+                RunObject = page "Customer Card";
+                RunPageLink = "No." = field("Customer No.");
+            }
+            action(ShowSalesperson)
+            {
+                ApplicationArea = All;
+                Caption = 'Salesperson', Comment = 'de-DE=Verkäufer';
+                ToolTip = 'Open the salesperson assigned to the Software Change.', Comment = 'de-DE=Öffnet den der Softwareanpassung zugewiesenen Verkäufer.';
+                Image = SalesPerson;
+                RunObject = page "Salesperson/Purchaser Card";
+                RunPageLink = "Code" = field("Salesperson Code");
+            }
+            action(ShowResource)
+            {
+                ApplicationArea = All;
+                Caption = 'Resource', Comment = 'de-DE=Ressource';
+                ToolTip = 'Open the developer resource assigned to the Software Change.', Comment = 'de-DE=Öffnet die der Softwareanpassung zugewiesene Entwickler-Ressource.';
+                Image = Resource;
+                RunObject = page "Resource Card";
+                RunPageLink = "No." = field("Developer Resource No.");
+            }
+            action(ShowComments)
+            {
+                ApplicationArea = All;
+                Caption = 'Comments', Comment = 'de-DE=Bemerkungen';
+                ToolTip = 'View or add comments for the Software Change.', Comment = 'de-DE=Zeigt die Bemerkungen zur Softwareanpassung an oder ergänzt sie.';
+                Image = ViewComments;
 
-                action(ShowContact)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Contact', Comment = 'de-DE=Kontakt';
-                    ToolTip = 'Open the contact assigned to the Software Change.', Comment = 'de-DE=Öffnet den der Softwareanpassung zugewiesenen Kontakt.';
-                    Image = ContactPerson;
-                    RunObject = page "Contact Card";
-                    RunPageLink = "No." = field("Contact No.");
-                }
-                action(ShowCustomer)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Customer', Comment = 'de-DE=Debitor';
-                    ToolTip = 'Open the customer assigned to the Software Change.', Comment = 'de-DE=Öffnet den der Softwareanpassung zugewiesenen Debitor.';
-                    Image = Customer;
-                    RunObject = page "Customer Card";
-                    RunPageLink = "No." = field("Customer No.");
-                }
-                action(ShowSalesperson)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Salesperson', Comment = 'de-DE=Verkäufer';
-                    ToolTip = 'Open the salesperson assigned to the Software Change.', Comment = 'de-DE=Öffnet den der Softwareanpassung zugewiesenen Verkäufer.';
-                    Image = SalesPerson;
-                    RunObject = page "Salesperson/Purchaser Card";
-                    RunPageLink = "Code" = field("Salesperson Code");
-                }
-                action(ShowResource)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Resource', Comment = 'de-DE=Ressource';
-                    ToolTip = 'Open the developer resource assigned to the Software Change.', Comment = 'de-DE=Öffnet die der Softwareanpassung zugewiesene Entwickler-Ressource.';
-                    Image = Resource;
-                    RunObject = page "Resource Card";
-                    RunPageLink = "No." = field("Developer Resource No.");
-                }
-                action(ShowComments)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Comments', Comment = 'de-DE=Bemerkungen';
-                    ToolTip = 'View or add comments for the Software Change.', Comment = 'de-DE=Zeigt die Bemerkungen zur Softwareanpassung an oder ergänzt sie.';
-                    Image = ViewComments;
-
-                    trigger OnAction()
-                    begin
-                        Rec.ShowComments();
-                    end;
-                }
+                trigger OnAction()
+                begin
+                    Rec.ShowComments();
+                end;
             }
         }
         area(Promoted)
@@ -211,7 +217,7 @@ page 63611 "PTE Software Change Card"
                 {
                 }
             }
-            group(Category_Category4)
+            group(Category_SoftwareChange)
             {
                 Caption = 'Software Change', Comment = 'de-DE=Software Anpassung';
 
@@ -224,4 +230,17 @@ page 63611 "PTE Software Change Card"
             }
         }
     }
+
+    trigger OnOpenPage()
+    begin
+        if Rec."Accounting Type" = Rec."Accounting Type"::"Commission Contract" then
+            IsCommissionPercentageEditable := false
+        else
+            IsCommissionPercentageEditable := true;
+    end;
+
+
+
+    var
+        IsCommissionPercentageEditable: Boolean;
 }

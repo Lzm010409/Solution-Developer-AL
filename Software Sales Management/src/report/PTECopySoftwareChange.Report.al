@@ -72,9 +72,7 @@ report 63620 "PTE Copy Software Change"
         CopyContactPerson: Boolean;
         CopiedMsg: Label 'The software change %1 has been copied to the new software change %2.', Comment = 'de-DE=Die Softwareanpassung %1 wurde in die neue Softwareanpassung %2 kopiert.';
 
-    /// <summary>
-    /// Sets the software change that is copied. Has to be called before the report is started.
-    /// </summary>
+
     procedure SetSourceSoftwareChange(SoftwareChange: Record "PTE Software Change")
     begin
         FromSoftwareChange := SoftwareChange;

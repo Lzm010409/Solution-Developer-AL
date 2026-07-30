@@ -34,12 +34,9 @@ codeunit 63630 "PTE Software Change-Post"
         LockTables();
         InitProgressWindow(SoftwareChange);
 
-        // The order of these four steps is binding: the invoice has to exist before the
-        // commission can be determined, because the commission is based on the amount of the
-        // resulting customer entry, and the original record may only be removed once both
-        // documents have been created.
+        InsertPostedSoftwareChange(SoftwareChange);
         SalesInvoiceNo := PostSalesInvoice(SoftwareChange);
-        InsertPostedSoftwareChange(SoftwareChange, SalesInvoiceNo);
+        SetSalesInvoiceNoForPostedSoftwareChange(SoftwareChange, SalesInvoiceNo);
         PostCommission(SoftwareChange, SalesInvoiceNo);
         FinalizeSoftwareChange(SoftwareChange);
 
@@ -49,10 +46,6 @@ codeunit 63630 "PTE Software Change-Post"
         SoftwareChange2 := SoftwareChange;
     end;
 
-    /// <summary>
-    /// Returns the historical document created by the last run, so that the calling routine can
-    /// report it back to the user.
-    /// </summary>
     procedure GetPostedSoftwareChange(var PostedSoftwareChange2: Record "PTE Posted Software Change")
     begin
         PostedSoftwareChange2 := PostedSoftwareChange;
@@ -148,14 +141,20 @@ codeunit 63630 "PTE Software Change-Post"
         SalesHeader.Invoice := true;
         SalesPost.Run(SalesHeader);
 
-        // The posted document is located through the number the unposted one carried, because
-        // posting may draw a number from a separate series.
         SalesInvoiceHeader.SetRange("Pre-Assigned No.", PreAssignedNo);
         SalesInvoiceHeader.FindLast();
         exit(SalesInvoiceHeader."No.");
     end;
 
-    local procedure InsertPostedSoftwareChange(SoftwareChange: Record "PTE Software Change"; SalesInvoiceNo: Code[20])
+
+    local procedure SetSalesInvoiceNoForPostedSoftwareChange(var SoftwareChange: Record "PTE Software Change"; SalesInvoiceNo: Code[20])
+    begin
+        PostedSoftwareChange.Validate("Sales Invoice No.", SalesInvoiceNo);
+        PostedSoftwareChange.Modify(true);
+    end;
+
+
+    local procedure InsertPostedSoftwareChange(SoftwareChange: Record "PTE Software Change")
     var
         SoftwareChangeMgt: Codeunit "PTE Software Change";
         RecordLinkManagement: Codeunit "Record Link Management";
@@ -166,7 +165,6 @@ codeunit 63630 "PTE Software Change-Post"
         PostedSoftwareChange."No. Series" := SoftwareSalesMgtSetup."Posted Software Change Nos.";
         PostedSoftwareChange."No." := NoSeries.GetNextNo(PostedSoftwareChange."No. Series", WorkDate());
         PostedSoftwareChange."Software Change No." := SoftwareChange."No.";
-        PostedSoftwareChange."Sales Invoice No." := SalesInvoiceNo;
         PostedSoftwareChange."Posting Date" := WorkDate();
         PostedSoftwareChange."User ID" := CopyStr(UserId(), 1, MaxStrLen(PostedSoftwareChange."User ID"));
         PostedSoftwareChange.Insert(true);
