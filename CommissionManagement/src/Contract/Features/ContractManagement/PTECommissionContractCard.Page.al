@@ -66,6 +66,7 @@ page 63021 "PTE Commission Contract Card"
 
                 field("Commission Percentage"; Rec."Commission Percentage")
                 {
+                    ShowMandatory = true;
                     Caption = 'Commission Percentage', Comment = 'de-DE=Provisions Prozentsatz';
                     ToolTip = 'Specifies the commission percentage of the Commission Contract.', Comment = 'de-DE=Gibt den Provisions Prozentsatz des Provisions Vertrags an.';
                 }

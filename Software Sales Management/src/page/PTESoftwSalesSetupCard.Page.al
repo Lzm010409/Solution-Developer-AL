@@ -14,13 +14,16 @@ page 63600 "PTE Softw. Sales Setup Card"
             {
                 Caption = 'Number Series', Comment = 'de-DE=Nummernserie';
 
-                field("Software Change Nos."; Rec."Software Change Nos.")
-                {
-                    ApplicationArea = All;
-                }
-                field("Posted Software Change Nos."; Rec."Posted Software Change Nos.")
-                {
-                    ApplicationArea = All;
+                    field("Software Change Nos."; Rec."Software Change Nos.")
+                    {
+                        ShowMandatory = true;
+                        ApplicationArea = All;
+                    }
+                    field("Posted Software Change Nos."; Rec."Posted Software Change Nos.")
+                    {
+                        ShowMandatory = true;
+                        ApplicationArea = All;
+                    }
                 }
             }
         }

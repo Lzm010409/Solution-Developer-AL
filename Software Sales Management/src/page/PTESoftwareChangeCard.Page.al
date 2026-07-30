@@ -27,6 +27,7 @@ page 63611 "PTE Software Change Card"
                 }
                 field(Description; Rec.Description)
                 {
+                    ShowMandatory = true;
                 }
                 field("Entry Date"; Rec."Entry Date")
                 {
@@ -37,6 +38,7 @@ page 63611 "PTE Software Change Card"
                 }
                 field(Status; Rec.Status)
                 {
+                    ShowMandatory = true;
                 }
                 field(Priority; Rec.Priority)
                 {
@@ -48,25 +50,27 @@ page 63611 "PTE Software Change Card"
 
                 field("Salesperson Code"; Rec."Salesperson Code")
                 {
+                    ShowMandatory = true;
                 }
                 field("Customer No."; Rec."Customer No.")
                 {
-                }
-                field("Customer Name"; Rec."Customer Name")
-                {
-                    Importance = Additional;
+                    ShowMandatory = true;
                 }
                 field("Gen. Bus. Posting Group"; Rec."Gen. Bus. Posting Group")
                 {
+                    ShowMandatory = true;
                 }
                 field("VAT Bus. Posting Group"; Rec."VAT Bus. Posting Group")
                 {
+                    ShowMandatory = true;
                 }
                 field("Developer Resource No."; Rec."Developer Resource No.")
                 {
+                    ShowMandatory = true;
                 }
                 field("Quantity Implementation (hrs)"; Rec."Quantity Implementation (hrs)")
                 {
+                    ShowMandatory = true;
                 }
                 group(Commission)
                 {
@@ -75,6 +79,7 @@ page 63611 "PTE Software Change Card"
 
                     field("Accounting Type"; Rec."Accounting Type")
                     {
+                        ShowMandatory = true;
                         trigger OnValidate()
                         begin
                             if Rec."Accounting Type" = Rec."Accounting Type"::"Commission Contract" then
@@ -82,6 +87,7 @@ page 63611 "PTE Software Change Card"
                             else
                                 IsCommissionPercentageEditable := true;               
                         end;
+
                     }
                     field("Commission Percentage"; Rec."Commission Percentage")
                     {
