@@ -9,24 +9,29 @@ Beleg und der Provisionsposten des Verkäufers.
 | Prefix | `PTE` |
 | ID-Bereich | 63600 – 63700 |
 | Version | 1.0.0.0 |
-| Dependencies | Commission Management 1.1.0.0 |
+| Dependencies | Commission Management 1.1.0.0, Microsoft-Testbibliotheken |
 | Sprachen | `de-DE`, `en-US` (XLIFF unter `Translations/`) |
+
+Die automatischen Tests liegen laut Spezifikation, Kapitel 10, **in dieser App** und nicht
+in einer eigenen Test-Extension. Dadurch hängt die App an den Microsoft-Testbibliotheken
+und lässt sich nur auf Instanzen installieren, auf denen das Test-Toolkit vorhanden ist.
 
 ## Ordnerstruktur
 
-Objekttyporientiert, ein Ordner je Objekttyp:
+Featureorientiert; innerhalb eines Features nach Objekttyp:
 
 ```
 src/
-├── codeunit/           Tabellenlogik, Kopieren, Buchungskette, Navigate, Provisionsanbindung
-├── enum/               Abrechnungsart und Status
-├── enumextension/      Erweiterung der BC-Bemerkungsarten
-├── page/               Einrichtung, Vorlagen, Anpassungen, gebuchte Anpassungen
-├── pageextension/      Verkaufsbelege, Verkäufer, Rollencenter
-├── permissionset/      vier Berechtigungssätze
-├── report/             Kopierdialog
-├── table/              Einrichtung, Vorlage, Anpassung, gebuchte Anpassung
-└── tableextension/     BC-Belegfluss und die beiden Tabellen der Basis-App
+├── Setup/            Einrichtung mit den beiden Nummernkreisen
+│   └── table · page · codeunit
+├── Software Change/  Kern: Vorlage, Anpassung, gebuchte Anpassung, Kopieren, Buchen
+│   └── table · page · codeunit · enum · report
+├── Salesextension/   Erweiterungen des BC-Belegflusses und der Verkäufer-Pages
+│   └── tableext · pageext · enumext
+├── Commission/       Anbindung an das Provisionsmanagement
+│   └── tableext · codeunit
+├── Permission/       vier Berechtigungssätze
+└── Automatic Tests/  Testlibrary und Testfälle
 ```
 
 ## Objekte
@@ -58,6 +63,8 @@ src/
 | PageExt | 63603/63604 | Verkäuferkarte und -liste | offene Anpassungen des Verkäufers |
 | PageExt | 63605 | Order Processor Role Center | drei Einträge in der Gruppe „Provisionsmanagement" |
 | PermissionSet | 63600–63603 | Vollzugriff / Lesen / Buchen / Einrichtung | |
+| Codeunit | 63698 | Softw. Change Test Lib | legt Einrichtung, Stammdaten und Testdaten an |
+| Codeunit | 63699 | Softw. Sales Mgt. Test | die Testfälle (`Subtype = Test`) |
 
 ## Bemerkungen
 
@@ -72,13 +79,14 @@ Codeunit 63630 arbeitet in dieser Reihenfolge, die bindend ist:
 
 ```
 1. Pflichtfelder prüfen (Status muss „Abgeschlossen" sein)
-2. Verkaufsrechnung erzeugen und über Codeunit 80 buchen
-3. gebuchte Softwareanpassung anlegen, Bemerkungen und Links übernehmen
-4. Provisionsposten über die Buch.-Blattzeile der Basis-App erzeugen
-5. die ursprüngliche Anpassung löschen
+2. gebuchte Softwareanpassung anlegen, Bemerkungen und Links übernehmen
+3. Verkaufsrechnung erzeugen und über Codeunit 80 buchen
+4. Rechnungsnummer am historischen Beleg nachtragen
+5. Provisionsposten über die Buch.-Blattzeile der Basis-App erzeugen
+6. die ursprüngliche Anpassung löschen
 ```
 
-Schritt 4 setzt Schritt 2 voraus: Grundlage der Provision ist der Betrag des entstandenen
+Schritt 5 setzt Schritt 3 voraus: Grundlage der Provision ist der Betrag des entstandenen
 Debitorenpostens — dieselbe Quelle, die auch der Stapellauf „Provisionen berechnen"
 verwendet. Dadurch erkennt die Basis-App den Beleg später als bereits provisioniert und
 bucht ihn nicht doppelt.
@@ -91,11 +99,23 @@ Das Feld `Abrechnungsart` steuert, woher der Prozentsatz kommt:
 
 | Abrechnungsart | Wirkung |
 |---|---|
-| Provisionsvertrag | der Prozentsatz des Vertrags gilt |
-| Software Change | der Prozentsatz der Anpassung überschreibt den Vertrag — **nur wenn er nicht 0 ist** |
+| Provisionsvertrag | der Prozentsatz des Vertrags gilt; ein abweichender Wert lässt sich auf der Karte gar nicht erst erfassen |
+| Software Change | der Prozentsatz der Anpassung gilt und überschreibt den Vertrag |
 
 Umgesetzt ist das in Codeunit 63621 als Subscriber auf `OnAfterGetCommissionPercentage`
 der Basis-App. Es gibt bewusst **keine** eigene Berechnungslogik in dieser App.
+
+## Automatische Tests
+
+Die Tests liegen unter `src/Automatic Tests/` und decken die drei Themen aus Kapitel 10 der
+Spezifikation ab: Übernahme der Vorlagenwerte, vollständiges Kopieren einer Anpassung
+inklusive Bemerkungen, und die Rückfrage vor dem Buchen. Sie folgen dem Schema
+`Feature / Scenario / Given / When / Then`; jede Prüfung trägt eine eigene Fehlermeldung.
+
+Codeunit 63698 legt Einrichtung, Nummernserien und Stammdaten direkt an, statt die
+Microsoft-Testbibliotheken dafür zu bemühen. Referenziert wird aus dem Toolkit allein
+`Assert`. Zum Ausführen muss das Test-Toolkit auf der Instanz installiert sein —
+`SolDev/Import TestToolkit BC26.ps1` erledigt das.
 
 ## Voraussetzungen im Mandanten
 
