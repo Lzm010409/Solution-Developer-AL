@@ -4,8 +4,8 @@ permissionset 63003 "PTE Permission PO"
     Caption = 'Commission Posting', Comment = 'de-DE=Zugriff auf Provisionsbuchung';
 
     Permissions =
-        tabledata "PTE Commission Ledger Entry" = RI,
-        tabledata "PTE Commission Journal Line" = RIMD,
+        tabledata "PTE Commission Ledger Entry" = Ri,
+        tabledata "PTE Commission Journal Line" = Rimd,
         tabledata "PTE Commission Contract" = R,
         tabledata "PTE Commission Type" = R,
         tabledata "PTE Commission Comment Line"=RI,
