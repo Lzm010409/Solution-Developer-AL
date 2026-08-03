@@ -1,0 +1,19 @@
+{
+    "al.codeAnalyzers": [
+        "${CodeCop}",
+        "${UICop}",
+        "${PerTenantExtensionCop}"
+    ],
+    "al.enableCodeAnalysis": true,
+    "al.packageCachePath": [
+        "./.alpackages",
+        "../.alpackages-shared"
+    ],
+    "xliffSync.baseFile": "Software Sales Management.g.xlf",
+    "xliffSync.parseFromDeveloperNote": true,
+    "xliffSync.parseFromDeveloperNoteOverwrite": true,
+    "xliffSync.parseFromDeveloperNoteSeparator": "|",
+    "xliffSync.detectSourceTextChanges": true,
+    "xliffSync.autoCheckMissingTranslations": true,
+    "xliffSync.autoCheckNeedWorkTranslations": true
+}

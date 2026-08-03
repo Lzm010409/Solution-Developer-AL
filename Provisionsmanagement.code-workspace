@@ -1,0 +1,25 @@
+{
+    "folders": [
+        {
+            "name": "1 - Commission Management",
+            "path": "CommissionManagement"
+        },
+        {
+            "name": "2 - Software Sales Management",
+            "path": "Software Sales Management"
+        },
+        {
+            "name": "3 - Software Sales Management Test",
+            "path": "Software Sales Management Test"
+        }
+    ],
+    "settings": {
+        "al.codeAnalyzers": [
+            "${CodeCop}",
+            "${UICop}",
+            "${PerTenantExtensionCop}"
+        ],
+        "al.enableCodeAnalysis": true,
+        "al.backgroundCodeAnalysis": "Project"
+    }
+}
