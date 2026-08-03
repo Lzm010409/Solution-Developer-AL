@@ -5,7 +5,7 @@ permissionset 63000 "PTE Permission GL"
     Permissions = tabledata "PTE Commission Comment Line"=RIMD,
         tabledata "PTE Commission Contract"=RIMD,
         tabledata "PTE Commission Ledger Entry"=Ri,
-        tabledata "PTE Commission Journal Line"=RIMD,
+        tabledata "PTE Commission Journal Line"=Rimd,
         tabledata "PTE Commission Mgt. Setup"=RIMD,
         tabledata "PTE Commission Type"=RIMD,
         table "PTE Commission Comment Line"=X,
