@@ -156,20 +156,12 @@ table 63023 "PTE Commission Journal Line"
         }
     }
 
-    /// <summary>
-    /// Indicates that the line carries no posting relevant content and may be skipped by the
-    /// posting routines.
-    /// </summary>
     procedure EmptyLine(): Boolean
     begin
         exit(("Salesperson Code" = '') and ("Amount (LCY)" = 0));
     end;
 
-    /// <summary>
-    /// Prepares a journal line from a salesperson and the customer entry the commission is
-    /// based on. The amounts are taken over unchanged so that no second currency conversion
-    /// takes place; a credit memo therefore results in a negative commission.
-    /// </summary>
+
     procedure SetUpNewLine(SalespersonPurchaser: Record "Salesperson/Purchaser"; CustomerLedgerEntry: Record "Cust. Ledger Entry")
     begin
         Init();
@@ -186,10 +178,6 @@ table 63023 "PTE Commission Journal Line"
         "Commission Type" := "PTE Commission Payment Type"::"Commission Payment";
     end;
 
-    /// <summary>
-    /// Maps the document type of the general journal to the one used by the commission entries.
-    /// Anything that is not an invoice is treated as a credit memo.
-    /// </summary>
     procedure MapDocumentType(GenJournalDocumentType: Enum "Gen. Journal Document Type"): Enum "PTE Com. Led. Ent. Doc. Type"
     begin
         if GenJournalDocumentType = "Gen. Journal Document Type"::Invoice then

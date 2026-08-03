@@ -11,10 +11,6 @@ codeunit 63021 "PTE Calculate Commission"
         exit(Amount);
     end;
 
-    /// <summary>
-    /// Indicates that a commission has already been created for a salesperson and a customer
-    /// entry. Keeps the same document from being commissioned a second time.
-    /// </summary>
     procedure IsAlreadyCommissioned(SalespersonCode: Code[20]; LedgerEntryNo: Integer): Boolean
     var
         CommissionLedgerEntry: Record "PTE Commission Ledger Entry";
@@ -24,11 +20,6 @@ codeunit 63021 "PTE Calculate Commission"
         exit(not CommissionLedgerEntry.IsEmpty());
     end;
 
-    /// <summary>
-    /// Determines the commission percentage that applies to a single commission journal line.
-    /// Other extensions can supply a deviating percentage through the published events.
-    /// </summary>
-    /// <param name="CommissionJournalLine">The journal line the percentage is determined for.</param>
     procedure GetCommissionPercentage(var CommissionJournalLine: Record "PTE Commission Journal Line"): Decimal
     var
         CommissionContract: Record "PTE Commission Contract";
@@ -46,13 +37,7 @@ codeunit 63021 "PTE Calculate Commission"
         exit(CommissionPercentage);
     end;
 
-    /// <summary>
-    /// Calculates the commission amount for a single commission journal line.
-    /// Credit memos carry a negative sales amount and therefore yield a negative commission.
-    /// </summary>
-    /// <param name="CommissionJournalLine">The journal line the amount is calculated for.</param>
-    /// <param name="CommissionPercentage">The percentage determined by GetCommissionPercentage.</param>
-    /// <param name="SalesAmount">The sales amount the commission is based on, in local currency.</param>
+
     procedure CalculateCommissionAmount(var CommissionJournalLine: Record "PTE Commission Journal Line"; CommissionPercentage: Decimal; SalesAmount: Decimal): Decimal
     var
         CommissionAmount: Decimal;

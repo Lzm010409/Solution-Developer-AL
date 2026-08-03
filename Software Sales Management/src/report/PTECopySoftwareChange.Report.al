@@ -23,7 +23,7 @@ report 63620 "PTE Copy Software Change"
                     Caption = 'Options', Comment = 'de-DE=Optionen';
                     InstructionalText = 'Specify the parameters used to copy the software change.', Comment = 'de-DE=Geben Sie die Parameter an, die zum Kopieren der Softwareanpassung herangezogen werden sollen.';
 
-                    field(CopyComments; CopyComments)
+                    field(CopyCommentsField; CopyComments)
                     {
                         ApplicationArea = All;
                         Caption = 'Copy Comments', Comment = 'de-DE=Kopiere Bemerkungen';
@@ -33,19 +33,19 @@ report 63620 "PTE Copy Software Change"
                     {
                         Caption = 'Copy data of group:', Comment = 'de-DE=Kopiere Daten der Gruppe:';
 
-                        field(CopyGeneral; CopyGeneral)
+                        field(CopyGeneralField; CopyGeneral)
                         {
                             ApplicationArea = All;
                             Caption = 'General', Comment = 'de-DE=Allgemein';
                             ToolTip = 'Specifies whether the fields of the General group are copied.', Comment = 'de-DE=Gibt an, ob die Felder der Gruppe Allgemein kopiert werden.';
                         }
-                        field(CopyInvoicing; CopyInvoicing)
+                        field(CopyInvoicingField; CopyInvoicing)
                         {
                             ApplicationArea = All;
                             Caption = 'Invoicing', Comment = 'de-DE=Fakturierung';
                             ToolTip = 'Specifies whether the fields of the Invoicing group are copied.', Comment = 'de-DE=Gibt an, ob die Felder der Gruppe Fakturierung kopiert werden.';
                         }
-                        field(CopyContactPerson; CopyContactPerson)
+                        field(CopyContactPersonField; CopyContactPerson)
                         {
                             ApplicationArea = All;
                             Caption = 'Contact Person', Comment = 'de-DE=Kontaktperson';

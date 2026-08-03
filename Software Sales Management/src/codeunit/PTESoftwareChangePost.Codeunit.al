@@ -15,12 +15,9 @@ codeunit 63630 "PTE Software Change-Post"
         Window: Dialog;
         SetupRead: Boolean;
         PostingMsg: Label 'Posting software change  #1##################\', Comment = 'de-DE=Buche Softwareanpassung  #1##################\\';
+        WrongAccountingTypeCombinationErr: Label 'You cannot choose a Salesperson without a Commission Contract when using the Accounting Type "Commission Contract".', Comment = 'de-DE=Sie können keinen Vertriebsmitarbeiter ohne Provisionsvertrag wählen, wenn Sie den Buchungstyp "Provisionsvertrag" verwenden.';
 
-    /// <summary>
-    /// Invoices a software change in one go: it is checked, billed as a sales invoice, turned
-    /// into a historical document, commissioned and finally removed. The routine performs no
-    /// user interaction so that it stays callable from tests and background sessions.
-    /// </summary>
+
     procedure RunWithCheck(var SoftwareChange2: Record "PTE Software Change")
     var
         SoftwareChange: Record "PTE Software Change";
@@ -36,7 +33,7 @@ codeunit 63630 "PTE Software Change-Post"
 
         InsertPostedSoftwareChange(SoftwareChange);
         SalesInvoiceNo := PostSalesInvoice(SoftwareChange);
-        SetSalesInvoiceNoForPostedSoftwareChange(SoftwareChange, SalesInvoiceNo);
+        SetSalesInvoiceNoForPostedSoftwareChange(SalesInvoiceNo);
         PostCommission(SoftwareChange, SalesInvoiceNo);
         FinalizeSoftwareChange(SoftwareChange);
 
@@ -147,7 +144,7 @@ codeunit 63630 "PTE Software Change-Post"
     end;
 
 
-    local procedure SetSalesInvoiceNoForPostedSoftwareChange(var SoftwareChange: Record "PTE Software Change"; SalesInvoiceNo: Code[20])
+    local procedure SetSalesInvoiceNoForPostedSoftwareChange(SalesInvoiceNo: Code[20])
     begin
         PostedSoftwareChange.Validate("Sales Invoice No.", SalesInvoiceNo);
         PostedSoftwareChange.Modify(true);
@@ -186,8 +183,8 @@ codeunit 63630 "PTE Software Change-Post"
         CommisJnlPostLine: Codeunit "PTE Commis. Jnl.-Post Line";
     begin
         SalespersonPurchaser.Get(SoftwareChange."Salesperson Code");
-        if SalespersonPurchaser."PTE Commission Contract No." = '' then
-            exit;
+        if (SalespersonPurchaser."PTE Commission Contract No." = '') and (SoftwareChange."Accounting Type" = SoftwareChange."Accounting Type"::"Commission Contract") then
+            Error(WrongAccountingTypeCombinationErr);
 
         FindCustLedgerEntry(SalesInvoiceNo, CustLedgerEntry);
         CustLedgerEntry.CalcFields("Amount (LCY)");

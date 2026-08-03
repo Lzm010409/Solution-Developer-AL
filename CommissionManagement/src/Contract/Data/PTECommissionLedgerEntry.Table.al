@@ -120,10 +120,6 @@ table 63022 "PTE Commission Ledger Entry"
         }
     }
 
-    /// <summary>
-    /// Takes over the content of a journal line into the entry. Other extensions add their own
-    /// content through the event published at the end.
-    /// </summary>
     procedure CopyFromJnlLine(CommissionJournalLine: Record "PTE Commission Journal Line")
     begin
         "Posting Date" := CommissionJournalLine."Posting Date";

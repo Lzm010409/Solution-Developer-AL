@@ -4,7 +4,7 @@ table 63610 "PTE Software Change"
     DataCaptionFields = "No.", Description;
     Caption = 'Software Change', Comment = 'de-DE=Softwareanpassung';
     LookupPageId = "PTE Software Change List";
-    DrillDownPageId = "PTE Software Change List";
+    DrillDownPageId = "PTE Software Change Card";
 
     fields
     {
@@ -83,6 +83,7 @@ table 63610 "PTE Software Change"
                 SoftwareChange: Codeunit "PTE Software Change";
             begin
                 SoftwareChange.CheckSalespersonNotPrivacyBlocked("Salesperson Code");
+                SoftwareChange.SetSalesPersonCommissionContract(Rec);
                 CalcFields("Salesperson Name");
             end;
         }

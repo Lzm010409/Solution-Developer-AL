@@ -1,11 +1,5 @@
 codeunit 63612 "PTE Copy Software Change"
 {
-    /// <summary>
-    /// Creates a new software change from an existing one. Each group of the card can be
-    /// included or left empty independently.
-    /// </summary>
-    /// <param name="FromSoftwareChange">The software change that is copied.</param>
-    /// <param name="ToSoftwareChange">Returns the newly created software change.</param>
     procedure CopySoftwareChange(FromSoftwareChange: Record "PTE Software Change"; var ToSoftwareChange: Record "PTE Software Change"; CopyComments: Boolean; CopyGeneral: Boolean; CopyInvoicing: Boolean; CopyContactPerson: Boolean)
     begin
         ToSoftwareChange.Init();

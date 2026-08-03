@@ -127,7 +127,7 @@ page 63610 "PTE Software Change List"
                 {
                 }
             }
-            group(Category_Category4)
+            group(Category_SoftwareChange)
             {
                 Caption = 'Software Change', Comment = 'de-DE=Software Anpassung';
 

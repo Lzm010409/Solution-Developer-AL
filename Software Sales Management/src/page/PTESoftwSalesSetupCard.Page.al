@@ -27,7 +27,7 @@ page 63600 "PTE Softw. Sales Setup Card"
                 }
             }
         }
-    }
+    
 
     actions
     {

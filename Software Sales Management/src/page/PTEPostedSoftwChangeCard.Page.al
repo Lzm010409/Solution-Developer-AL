@@ -5,6 +5,7 @@ page 63616 "PTE Posted Softw. Change Card"
     ApplicationArea = All;
     UsageCategory = None;
     Editable = false;
+    DeleteAllowed = false;
     Caption = 'Posted Software Change', Comment = 'de-DE=Geb. Softwareanpassung';
 
     layout

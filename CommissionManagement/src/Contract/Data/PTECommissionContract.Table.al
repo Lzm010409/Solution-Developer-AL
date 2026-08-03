@@ -144,10 +144,6 @@ table 63020 "PTE Commission Contract"
         end;
     end;
 
-    /// <summary>
-    /// Lets the user pick a related number series and draws the next number from it. Returns
-    /// false when the user leaves the selection without choosing.
-    /// </summary>
     procedure AssistEditNoSeries(OldCommissionContract: Record "PTE Commission Contract"): Boolean
     var
         Setup: Record "PTE Commission Mgt. Setup";

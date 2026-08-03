@@ -51,6 +51,13 @@ page 63611 "PTE Software Change Card"
                 field("Salesperson Code"; Rec."Salesperson Code")
                 {
                     ShowMandatory = true;
+
+                    trigger OnValidate()
+                    var
+                        PTESoftwareChange: Codeunit "PTE Software Change";
+                    begin 
+                        PTESoftwareChange.ShouldPermissionForSoftwareChangeBeEditable(Rec, IsCommissionPercentageEditable);
+                    end;
                 }
                 field("Customer No."; Rec."Customer No.")
                 {
@@ -217,7 +224,7 @@ page 63611 "PTE Software Change Card"
         {
             group(Category_Process)
             {
-                Caption = 'Process', Comment = 'de-DE=Prozess';
+                Caption = 'Post', Comment = 'de-DE=Buchen';
 
                 actionref(PostRef; Post)
                 {

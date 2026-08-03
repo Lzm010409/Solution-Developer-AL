@@ -4,7 +4,7 @@ table 63601 "PTE Software Change Template"
     DataCaptionFields = "Code", Description;
     Caption = 'Software Change Template', Comment = 'de-DE=Softwareanpassungsvorlage';
     LookupPageId = "PTE Software Change Templates";
-    DrillDownPageId = "PTE Software Change Templates";
+    DrillDownPageId = "PTE Softw. Change Templ. Card";
 
     fields
     {
@@ -84,6 +84,9 @@ table 63601 "PTE Software Change Template"
     fieldgroups
     {
         fieldgroup(DropDown; "Code", Description)
+        {
+        }
+        fieldgroup(Brick; "Code", Description, "Accounting Type", "Commission Percentage", "Developer Resource No.")
         {
         }
     }

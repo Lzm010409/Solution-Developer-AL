@@ -12,18 +12,11 @@ codeunit 63621 "PTE Sw. Change Commission"
         TransferSoftwareChangeNo(CommissionLedgerEntry, CommissionJournalLine);
     end;
 
-    /// <summary>
-    /// Replaces the commission percentage of the commission contract with the one agreed for a
-    /// single software change. This only applies when the software change is accounted for by
-    /// itself and carries a percentage of its own.
-    /// </summary>
+
     local procedure ApplySoftwareChangePercentage(var CommissionJournalLine: Record "PTE Commission Journal Line"; var CommissionPercentage: Decimal)
     begin
-        if CommissionJournalLine."PTE Accounting Type" <> "PTE Accounting Type"::"Software Change" then
+        if CommissionJournalLine."PTE Accounting Type" = CommissionJournalLine."PTE Accounting Type"::"Commission Contract" then
             exit;
-        if CommissionJournalLine."PTE Commission Percentage" = 0 then
-            exit;
-
         CommissionPercentage := CommissionJournalLine."PTE Commission Percentage";
     end;
 

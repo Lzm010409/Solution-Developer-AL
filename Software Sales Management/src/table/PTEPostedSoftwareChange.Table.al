@@ -4,7 +4,8 @@ table 63615 "PTE Posted Software Change"
     DataCaptionFields = "No.", Description;
     Caption = 'Posted Software Change', Comment = 'de-DE=Geb. Softwareanpassung';
     LookupPageId = "PTE Posted Softw. Change List";
-    DrillDownPageId = "PTE Posted Softw. Change List";
+    DrillDownPageId = "PTE Posted Softw. Change Card";
+    
 
     fields
     {
@@ -224,6 +225,7 @@ table 63615 "PTE Posted Software Change"
         fieldgroup(DropDown; "No.", Description, "Customer No.")
         {
         }
+        fieldgroup(Brick; "No.", Description, "Customer No."){}
     }
 
     trigger OnDelete()
@@ -240,10 +242,7 @@ table 63615 "PTE Posted Software Change"
         SoftwareChange.ShowComments("Comment Line Table Name"::"PTE Posted Software Change", "No.");
     end;
 
-    /// <summary>
-    /// Opens the standard search for all entries and documents that were created when this
-    /// document was posted.
-    /// </summary>
+
     procedure ShowEntries()
     var
         Navigate: Page Navigate;

@@ -20,11 +20,7 @@ codeunit 63631 "PTE Softw. Change-Post (Y/N)"
         CanceledByUserErr: Label 'Canceled by user.', Comment = 'de-DE=Benutzerabbruch.';
         PostedMsg: Label 'The software change has been posted as the posted software change %1.', Comment = 'de-DE=Die Softwareanpassung wurde als gebuchte Softwareanpassung %1 gebucht.';
 
-    /// <summary>
-    /// Asks whether the software change should really be invoiced and hands the work over to the
-    /// posting routine. All dialogs live here, so that the posting routine itself stays free of
-    /// user interaction.
-    /// </summary>
+
     local procedure "Code"(var SoftwareChange: Record "PTE Software Change")
     var
         PostedSoftwareChange: Record "PTE Posted Software Change";

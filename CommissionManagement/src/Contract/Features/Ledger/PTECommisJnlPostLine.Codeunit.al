@@ -14,10 +14,6 @@ codeunit 63032 "PTE Commis. Jnl.-Post Line"
         CommisJnlCheckLine: Codeunit "PTE Commis. Jnl.-Check Line";
         SetupRead: Boolean;
 
-    /// <summary>
-    /// Posts a single journal line into a commission entry. The line is checked first, then the
-    /// applicable percentage and the resulting amount are determined and rounded as configured.
-    /// </summary>
     procedure RunWithCheck(var CommissionJournalLine: Record "PTE Commission Journal Line")
     begin
         CommissionJournalLineGlobal.Copy(CommissionJournalLine);
@@ -79,7 +75,6 @@ codeunit 63032 "PTE Commis. Jnl.-Post Line"
 
     local procedure GetSetup()
     begin
-        // Cached, so that a posting run touching many lines reads the setup only once.
         if SetupRead then
             exit;
 
