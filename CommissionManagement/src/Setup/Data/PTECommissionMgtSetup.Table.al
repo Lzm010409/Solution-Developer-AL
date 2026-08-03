@@ -1,6 +1,7 @@
 table 63000 "PTE Commission Mgt. Setup"
 {
     DataClassification = CustomerContent;
+    Caption = 'Commission Management Setup', Comment = 'de-DE=Provisionen Verwaltung Setup';
 
     fields
     {

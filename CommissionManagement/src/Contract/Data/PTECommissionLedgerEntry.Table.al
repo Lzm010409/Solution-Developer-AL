@@ -2,6 +2,7 @@ table 63022 "PTE Commission Ledger Entry"
 {
     DataClassification = CustomerContent;
 
+    Caption = 'Commission Ledger Entry', Comment = 'de-DE=Provisionsposten';
     fields
     {
         field(1; "Entry No."; Integer)
@@ -99,7 +100,7 @@ table 63022 "PTE Commission Ledger Entry"
         field(130; "Customer Ledger Entry No."; Integer)
         {
             DataClassification = CustomerContent;
-            TableRelation = "Cust. Ledger Entry";        
+            TableRelation = "Cust. Ledger Entry";
             Caption = 'Customer Ledger Entry No.', Comment = 'de-DE=Kundenbuchungsnr.';
             ToolTip = 'Specifies the Customer Ledger Entry No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Kundenbuchungsnr. des Provisionsbuchungseintrags an.';
         }

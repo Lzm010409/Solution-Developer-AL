@@ -1,4 +1,4 @@
-codeunit 63702 "PTE Softw. Sales Mgt. Test"
+codeunit 63699 "PTE Softw. Sales Mgt. Test"
 {
     // [FEATURE] [PTE Software Sales Management]
     Subtype = Test;

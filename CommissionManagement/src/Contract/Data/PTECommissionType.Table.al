@@ -1,7 +1,7 @@
 table 63001 "PTE Commission Type"
 {
     DataClassification = CustomerContent;
-    
+    Caption = 'Commission Type', Comment = 'de-DE=Provisionsart';
     fields
     {
         field(1; "Code"; Code[20])

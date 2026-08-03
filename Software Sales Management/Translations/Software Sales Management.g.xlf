@@ -293,6 +293,11 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Softwareanpassung</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3706884996 - NamedType 2515459296" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no related %1</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Es gibt keine zugehörigen %1</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Software Change - NamedType NoContactErr</note>
+        </trans-unit>
         <trans-unit id="Table 3706884996 - Field 238246027 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Accounting Type of the Software Change. It controls whether the commission is taken from the commission contract or from this Software Change.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Abrechnungsart der Softwareanpassung. Sie steuert an, ob die Provision aus dem Provisionsvertrag oder aus dieser Softwareanpassung ermittelt wird.</note>
@@ -693,6 +698,11 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Buche Softwareanpassung  #1##################\\</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Software Change-Post - NamedType PostingMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2394095431 - NamedType 3636422026" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot choose a Salesperson without a Commission Contract when using the Accounting Type "Commission Contract".</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Sie können keinen Vertriebsmitarbeiter ohne Provisionsvertrag wählen, wenn Sie den Buchungstyp "Provisionsvertrag" verwenden.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Software Change-Post - NamedType WrongAccountingTypeCombinationErr</note>
+        </trans-unit>
         <trans-unit id="Page 66653583 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Software Change</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Geb. Softwareanpassung</note>
@@ -823,11 +833,6 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Software Verkaufsmanagement Einrichtung</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Softw. Sales Setup Card - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 415741599 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>General</source>
-          <note from="Developer" annotates="general" priority="2">de-DE=Allgemein</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Softw. Sales Setup Card - Control General - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 415741599 - Control 1833901164 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Number Series</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Nummernserie</note>
@@ -873,10 +878,10 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Softwareanpassungsvorlagen</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Softw. Sales Setup Card - Action PTESoftwareChangeTemplates - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 415741599 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 415741599 - Action 25191195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Software Change</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Softw. Sales Setup Card - Action Category_Category4 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Softw. Sales Setup Card - Action SoftwareChange - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3258448944 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Software Change</source>
@@ -907,11 +912,6 @@
           <source>Commission</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Provision</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Control Commission - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3258448944 - Action 1621817605 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Software Change</source>
-          <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Action RelatedInformation - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3258448944 - Action 4026912517 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>View or add comments for the Software Change.</source>
@@ -993,15 +993,15 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Softwareanpassung kopieren</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Action CopySoftwareChange - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3258448944 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3258448944 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Buchen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Action Category_Process - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3258448944 - Action 3230676146 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Software Change</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Action Category_Category4 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3258448944 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Process</source>
-          <note from="Developer" annotates="general" priority="2">de-DE=Prozess</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Action Category_Process - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change Card - Action Category_SoftwareChange - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2606439702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Software Changes</source>
@@ -1048,15 +1048,15 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Bemerkungen</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change List - Action ShowComments - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2606439702 - Action 1587086413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Software Change</source>
-          <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change List - Action Category_Category4 - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 2606439702 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Process</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Prozess</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change List - Action Category_Process - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2606439702 - Action 3230676146 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Software Change</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Software Anpassung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Software Change List - Action Category_SoftwareChange - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2606439702 - View 55175650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open Software Changes</source>
@@ -1093,50 +1093,50 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Optionen</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control Options - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 3716281679 - Control 3475889543 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 3716281679 - Control 2292405457 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether the comments of the original software change are copied.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt an, ob die Bemerkungen der ursprünglichen Softwareanpassung kopiert werden.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyComments - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyCommentsField - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Report 3716281679 - Control 3475889543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 3716281679 - Control 2292405457 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Copy Comments</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Kopiere Bemerkungen</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyComments - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyCommentsField - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3716281679 - Control 4251224683 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Copy data of group:</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Kopiere Daten der Gruppe:</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyGroups - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 3716281679 - Control 3350414836 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 3716281679 - Control 1938521494 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether the fields of the Contact Person group are copied.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt an, ob die Felder der Gruppe Kontaktperson kopiert werden.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyContactPerson - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyContactPersonField - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Report 3716281679 - Control 3350414836 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 3716281679 - Control 1938521494 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact Person</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Kontaktperson</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyContactPerson - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyContactPersonField - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 3716281679 - Control 668388445 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 3716281679 - Control 2319241203 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether the fields of the General group are copied.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt an, ob die Felder der Gruppe Allgemein kopiert werden.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyGeneral - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyGeneralField - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Report 3716281679 - Control 668388445 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 3716281679 - Control 2319241203 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Allgemein</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyGeneral - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyGeneralField - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 3716281679 - Control 4233029155 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 3716281679 - Control 1068672621 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether the fields of the Invoicing group are copied.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt an, ob die Felder der Gruppe Fakturierung kopiert werden.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyInvoicing - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyInvoicingField - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Report 3716281679 - Control 4233029155 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Report 3716281679 - Control 1068672621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoicing</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Fakturierung</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyInvoicing - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PTE Copy Software Change - Control CopyInvoicingField - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3924604788 - Control 1460390153 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2716593954">
           <source>Specifies the Software Change No. the posted sales credit memo belongs to.</source>
@@ -1267,6 +1267,11 @@
           <source>PTE Software Change No.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=PTE Softwareanpassungsnr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Sales Cr.Memo Hdr. Sw.Chg - Field PTE Software Change No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 679299102 - NamedType 863384460" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 679299102">
+          <source>Do you want to update the sales header with the data from the software change?</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Möchten Sie den Verkaufskopf mit den Daten aus der Softwareanpassung aktualisieren?</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Sales Header Sw. Change - NamedType UpdateSalesHeaderQst</note>
         </trans-unit>
         <trans-unit id="TableExtension 679299102 - Field 544647753 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
           <source>Specifies the PTE Software Change No. field added to the Sales Header table by the PTE Software Sales Management Extension. It carries no table relation because the software change is deleted when it is posted.</source>

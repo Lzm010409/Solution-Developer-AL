@@ -3,6 +3,8 @@ table 63020 "PTE Commission Contract"
     DataClassification = CustomerContent;
     DataCaptionFields = "No.", Description;
 
+    Caption = 'Commission Contract', Comment = 'de-DE=Provisionsvertrag';
+
     fields
     {
         field(1; "No."; Code[20])
@@ -58,7 +60,7 @@ table 63020 "PTE Commission Contract"
             var
                 EndingDateErr: Label 'Ending Date cannot be before Starting Date.', Comment = 'de-DE=Enddatum darf nicht vor Startdatum liegen.';
             begin
-                if("Starting Date" = 0D) then
+                if ("Starting Date" = 0D) then
                     "Starting Date" := Today;
                 if ("Starting Date" <> 0D) and ("Ending Date" < "Starting Date") then
                     Error(EndingDateErr);

@@ -3,6 +3,11 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Commission Management">
     <body>
       <group id="body">
+        <trans-unit id="Table 2127244123 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission Comment Line</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Provisionskommentarzeile</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2127244123 - Field 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Code of the Commission Comment Line.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Code der Provisionskommentarzeile an.</note>
@@ -62,6 +67,11 @@
           <source>Table Name</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Tabellenname</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Comment Line - Field Table Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3333216146 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission Contract</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Provisionsvertrag</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Contract - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3333216146 - NamedType 1456515433" size-unit="char" translate="yes" xml:space="preserve">
           <source>There are still salespersons related to this commission contract. Please remove them from the contract first.</source>
@@ -413,6 +423,11 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Herkunftscode</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Journal Line - Field Source Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1876454807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission Ledger Entry</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Provisionsposten</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1876454807 - Field 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Amount of the Commission Ledger Entry.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Betrag des Provisionsbuchungseintrags an.</note>
@@ -563,6 +578,11 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Verkäufercode</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Salesperson Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1747303013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission Management Setup</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Provisionen Verwaltung Setup</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Mgt. Setup - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1747303013 - Field 2163916938 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the code for the number series that will be used to assign numbers to commission contracts.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Code für den Nummernkreis an, der verwendet wird, um Nummern für Provisionsverträge zu vergeben.</note>
@@ -592,6 +612,11 @@
           <source>Rounding Precision</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Rundungspräzision</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Mgt. Setup - Field Rounding Precision - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2521517640 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission Type</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Provisionsart</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2521517640 - Field 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Code of the Commission Type.</source>

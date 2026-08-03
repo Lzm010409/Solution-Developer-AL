@@ -1,4 +1,4 @@
-codeunit 63701 "PTE Softw. Change Test Lib"
+codeunit 63698 "PTE Softw. Change Test Lib"
 {
     var
         SoftwareChangeNosTxt: Label 'TESTSC', Locked = true;
@@ -6,9 +6,7 @@ codeunit 63701 "PTE Softw. Change Test Lib"
         SoftwareChangeStartingNoTxt: Label 'SC00001', Locked = true;
         PostedSoftwareChangeStartingNoTxt: Label 'PSC00001', Locked = true;
 
-    /// <summary>
-    /// Creates the number series and the setup record the tests need. Can be called repeatedly.
-    /// </summary>
+
     procedure CreateSoftwareSalesSetup(var SoftwareSalesMgtSetup: Record "PTE Software Sales Mgt. Setup")
     begin
         CreateNoSeries(SoftwareChangeNosTxt, SoftwareChangeStartingNoTxt);
@@ -77,10 +75,7 @@ codeunit 63701 "PTE Softw. Change Test Lib"
         SoftwareChange.Insert(true);
     end;
 
-    /// <summary>
-    /// Creates a software change in which every group of the card is filled, together with all
-    /// master data it refers to.
-    /// </summary>
+
     procedure CreateFilledSoftwareChange(var SoftwareChange: Record "PTE Software Change")
     var
         Customer: Record Customer;

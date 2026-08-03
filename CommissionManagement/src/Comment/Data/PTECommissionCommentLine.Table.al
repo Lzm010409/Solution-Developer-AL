@@ -1,7 +1,7 @@
 table 63021 "PTE Commission Comment Line"
 {
     DataClassification = CustomerContent;
-    
+    Caption = 'Commission Comment Line', Comment = 'de-DE=Provisionskommentarzeile';
     fields
     {
         field(1; "Table Name"; Enum "PTE Comment Line Table Name")
