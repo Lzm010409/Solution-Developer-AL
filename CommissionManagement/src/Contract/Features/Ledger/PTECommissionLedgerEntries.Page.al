@@ -69,6 +69,18 @@ page 63025 "PTE Commission Ledger Entries"
                 {
                     Caption = 'Commission Type', Comment = 'de-DE=Provisionsart';
                 }
+                field("Source Code"; Rec."Source Code")
+                {
+                    Caption = 'Source Code', Comment = 'de-DE=Herkunftscode';
+                }
+                field("Reason Code"; Rec."Reason Code")
+                {
+                    Caption = 'Reason Code', Comment = 'de-DE=Ursachencode';
+                }
+                field("User ID"; Rec."User ID")
+                {
+                    Caption = 'User ID', Comment = 'de-DE=Benutzer-ID';
+                }
 
 
             }

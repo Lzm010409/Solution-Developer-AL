@@ -36,9 +36,11 @@ PageExtensions) und `Features/<Bereich>/` (Pages, Codeunits, Reports).
 | Table | 63022 | Commission Ledger Entry | Provisionsposten, nur einfügen |
 | Table | 63023 | Commission Journal Line | Buch.-Blattzeile — Eingang jeder Provisionsbuchung |
 | TableExt | 63000 | Salesperson/Purchaser | Vertragsnr., Provisionsbetrag, Datumsfilter |
+| TableExt | 63001 | Herkunftscodeeinrichtung | Feld `PTE Commission` |
 | Page | 63000–63025 | Setup, Listen, Karte, FactBox, Bemerkungen, Posten | |
 | PageExt | 63000 | Order Processor Role Center | Menügruppe „Provisionsmanagement" |
 | PageExt | 63001/63002 | Verkäuferkarte / -liste | Vertrag und Posten am Verkäufer |
+| PageExt | 63003 | Herkunftscodeeinrichtung | Gruppe „Provisionsmanagement" |
 | Codeunit | 63000 | Com. Mgt. Validation | prüft, ob der Einrichtungssatz existiert |
 | Codeunit | 63001 | Com. Mgt. Inst. Lib | Anmeldung in der Manuellen Einrichtung |
 | Codeunit | 63021 | Calculate Commission | Prozentsatz- und Betragsermittlung, publiziert Events |
@@ -86,11 +88,33 @@ Codeunit 63021 publiziert vier Integration Events. Über sie greift die App
 Table 63022 publiziert zusätzlich `OnAfterCopyFromJnlLine`, damit fremde Felder aus der
 Buch.-Blattzeile in den Posten wandern können.
 
+## Herkunft eines Provisionspostens
+
+Jeder Posten trägt `Source Code`, `Reason Code` und `User ID`.
+
+Den Herkunftscode setzt Codeunit 63032 beim Buchen aus dem Feld `PTE Commission` der
+BC-Standardeinrichtung „Herkunftscodes" — **aber nur, wenn die Buch.-Blattzeile keinen
+eigenen trägt**. Eine aufsetzende App füllt `Source Code` an der Buch.-Blattzeile und
+kennzeichnet ihre Buchungen damit abweichend vom Stapellauf. Genau dafür sollte sie ein
+eigenes Feld an der Herkunftscodeeinrichtung anlegen, statt den Code fest zu verdrahten.
+
+Der Ursachencode hat in dieser App keine Quelle — es gibt keinen Beleg und keine
+Anfrageseite, auf der ihn jemand auswählen könnte. Das Feld existiert an Buch.-Blattzeile
+und Posten, damit eine aufsetzende App den Weg vollständig nutzen kann.
+
+Die Benutzer-ID stempelt Codeunit 63032 selbst; sie stammt nicht aus der Buch.-Blattzeile.
+
+Ist die Herkunftscodeeinrichtung im Mandanten nicht vorhanden, bleibt der Herkunftscode
+leer. Die Buchung läuft trotzdem durch.
+
 ## Änderungen in 1.1.0.0
 
 Neu sind Table 63023 sowie die Codeunits 63024, 63031 und 63032. Der Provisionsposten hat
 das Feld `Commission Percentage` (111) bekommen, damit der verwendete Prozentsatz im
 Beleg nachvollziehbar bleibt. Der Report schreibt keine Posten mehr selbst.
+
+Ebenfalls neu sind TableExt 63001 und PageExt 63003 auf der Herkunftscodeeinrichtung sowie
+die Felder `Source Code` (140), `Reason Code` (150) und `User ID` (160) am Provisionsposten.
 
 **Obsolet gesetzt, nicht gelöscht** (Tag `1.1.0.0`):
 `Calculate` und `PostNewEntry`. Beide bleiben lauffähig, sollten aber nicht mehr

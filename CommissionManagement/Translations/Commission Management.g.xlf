@@ -568,6 +568,16 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Buchungsbeschreibung</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Posting Description - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1876454807 - Field 1908046867 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the reason the Commission Ledger Entry was posted for.</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt die Ursache an, aus der der Provisionsposten gebucht wurde.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Reason Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1876454807 - Field 1908046867 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reason Code</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Ursachencode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Reason Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1876454807 - Field 553464652 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the Salesperson Code of the Commission Ledger Entry.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Verkäufercode des Provisionsbuchungseintrags an.</note>
@@ -577,6 +587,26 @@
           <source>Salesperson Code</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Verkäufercode</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Salesperson Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1876454807 - Field 2720485332 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the process that created the Commission Ledger Entry.</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Vorgang an, der den Provisionsposten erzeugt hat.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Source Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1876454807 - Field 2720485332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Code</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Herkunftscode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field Source Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1876454807 - Field 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the user who posted the Commission Ledger Entry.</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Benutzer an, der den Provisionsposten gebucht hat.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field User ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1876454807 - Field 2708250016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Benutzer-ID</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table PTE Commission Ledger Entry - Field User ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1747303013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Commission Management Setup</source>
@@ -1073,10 +1103,25 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Buchungsbeschreibung</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Ledger Entries - Control Posting Description - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1756836405 - Control 1908046867 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reason Code</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Ursachencode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Ledger Entries - Control Reason Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1756836405 - Control 553464652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Salesperson Code</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Verkäufercode</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Ledger Entries - Control Salesperson Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1756836405 - Control 2720485332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Code</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Herkunftscode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Ledger Entries - Control Source Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1756836405 - Control 2708250016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Benutzer-ID</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PTE Commission Ledger Entries - Control User ID - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 453009769 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Commission Management Setup</source>
@@ -1333,6 +1378,16 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Provisionsvertragsnr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson Com. Page Ext - Control PTECommission Contract No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2256226193 - Control 1563189501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1642199961">
+          <source>Commission Management</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Provisionsmanagement</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Source Code Setup Ext - Control PTECommissionGroup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2256226193 - Control 3006990728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1642199961">
+          <source>Specifies the source code that is assigned to commission ledger entries when they are posted.</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Herkunftscode an, der Provisionsposten beim Buchen zugewiesen wird.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Source Code Setup Ext - Control PTE Commission - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3118449088 - Field 2337685545 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3399585325">
           <source>Specifies the PTE Commission Amount (LCY) field added to Salesperson/Purchaser table by PTE Commission Management Extension.</source>
           <note from="Developer" annotates="general" priority="2">de-DE=Gibt das Feld PTE Provisionsbetrag (Lokalwährung) zur Tabelle Verkäufer/Einkäufer hinzugefügt von der PTE Provisionsverwaltung Erweiterung an.</note>
@@ -1362,6 +1417,16 @@
           <source>PTE Date Filter</source>
           <note from="Developer" annotates="general" priority="2">de-DE=PTE Datumsfilter</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Salesperson Com. Table Ext - Field PTE Date Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2256226193 - Field 3006990728 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1642199961">
+          <source>Specifies the source code that is assigned to commission ledger entries when they are posted.</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Herkunftscode an, der Provisionsposten beim Buchen zugewiesen wird.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Source Code Setup Ext - Field PTE Commission - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2256226193 - Field 3006990728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1642199961">
+          <source>Commission</source>
+          <note from="Developer" annotates="general" priority="2">de-DE=Provision</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Source Code Setup Ext - Field PTE Commission - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 1261374774 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

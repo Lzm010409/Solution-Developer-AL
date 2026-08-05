@@ -11,8 +11,10 @@ codeunit 63032 "PTE Commis. Jnl.-Post Line"
     var
         CommissionJournalLineGlobal: Record "PTE Commission Journal Line";
         CommissionMgtSetup: Record "PTE Commission Mgt. Setup";
+        SourceCodeSetup: Record "Source Code Setup";
         CommisJnlCheckLine: Codeunit "PTE Commis. Jnl.-Check Line";
         SetupRead: Boolean;
+        SourceCodeSetupRead: Boolean;
 
     procedure RunWithCheck(var CommissionJournalLine: Record "PTE Commission Journal Line")
     begin
@@ -32,8 +34,18 @@ codeunit 63032 "PTE Commis. Jnl.-Post Line"
             CommissionJournalLineGlobal."Document Date" := CommissionJournalLineGlobal."Posting Date";
 
         CheckSalespersonNotBlocked();
+        UpdateSourceCode();
         UpdateCommissionAmount();
         InsertCommissionLedgerEntry();
+    end;
+
+    local procedure UpdateSourceCode()
+    begin
+        if CommissionJournalLineGlobal."Source Code" <> '' then
+            exit;
+
+        GetSourceCodeSetup();
+        CommissionJournalLineGlobal."Source Code" := SourceCodeSetup."PTE Commission";
     end;
 
     local procedure CheckSalespersonNotBlocked()
@@ -70,6 +82,7 @@ codeunit 63032 "PTE Commis. Jnl.-Post Line"
     begin
         CommissionLedgerEntry.Init();
         CommissionLedgerEntry.CopyFromJnlLine(CommissionJournalLineGlobal);
+        CommissionLedgerEntry."User ID" := CopyStr(UserId(), 1, MaxStrLen(CommissionLedgerEntry."User ID"));
         CommissionLedgerEntry.Insert(true);
     end;
 
@@ -81,5 +94,15 @@ codeunit 63032 "PTE Commis. Jnl.-Post Line"
         CommissionMgtSetup.Get();
         CommissionMgtSetup.TestField("Rounding Precision");
         SetupRead := true;
+    end;
+
+    local procedure GetSourceCodeSetup()
+    begin
+        if SourceCodeSetupRead then
+            exit;
+
+        if not SourceCodeSetup.Get() then
+            Clear(SourceCodeSetup);
+        SourceCodeSetupRead := true;
     end;
 }
