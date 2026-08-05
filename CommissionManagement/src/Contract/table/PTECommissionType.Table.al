@@ -8,17 +8,17 @@ table 63001 "PTE Commission Type"
         {
             DataClassification = CustomerContent;
             Caption = 'Code', Comment = 'de-DE=Code';
-            ToolTip = 'Specifies the Code of the Commission Type.', Comment = 'de-DE=Gibt den Code des Provisions Typs an.';
-            NotBlank = true; 
+            ToolTip = 'Specifies the Code of the Commission Type.', Comment = 'de-DE=Gibt den Code der Provisionsart an.';
+            NotBlank = true;
         }
         field(10; Description; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Description', Comment = 'de-DE=Beschreibung';
-            ToolTip = 'Specifies the Description of the Commission Type.', Comment = 'de-DE=Gibt die Beschreibung des Provisions Typs an.';
+            ToolTip = 'Specifies the Description of the Commission Type.', Comment = 'de-DE=Gibt die Beschreibung der Provisionsart an.';
         }
     }
-    
+
     keys
     {
         key(PK; Code)
@@ -26,5 +26,5 @@ table 63001 "PTE Commission Type"
             Clustered = true;
         }
     }
-    
+
 }

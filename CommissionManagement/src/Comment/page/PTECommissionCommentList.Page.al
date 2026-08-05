@@ -1,7 +1,7 @@
 page 63023 "PTE Commission Comment List"
 {
     AutoSplitKey = true;
-    Caption = 'Commission Comment List', Comment = 'de-DE=Provisions Kommentarliste';
+    Caption = 'Commission Comment List', Comment = 'de-DE=Provisionskommentarliste';
     DataCaptionFields = "No.";
     PageType = List;
     SourceTable = "PTE Commission Comment Line";

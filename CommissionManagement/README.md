@@ -14,16 +14,22 @@ Debitorenposten die zugehörigen Provisionsposten.
 
 ## Ordnerstruktur
 
+Featureorientiert; innerhalb eines Features nach Objekttyp — identisch zur zweiten App:
+
 ```
 src/
-├── Comment/     Bemerkungen zu Provisionsverträgen (eigene Tabelle, nicht der BC-Standard)
-├── Contract/    Kern: Verträge, Provisionsarten, Posten, Berechnung, Buchung
-├── Permission/  vier Berechtigungssätze
-└── Setup/       Einrichtung und Anmeldung in der „Manuellen Einrichtung"
+├── Setup/             Einrichtung und Anmeldung in der „Manuellen Einrichtung"
+│   └── table · page · codeunit
+├── Contract/          Verträge und Provisionsarten
+│   └── table · page · codeunit · enum
+├── Commission Ledger/ Buch.-Blattzeile, Posten, Prüfen, Buchen, Berechnung, Stapellauf
+│   └── table · page · codeunit · enum · report
+├── Comment/           Bemerkungen zum Vertrag (eigene Tabelle, nicht der BC-Standard)
+│   └── table · page · enum
+├── Salesextension/    Erweiterungen am Verkäufer und am Rollencenter
+│   └── tableext · pageext
+└── Permission/        vier Berechtigungssätze
 ```
-
-Innerhalb eines Features gilt `Data/` (Tabellen), `Enums/`, `Extensions/` (Table- und
-PageExtensions) und `Features/<Bereich>/` (Pages, Codeunits, Reports).
 
 ## Objekte
 
@@ -93,7 +99,13 @@ das Feld `Commission Percentage` (111) bekommen, damit der verwendete Prozentsat
 Beleg nachvollziehbar bleibt. Der Report schreibt keine Posten mehr selbst.
 
 **Obsolet gesetzt, nicht gelöscht** (Tag `1.1.0.0`):
-`Calculate` und `PostNewEntry`. Beide bleiben lauffähig, sollten aber nicht mehr
-aufgerufen werden.
+`Calculate`, `PostNewEntry` und `ClearLedgerEntriesForContract`. Alle drei bleiben in der
+öffentlichen Schnittstelle, sollten aber nicht mehr aufgerufen werden.
 
 Das Schema ändert sich — beim Publizieren ist eine Synchronisierung nötig.
+
+## Löschen eines Vertrags
+
+Ein Provisionsvertrag lässt sich nur löschen, solange weder ein Verkäufer noch ein
+Provisionsposten auf ihn verweist. Provisionsposten werden dabei **nicht** angefasst — das
+Postenkonzept von BC kennt keine nachträgliche Änderung.

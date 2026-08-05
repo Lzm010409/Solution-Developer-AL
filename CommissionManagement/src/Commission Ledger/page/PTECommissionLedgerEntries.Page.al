@@ -6,7 +6,7 @@ page 63025 "PTE Commission Ledger Entries"
     PageType = List;
     SourceTable = "PTE Commission Ledger Entry";
     UsageCategory = History;
-    
+
     layout
     {
         area(Content)
@@ -15,62 +15,60 @@ page 63025 "PTE Commission Ledger Entries"
             {
                 field("Entry No."; Rec."Entry No.")
                 {
-                    Caption = 'Entry No.', Comment = 'de-DE=Postennr.';
+                    ToolTip = 'Specifies the Entry No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Postennr. des Provisionspostens an.';
                 }
                 field("Posting Date"; Rec."Posting Date")
                 {
-                    Caption = 'Posting Date', Comment = 'de-DE=Belegdatum';
+                    ToolTip = 'Specifies the Posting Date of the Commission Ledger Entry.', Comment = 'de-DE=Gibt das Buchungsdatum des Provisionspostens an.';
                 }
                 field("Document Type"; Rec."Document Type")
                 {
-                    Caption = 'Document Type', Comment = 'de-DE=Belegart';
+                    ToolTip = 'Specifies the Document Type of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Belegart des Provisionspostens an.';
                 }
                 field("Document No."; Rec."Document No.")
                 {
-                    Caption = 'Document No.', Comment = 'de-DE=Belegnr.';
+                    ToolTip = 'Specifies the Document No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Belegnr. des Provisionspostens an.';
                 }
                 field("Customer No."; Rec."Customer No.")
                 {
-                    Caption = 'Customer No.', Comment = 'de-DE=Kundennr.';
+                    ToolTip = 'Specifies the Customer No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Kundennr. des Provisionspostens an.';
                 }
                 field(Amount; Rec."Amount")
                 {
-                    Caption = 'Amount', Comment = 'de-DE=Betrag';
+                    ToolTip = 'Specifies the Amount of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Betrag des Provisionspostens an.';
                 }
                 field("Amount (LCY)"; Rec."Amount (LCY)")
                 {
-                    Caption = 'Amount (LCY)', Comment = 'de-DE=Betrag (Lokalwährung)';
+                    ToolTip = 'Specifies the Amount (LCY) of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Betrag (Lokalwährung) des Provisionspostens an.';
                 }
                 field("Salesperson Code"; Rec."Salesperson Code")
                 {
-                    Caption = 'Salesperson Code', Comment = 'de-DE=Verkäufercode';
+                    ToolTip = 'Specifies the Salesperson Code of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Verkäufercode des Provisionspostens an.';
                 }
                 field("Commission Contract No."; Rec."Commission Contract No.")
                 {
-                    Caption = 'Commission Contract No.', Comment = 'de-DE=Provisionsvertragsnr.';
+                    ToolTip = 'Specifies the Commission Contract No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Provisionsvertragsnr. des Provisionspostens an.';
                 }
                 field("Posting Description"; Rec."Posting Description")
                 {
-                    Caption = 'Posting Description', Comment = 'de-DE=Buchungsbeschreibung';
+                    ToolTip = 'Specifies the Posting Description of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Buchungsbeschreibung des Provisionspostens an.';
                 }
                 field("Currency Code"; Rec."Currency Code")
                 {
-                    Caption = 'Currency Code', Comment = 'de-DE=Währungscode';
+                    ToolTip = 'Specifies the Currency Code of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Währungscode des Provisionspostens an.';
                 }
                 field("Commission Percentage"; Rec."Commission Percentage")
                 {
-                    Caption = 'Commission Percentage', Comment = 'de-DE=Provisions Prozentsatz';
+                    ToolTip = 'Specifies the Commission Percentage of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Provisionsprozentsatz des Provisionspostens an.';
                 }
                 field("Commission Amount (LCY)"; Rec."Commission Amount (LCY)")
                 {
-                    Caption = 'Commission Amount (LCY)', Comment = 'de-DE=Provisionsbetrag (Lokalwährung)';
+                    ToolTip = 'Specifies the Commission Amount (LCY) of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Provisionsbetrag (Lokalwährung) des Provisionspostens an.';
                 }
                 field("Commission Type"; Rec."Commission Type")
                 {
-                    Caption = 'Commission Type', Comment = 'de-DE=Provisionsart';
+                    ToolTip = 'Specifies the Commission Type of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Provisionsart des Provisionspostens an.';
                 }
-
-
             }
         }
     }

@@ -2,19 +2,7 @@ pageextension 63000 "PTE Com. Contract Role Center" extends "Order Processor Rol
 {
     actions
     {
-        
-        addlast(Embedding)
-        {
-            action(PTECommissionTypeList)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Commission Types', Comment = 'de-DE=Provisionsarten';
-                    Image = Open;
-                    ToolTip ='Opens the Commission Types List.', Comment = 'de-DE=Öffnet die Liste der Provisionsarten.';
-                    RunObject = page "PTE Commission Type List";
-                }
-        }
-        addafter(Action63) 
+        addafter(Action63)
         {
             group(PTEProvisionsmanagement)
             {

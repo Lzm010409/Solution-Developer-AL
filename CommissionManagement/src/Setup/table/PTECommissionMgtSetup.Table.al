@@ -1,7 +1,7 @@
 table 63000 "PTE Commission Mgt. Setup"
 {
     DataClassification = CustomerContent;
-    Caption = 'Commission Management Setup', Comment = 'de-DE=Provisionen Verwaltung Setup';
+    Caption = 'Commission Management Setup', Comment = 'de-DE=Provisionsmanagement Einrichtung';
 
     fields
     {
@@ -9,8 +9,7 @@ table 63000 "PTE Commission Mgt. Setup"
         {
             DataClassification = CustomerContent;
             Caption = 'Primary Key', Comment = 'de-DE=Primärschlüssel';
-            ToolTip = 'Specifies the Primary Key of the Datapoint.', Comment = 'de-DE=Gibt Primärschlüssel des Datensatzes an.';
-
+            ToolTip = 'Specifies the Primary Key of the Datapoint.', Comment = 'de-DE=Gibt den Primärschlüssel des Datensatzes an.';
         }
         field(10; "Rounding Precision"; Decimal)
         {
@@ -18,9 +17,13 @@ table 63000 "PTE Commission Mgt. Setup"
             Caption = 'Rounding Precision', Comment = 'de-DE=Rundungspräzision';
             ToolTip = 'Specifies the Rounding Precision.', Comment = 'de-DE=Gibt die Rundungspräzision mit welcher gerundet wird an.';
             NotBlank = true;
+            InitValue = 0.01;
+            MinValue = 0;
+            DecimalPlaces = 2 : 5;
         }
         field(11; "Contract Nos."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Commission Contract No. Series', Comment = 'de-DE=Nummernkreis der Provisionsverträge';
             TableRelation = "No. Series";
             ToolTip = 'Specifies the code for the number series that will be used to assign numbers to commission contracts.', Comment = 'de-DE=Gibt den Code für den Nummernkreis an, der verwendet wird, um Nummern für Provisionsverträge zu vergeben.';

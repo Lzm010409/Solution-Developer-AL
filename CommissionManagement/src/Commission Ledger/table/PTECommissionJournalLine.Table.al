@@ -63,6 +63,7 @@ table 63023 "PTE Commission Journal Line"
         {
             DataClassification = CustomerContent;
             AutoFormatType = 1;
+            AutoFormatExpression = "Currency Code";
             Caption = 'Amount', Comment = 'de-DE=Betrag';
             ToolTip = 'Specifies the Amount of the Commission Journal Line.', Comment = 'de-DE=Gibt den Betrag der Provisions Buch.-Blattzeile an.';
         }
@@ -113,8 +114,8 @@ table 63023 "PTE Commission Journal Line"
             DecimalPlaces = 0 : 5;
             MinValue = 0;
             MaxValue = 100;
-            Caption = 'Commission Percentage', Comment = 'de-DE=Provisions Prozentsatz';
-            ToolTip = 'Specifies the Commission Percentage of the Commission Journal Line.', Comment = 'de-DE=Gibt den Provisions Prozentsatz der Provisions Buch.-Blattzeile an.';
+            Caption = 'Commission Percentage', Comment = 'de-DE=Provisionsprozentsatz';
+            ToolTip = 'Specifies the Commission Percentage of the Commission Journal Line.', Comment = 'de-DE=Gibt den Provisionsprozentsatz der Provisions Buch.-Blattzeile an.';
         }
         field(120; "Commission Type"; Enum "PTE Commission Payment Type")
         {

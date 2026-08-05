@@ -10,7 +10,7 @@ codeunit 63031 "PTE Commis. Jnl.-Check Line"
     var
         ClosingDateErr: Label 'cannot be a closing date', Comment = 'de-DE=darf kein Abschlussdatum sein';
 
- 
+
     procedure RunCheck(var CommissionJournalLine: Record "PTE Commission Journal Line")
     begin
         if CommissionJournalLine.EmptyLine() then

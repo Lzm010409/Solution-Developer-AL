@@ -14,8 +14,8 @@ table 63021 "PTE Commission Comment Line"
         field(2; "No."; Code[20])
         {
             DataClassification = CustomerContent;
-            Caption = 'Contract No.', Comment = 'de-DE=Vertrags Nr.';
-            ToolTip = 'Specifies the Contract No. of the Commission Comment Line.', Comment = 'de-DE=Gibt die Vertrags Nr. des Provisionskommentarzeile an.';
+            Caption = 'Contract No.', Comment = 'de-DE=Vertragsnr.';
+            ToolTip = 'Specifies the Contract No. of the Commission Comment Line.', Comment = 'de-DE=Gibt die Vertragsnr. der Provisionskommentarzeile an.';
             NotBlank = true;
         }
         field(3; "Line No."; Integer)
@@ -44,7 +44,7 @@ table 63021 "PTE Commission Comment Line"
             ToolTip = 'Specifies the Comment of the Commission Comment Line.', Comment = 'de-DE=Gibt den Kommentar der Provisionskommentarzeile an.';
         }
     }
-    
+
     keys
     {
         key(PK; "Table Name", "No.", "Line No.")
@@ -55,14 +55,12 @@ table 63021 "PTE Commission Comment Line"
 
     procedure SetUpNewLine()
     var
-        CommentLine: Record "Comment Line";
+        CommissionCommentLine: Record "PTE Commission Comment Line";
     begin
-        CommentLine.SetRange("Table Name", "Table Name");
-        CommentLine.SetRange("No.", "No.");
-        CommentLine.SetRange(Date, WorkDate());
-        if not CommentLine.IsEmpty() then
+        CommissionCommentLine.SetRange("Table Name", "Table Name");
+        CommissionCommentLine.SetRange("No.", "No.");
+        CommissionCommentLine.SetRange(Date, WorkDate());
+        if CommissionCommentLine.IsEmpty() then
             Date := WorkDate();
     end;
-    
-    
 }

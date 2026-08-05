@@ -17,17 +17,17 @@ page 63000 "PTE Commission Mgt. Setup Card"
                 field("Rounding Precision"; Rec."Rounding Precision")
                 {
                     ShowMandatory = true;
-                    ApplicationArea = All;
+                    ToolTip = 'Specifies the rounding precision that is used when commission amounts are posted.', Comment = 'de-DE=Gibt die Rundungspräzision an, mit der Provisionsbeträge gebucht werden.';
                 }
                 field("Contract Nos."; Rec."Contract Nos.")
                 {
                     ShowMandatory = true;
-                    ApplicationArea = Basic, Suite;
+                    ToolTip = 'Specifies the code for the number series that will be used to assign numbers to commission contracts.', Comment = 'de-DE=Gibt den Code für den Nummernkreis an, der verwendet wird, um Nummern für Provisionsverträge zu vergeben.';
                 }
             }
         }
     }
-    
+
     actions
     {
         area(Navigation)

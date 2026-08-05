@@ -62,15 +62,5 @@ pageextension 63002 "PTE Salesperson Com. List Ext" extends "Salespersons/Purcha
                 RunPageLink = "No." = field("PTE Commission Contract No.");
             }
         }
-
-        addlast("Category_Category4")
-        {
-            actionref("PTEOpenCommissionLedgerEntriesRef"; "PTEOpenCommissionLedgerEntries")
-            {
-            }
-            actionref("PTEOpenCommissionContractRef"; "PTEOpenCommissionContract")
-            {
-            }
-        }
     }
 }

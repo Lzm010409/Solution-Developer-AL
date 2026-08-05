@@ -66,10 +66,6 @@ report 63000 "PTE Calc. Commissions"
         TotalCount: Integer;
         LastPercent: Integer;
 
-    /// <summary>
-    /// Hands a single customer entry to the commission posting routine. The batch job itself
-    /// never writes commission entries.
-    /// </summary>
     local procedure PostCommissionForCustLedgEntry()
     var
         CommissionJournalLine: Record "PTE Commission Journal Line";
@@ -83,7 +79,6 @@ report 63000 "PTE Calc. Commissions"
     var
         CurrentPercent: Integer;
     begin
-        Sleep(500);
         if CurrentSalespersonName <> LastSalespersonName then begin
             Dialog.Update(1, Format(CurrentSalespersonName));
             Dialog.Update(2, '0%');

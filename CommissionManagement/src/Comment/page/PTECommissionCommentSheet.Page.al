@@ -1,7 +1,7 @@
 page 63024 "PTE Commission Comment Sheet"
 {
     AutoSplitKey = true;
-    Caption = 'Commission Comment Sheet', Comment = 'de-DE=Provisions Kommentarblatt';
+    Caption = 'Commission Comment Sheet', Comment = 'de-DE=Provisionskommentarblatt';
     DataCaptionFields = "No.";
     DelayedInsert = true;
     MultipleNewLines = true;
