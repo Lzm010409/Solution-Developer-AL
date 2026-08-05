@@ -1,0 +1,178 @@
+table 63022 "PTE Commission Ledger Entry"
+{
+    DataClassification = CustomerContent;
+
+    Caption = 'Commission Ledger Entry', Comment = 'de-DE=Provisionsposten';
+    fields
+    {
+        field(1; "Entry No."; Integer)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Entry No.', Comment = 'de-DE=Postennr.';
+            ToolTip = 'Specifies the Entry No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Postennr. des Provisionspostens an.';
+            NotBlank = true;
+            Editable = false;
+            AutoIncrement = true;
+        }
+        field(10; "Posting Date"; Date)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Posting Date', Comment = 'de-DE=Buchungsdatum';
+            ToolTip = 'Specifies the Posting Date of the Commission Ledger Entry.', Comment = 'de-DE=Gibt das Buchungsdatum des Provisionspostens an.';
+        }
+        field(20; "Document Type"; Enum "PTE Com. Led. Ent. Doc. Type")
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Document Type', Comment = 'de-DE=Belegart';
+            ToolTip = 'Specifies the Document Type of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Belegart des Provisionspostens an.';
+        }
+        field(30; "Document No."; Code[20])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Document No.', Comment = 'de-DE=Belegnr.';
+            ToolTip = 'Specifies the Document No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Belegnr. des Provisionspostens an.';
+        }
+        field(40; "Customer No."; Code[20])
+        {
+            DataClassification = CustomerContent;
+            TableRelation = Customer;
+            Caption = 'Customer No.', Comment = 'de-DE=Kundennr.';
+            ToolTip = 'Specifies the Customer No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Kundennr. des Provisionspostens an.';
+        }
+        field(50; Amount; Decimal)
+        {
+            DataClassification = CustomerContent;
+            AutoFormatType = 1;
+            AutoFormatExpression = "Currency Code";
+            Caption = 'Amount', Comment = 'de-DE=Betrag';
+            ToolTip = 'Specifies the Amount of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Betrag des Provisionspostens an.';
+        }
+        field(60; "Amount (LCY)"; Decimal)
+        {
+            DataClassification = CustomerContent;
+            AutoFormatType = 1;
+            Caption = 'Amount (LCY)', Comment = 'de-DE=Betrag (Lokalwährung)';
+            ToolTip = 'Specifies the Amount (LCY) of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Betrag (Lokalwährung) des Provisionspostens an.';
+        }
+        field(70; "Salesperson Code"; Code[20])
+        {
+            DataClassification = CustomerContent;
+            TableRelation = "Salesperson/Purchaser";
+            Caption = 'Salesperson Code', Comment = 'de-DE=Verkäufercode';
+            ToolTip = 'Specifies the Salesperson Code of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Verkäufercode des Provisionspostens an.';
+        }
+        field(80; "Commission Contract No."; Code[20])
+        {
+            DataClassification = CustomerContent;
+            TableRelation = "PTE Commission Contract";
+            Caption = 'Commission Contract No.', Comment = 'de-DE=Provisionsvertragsnr.';
+            ToolTip = 'Specifies the Commission Contract No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Provisionsvertragsnr. des Provisionspostens an.';
+        }
+        field(90; "Posting Description"; Text[100])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Posting Description', Comment = 'de-DE=Buchungsbeschreibung';
+            ToolTip = 'Specifies the Posting Description of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Buchungsbeschreibung des Provisionspostens an.';
+        }
+        field(100; "Currency Code"; Code[20])
+        {
+            DataClassification = CustomerContent;
+            TableRelation = Currency;
+            Caption = 'Currency Code', Comment = 'de-DE=Währungscode';
+            ToolTip = 'Specifies the Currency Code of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Währungscode des Provisionspostens an.';
+        }
+        field(110; "Commission Amount (LCY)"; Decimal)
+        {
+            DataClassification = CustomerContent;
+            AutoFormatType = 1;
+            Caption = 'Commission Amount (LCY)', Comment = 'de-DE=Provisionsbetrag (Lokalwährung)';
+            ToolTip = 'Specifies the Commission Amount (LCY) of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Provisionsbetrag (Lokalwährung) des Provisionspostens an.';
+        }
+        field(111; "Commission Percentage"; Decimal)
+        {
+            DataClassification = CustomerContent;
+            DecimalPlaces = 0 : 5;
+            Caption = 'Commission Percentage', Comment = 'de-DE=Provisionsprozentsatz';
+            ToolTip = 'Specifies the Commission Percentage of the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Provisionsprozentsatz des Provisionspostens an.';
+        }
+        field(120; "Commission Type"; Enum "PTE Commission Payment Type")
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Commission Type', Comment = 'de-DE=Provisionsart';
+            ToolTip = 'Specifies the Commission Type of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Provisionsart des Provisionspostens an.';
+        }
+        field(130; "Customer Ledger Entry No."; Integer)
+        {
+            DataClassification = CustomerContent;
+            TableRelation = "Cust. Ledger Entry";
+            Caption = 'Customer Ledger Entry No.', Comment = 'de-DE=Kundenbuchungsnr.';
+            ToolTip = 'Specifies the Customer Ledger Entry No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Kundenbuchungsnr. des Provisionspostens an.';
+        }
+        field(140; "Source Code"; Code[10])
+        {
+            DataClassification = CustomerContent;
+            TableRelation = "Source Code";
+            Editable = false;
+            Caption = 'Source Code', Comment = 'de-DE=Herkunftscode';
+            ToolTip = 'Specifies the process that created the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Vorgang an, der den Provisionsposten erzeugt hat.';
+        }
+        field(150; "Reason Code"; Code[10])
+        {
+            DataClassification = CustomerContent;
+            TableRelation = "Reason Code";
+            Editable = false;
+            Caption = 'Reason Code', Comment = 'de-DE=Ursachencode';
+            ToolTip = 'Specifies the reason the Commission Ledger Entry was posted for.', Comment = 'de-DE=Gibt die Ursache an, aus der der Provisionsposten gebucht wurde.';
+        }
+        field(160; "User ID"; Code[50])
+        {
+            DataClassification = EndUserIdentifiableInformation;
+            TableRelation = User."User Name";
+            ValidateTableRelation = false;
+            Editable = false;
+            Caption = 'User ID', Comment = 'de-DE=Benutzer-ID';
+            ToolTip = 'Specifies the user who posted the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Benutzer an, der den Provisionsposten gebucht hat.';
+        }
+    }
+
+    keys
+    {
+        key(PK; "Entry No.")
+        {
+            Clustered = true;
+        }
+        key(Key01; "Salesperson Code")
+        {
+            SumIndexFields = "Commission Amount (LCY)";
+        }
+        key(Key02; "Document No.", "Posting Date")
+        {
+        }
+    }
+
+    procedure CopyFromJnlLine(CommissionJournalLine: Record "PTE Commission Journal Line")
+    begin
+        "Posting Date" := CommissionJournalLine."Posting Date";
+        "Document Type" := CommissionJournalLine."Document Type";
+        "Document No." := CommissionJournalLine."Document No.";
+        "Customer No." := CommissionJournalLine."Customer No.";
+        Amount := CommissionJournalLine.Amount;
+        "Amount (LCY)" := CommissionJournalLine."Amount (LCY)";
+        "Salesperson Code" := CommissionJournalLine."Salesperson Code";
+        "Commission Contract No." := CommissionJournalLine."Commission Contract No.";
+        "Posting Description" := CommissionJournalLine."Posting Description";
+        "Currency Code" := CommissionJournalLine."Currency Code";
+        "Commission Amount (LCY)" := CommissionJournalLine."Commission Amount (LCY)";
+        "Commission Percentage" := CommissionJournalLine."Commission Percentage";
+        "Commission Type" := CommissionJournalLine."Commission Type";
+        "Customer Ledger Entry No." := CommissionJournalLine."Customer Ledger Entry No.";
+        "Source Code" := CommissionJournalLine."Source Code";
+        "Reason Code" := CommissionJournalLine."Reason Code";
+        OnAfterCopyFromJnlLine(Rec, CommissionJournalLine);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterCopyFromJnlLine(var CommissionLedgerEntry: Record "PTE Commission Ledger Entry"; CommissionJournalLine: Record "PTE Commission Journal Line")
+    begin
+    end;
+}
