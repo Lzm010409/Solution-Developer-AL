@@ -108,6 +108,31 @@ table 63022 "PTE Commission Ledger Entry"
             Caption = 'Customer Ledger Entry No.', Comment = 'de-DE=Kundenbuchungsnr.';
             ToolTip = 'Specifies the Customer Ledger Entry No. of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Kundenbuchungsnr. des Provisionspostens an.';
         }
+        field(140; "Source Code"; Code[10])
+        {
+            DataClassification = CustomerContent;
+            TableRelation = "Source Code";
+            Editable = false;
+            Caption = 'Source Code', Comment = 'de-DE=Herkunftscode';
+            ToolTip = 'Specifies the process that created the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Vorgang an, der den Provisionsposten erzeugt hat.';
+        }
+        field(150; "Reason Code"; Code[10])
+        {
+            DataClassification = CustomerContent;
+            TableRelation = "Reason Code";
+            Editable = false;
+            Caption = 'Reason Code', Comment = 'de-DE=Ursachencode';
+            ToolTip = 'Specifies the reason the Commission Ledger Entry was posted for.', Comment = 'de-DE=Gibt die Ursache an, aus der der Provisionsposten gebucht wurde.';
+        }
+        field(160; "User ID"; Code[50])
+        {
+            DataClassification = EndUserIdentifiableInformation;
+            TableRelation = User."User Name";
+            ValidateTableRelation = false;
+            Editable = false;
+            Caption = 'User ID', Comment = 'de-DE=Benutzer-ID';
+            ToolTip = 'Specifies the user who posted the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Benutzer an, der den Provisionsposten gebucht hat.';
+        }
     }
 
     keys
@@ -141,6 +166,8 @@ table 63022 "PTE Commission Ledger Entry"
         "Commission Percentage" := CommissionJournalLine."Commission Percentage";
         "Commission Type" := CommissionJournalLine."Commission Type";
         "Customer Ledger Entry No." := CommissionJournalLine."Customer Ledger Entry No.";
+        "Source Code" := CommissionJournalLine."Source Code";
+        "Reason Code" := CommissionJournalLine."Reason Code";
         OnAfterCopyFromJnlLine(Rec, CommissionJournalLine);
     end;
 

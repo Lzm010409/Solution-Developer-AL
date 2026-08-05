@@ -69,6 +69,18 @@ page 63025 "PTE Commission Ledger Entries"
                 {
                     ToolTip = 'Specifies the Commission Type of the Commission Ledger Entry.', Comment = 'de-DE=Gibt die Provisionsart des Provisionspostens an.';
                 }
+                field("Source Code"; Rec."Source Code")
+                {
+                    ToolTip = 'Specifies the process that created the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Vorgang an, der den Provisionsposten erzeugt hat.';
+                }
+                field("Reason Code"; Rec."Reason Code")
+                {
+                    ToolTip = 'Specifies the reason the Commission Ledger Entry was posted for.', Comment = 'de-DE=Gibt die Ursache an, aus der der Provisionsposten gebucht wurde.';
+                }
+                field("User ID"; Rec."User ID")
+                {
+                    ToolTip = 'Specifies the user who posted the Commission Ledger Entry.', Comment = 'de-DE=Gibt den Benutzer an, der den Provisionsposten gebucht hat.';
+                }
             }
         }
     }

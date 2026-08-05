@@ -9,6 +9,9 @@ permissionset 63003 "PTE Permission PO"
         tabledata "PTE Commission Contract" = R,
         tabledata "PTE Commission Type" = R,
         tabledata "PTE Commission Comment Line"=RI,
+        tabledata "Source Code Setup" = R,
+        tabledata "Source Code" = R,
+        tabledata "Reason Code" = R,
 
         report "PTE Calc. Commissions" = X,
         codeunit "PTE Calculate Commission"=X,
