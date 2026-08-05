@@ -23,6 +23,32 @@ codeunit 63032 "PTE Commis. Jnl.-Post Line"
         CommissionJournalLine := CommissionJournalLineGlobal;
     end;
 
+    procedure RunWithoutCheck(var CommissionJournalLine: Record "PTE Commission Journal Line")
+    begin
+        CommissionJournalLineGlobal.Copy(CommissionJournalLine);
+        "Code"(false);
+        CommissionJournalLine := CommissionJournalLineGlobal;
+    end;
+
+    local procedure "Code"(Check: Boolean)
+    begin
+        if Check then begin
+            "Code"();
+            exit;
+        end;
+
+        if CommissionJournalLineGlobal.EmptyLine() then
+            exit;
+
+        if CommissionJournalLineGlobal."Document Date" = 0D then
+            CommissionJournalLineGlobal."Document Date" := CommissionJournalLineGlobal."Posting Date";
+
+        CheckSalespersonNotBlocked();
+        UpdateSourceCode();
+        UpdateCommissionAmount();
+        InsertCommissionLedgerEntry();
+    end;
+
     local procedure "Code"()
     begin
         if CommissionJournalLineGlobal.EmptyLine() then

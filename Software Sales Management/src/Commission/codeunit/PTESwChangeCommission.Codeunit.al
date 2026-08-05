@@ -15,9 +15,8 @@ codeunit 63621 "PTE Sw. Change Commission"
 
     local procedure ApplySoftwareChangePercentage(var CommissionJournalLine: Record "PTE Commission Journal Line"; var CommissionPercentage: Decimal)
     begin
-        if CommissionJournalLine."PTE Accounting Type" = CommissionJournalLine."PTE Accounting Type"::"Commission Contract" then
-            exit;
-        CommissionPercentage := CommissionJournalLine."PTE Commission Percentage";
+        if CommissionJournalLine."PTE Accounting Type" = CommissionJournalLine."PTE Accounting Type"::"Software Change" then
+            CommissionPercentage := CommissionJournalLine."PTE Commission Percentage";
     end;
 
     local procedure TransferSoftwareChangeNo(var CommissionLedgerEntry: Record "PTE Commission Ledger Entry"; CommissionJournalLine: Record "PTE Commission Journal Line")

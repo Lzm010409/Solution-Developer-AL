@@ -201,7 +201,7 @@ codeunit 63630 "PTE Software Change-Post"
         GetSourceCodeSetup();
         CommissionJournalLine."Source Code" := SourceCodeSetup."PTE Software Change";
 
-        CommisJnlPostLine.RunWithCheck(CommissionJournalLine);
+        CommisJnlPostLine.RunWithoutCheck(CommissionJournalLine);
     end;
 
     local procedure GetSourceCodeSetup()
