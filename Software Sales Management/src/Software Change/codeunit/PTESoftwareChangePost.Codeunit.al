@@ -12,8 +12,10 @@ codeunit 63630 "PTE Software Change-Post"
     var
         PostedSoftwareChange: Record "PTE Posted Software Change";
         SoftwareSalesMgtSetup: Record "PTE Software Sales Mgt. Setup";
+        SourceCodeSetup: Record "Source Code Setup";
         Window: Dialog;
         SetupRead: Boolean;
+        SourceCodeSetupRead: Boolean;
         PostingMsg: Label 'Posting software change  #1##################\', Comment = 'de-DE=Buche Softwareanpassung  #1##################\\';
         WrongAccountingTypeCombinationErr: Label 'You cannot choose a Salesperson without a Commission Contract when using the Accounting Type "Commission Contract".', Comment = 'de-DE=Sie können keinen Vertriebsmitarbeiter ohne Provisionsvertrag wählen, wenn Sie den Buchungstyp "Provisionsvertrag" verwenden.';
 
@@ -196,7 +198,20 @@ codeunit 63630 "PTE Software Change-Post"
         CommissionJournalLine."PTE Accounting Type" := SoftwareChange."Accounting Type";
         CommissionJournalLine."PTE Commission Percentage" := SoftwareChange."Commission Percentage";
 
+        GetSourceCodeSetup();
+        CommissionJournalLine."Source Code" := SourceCodeSetup."PTE Software Change";
+
         CommisJnlPostLine.RunWithCheck(CommissionJournalLine);
+    end;
+
+    local procedure GetSourceCodeSetup()
+    begin
+        if SourceCodeSetupRead then
+            exit;
+
+        if not SourceCodeSetup.Get() then
+            Clear(SourceCodeSetup);
+        SourceCodeSetupRead := true;
     end;
 
     local procedure FindCustLedgerEntry(SalesInvoiceNo: Code[20]; var CustLedgerEntry: Record "Cust. Ledger Entry")

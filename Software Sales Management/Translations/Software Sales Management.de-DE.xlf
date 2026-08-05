@@ -843,24 +843,6 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Sie können keinen Vertriebsmitarbeiter ohne Provisionsvertrag wählen, wenn Sie den Buchungstyp "Provisionsvertrag" verwenden.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Software Change-Post - NamedType WrongAccountingTypeCombinationErr</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3508614948 - NamedType 1427565258" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Setup the Software Sales Management to manage and calculate sales for software products.</source>
-          <target state="translated">Richten sie das Softwareverkauf management ein, es dient der Verwaltung und Berechnung von Softwareverkäufen.</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Richten sie das Softwareverkauf management ein, es dient der Verwaltung und Berechnung von Softwareverkäufen.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Software Sales Mgt. Inst. - NamedType DescriptionTxt</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3508614948 - NamedType 1269954070" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Software Sales Management</source>
-          <target state="translated">Softwareverkauf</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Softwareverkauf</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Software Sales Mgt. Inst. - NamedType ShortTitelTxt</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3508614948 - NamedType 2642908156" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Software Sales Management Setup</source>
-          <target state="translated">Einrichtung Softwareverkauf</target>
-          <note from="Developer" annotates="general" priority="2">de-DE=Einrichtung Softwareverkauf</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit PTE Software Sales Mgt. Inst. - NamedType TitelTxt</note>
-        </trans-unit>
         <trans-unit id="Page 66653583 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted Software Change</source>
           <target state="translated">Geb. Softwareanpassung</target>
@@ -1443,6 +1425,18 @@
           <note from="Developer" annotates="general" priority="2">de-DE=Softwareanpassungen</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Salesperson List Sw. Chg. - Action PTEOpenSoftwareChanges - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2458266809 - Control 860836003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1642199961">
+          <source>Software Sales Management</source>
+          <target state="translated">Software-Verkaufsmanagement</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Software-Verkaufsmanagement</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Src. Code Setup Sw. Chg. - Control PTESoftwareSalesGroup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2458266809 - Control 3706884996 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1642199961">
+          <source>Specifies the source code that is assigned to commission ledger entries that originate from a software change.</source>
+          <target state="translated">Gibt den Herkunftscode an, der Provisionsposten aus einer Softwareanpassung zugewiesen wird.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Herkunftscode an, der Provisionsposten aus einer Softwareanpassung zugewiesen wird.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PTE Src. Code Setup Sw. Chg. - Control PTE Software Change - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1710153102 - Action 786321334 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2747922353">
           <source>Opens the Posted Software Changes List.</source>
           <target state="translated">Öffnet die Liste der gebuchten Softwareanpassungen.</target>
@@ -1568,6 +1562,18 @@
           <target state="translated">PTE Softwareanpassungsnr.</target>
           <note from="Developer" annotates="general" priority="2">de-DE=PTE Softwareanpassungsnr.</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Sales Inv. Hdr. Sw. Chg. - Field PTE Software Change No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2458266809 - Field 3706884996 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1642199961">
+          <source>Specifies the source code that is assigned to commission ledger entries that originate from a software change.</source>
+          <target state="translated">Gibt den Herkunftscode an, der Provisionsposten aus einer Softwareanpassung zugewiesen wird.</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Gibt den Herkunftscode an, der Provisionsposten aus einer Softwareanpassung zugewiesen wird.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Src. Code Setup Sw. Chg. - Field PTE Software Change - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2458266809 - Field 3706884996 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1642199961">
+          <source>Software Change</source>
+          <target state="translated">Softwareanpassung</target>
+          <note from="Developer" annotates="general" priority="2">de-DE=Softwareanpassung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension PTE Src. Code Setup Sw. Chg. - Field PTE Software Change - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 3669266532 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>

@@ -59,6 +59,8 @@ src/
 | EnumExt | 63600 | Comment Line Table Name | zwei Werte für die BC-Standardbemerkungen |
 | TableExt | 63600–63602 | Sales Header, Sales Invoice Header, Sales Cr.Memo Header | Softwareanpassungsnr. im Belegfluss |
 | TableExt | 63603/63604 | Buch.-Blattzeile und Provisionsposten der Basis-App | Herkunft und abweichende Provision |
+| TableExt | 63605 | Herkunftscodeeinrichtung | Feld `PTE Software Change` |
+| PageExt | 63606 | Herkunftscodeeinrichtung | Gruppe „Software-Verkaufsmanagement" |
 | PageExt | 63600–63602 | Verkaufsrechnung und die beiden gebuchten Belege | |
 | PageExt | 63603/63604 | Verkäuferkarte und -liste | offene Anpassungen des Verkäufers |
 | PageExt | 63605 | Order Processor Role Center | drei Einträge in der Gruppe „Provisionsmanagement" |
@@ -104,6 +106,27 @@ Das Feld `Abrechnungsart` steuert, woher der Prozentsatz kommt:
 
 Umgesetzt ist das in Codeunit 63621 als Subscriber auf `OnAfterGetCommissionPercentage`
 der Basis-App. Es gibt bewusst **keine** eigene Berechnungslogik in dieser App.
+
+## Herkunftscode
+
+Provisionsposten aus einer Softwareabrechnung sollen sich von denen des Stapellaufs
+„Provisionen berechnen" unterscheiden lassen. Dafür trägt die Herkunftscodeeinrichtung ein
+eigenes Feld je Programmteil — genau wie im BC-Standard, wo Verkauf, Einkauf und die
+Buch.-Blätter jeweils eigene Felder haben.
+
+Einzurichten sind zwei Zeilen in der Standardeinrichtung **„Herkunftscodeeinrichtung"**:
+
+| Gruppe | Feld | wirkt auf |
+|---|---|---|
+| Provisionsmanagement | Provision | den Stapellauf und alles ohne eigenen Code |
+| Software-Verkaufsmanagement | Softwareanpassung | die Abrechnung einer Softwareanpassung |
+
+Codeunit 63630 setzt den Code an der Buch.-Blattzeile, bevor sie gebucht wird. Die
+Basis-App überschreibt einen bereits gesetzten Code nicht. Bleibt das Feld leer, greift der
+Code der Basis-App; sind beide leer, bleibt der Herkunftscode am Posten leer und die
+Buchung läuft trotzdem durch.
+
+Die Herkunftscodes selbst legt der Mandant an — keine der beiden Apps erzeugt sie.
 
 ## Automatische Tests
 
