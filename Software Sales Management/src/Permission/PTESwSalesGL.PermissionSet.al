@@ -8,6 +8,7 @@ permissionset 63600 "PTE Sw. Sales GL"
         tabledata "PTE Software Change Template" = RIMD,
         tabledata "PTE Software Change" = RIMD,
         tabledata "PTE Posted Software Change" = Ri,
+        tabledata "Source Code Setup" = R,
 
         table "PTE Software Sales Mgt. Setup" = X,
         table "PTE Software Change Template" = X,
